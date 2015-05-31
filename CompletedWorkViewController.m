@@ -1,21 +1,21 @@
 //
-//  StanzaViewController.m
+//  CompletedWorkViewController.m
 //  Stanzanator
 //
 //  Created by jonathan thornburg on 5/30/15.
 //  Copyright (c) 2015 jonathan thornburg. All rights reserved.
 //
 
-#import "StanzaViewController.h"
+#import "CompletedWorkViewController.h"
 
-@interface StanzaViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
-@property (weak, nonatomic) IBOutlet UITextView *poemBodyText;
+@interface CompletedWorkViewController ()
+@property (strong, nonatomic) IBOutlet UIView *titleLabel;
+@property (weak, nonatomic) IBOutlet UITextView *poemTextView;
 
 @end
 
-@implementation StanzaViewController
-- (IBAction)doneButtonTapped:(id)sender {
+@implementation CompletedWorkViewController
+- (IBAction)goToAuthorsProfie:(id)sender {
 }
 - (IBAction)makePrivateButtonTapped:(id)sender {
 }

@@ -9,6 +9,8 @@
 #import "TitleOnlyViewController.h"
 
 @interface TitleOnlyViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UITextView *poemBodyText;
 
 @end
 
@@ -17,6 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)makePrivateButtonTapped:(id)sender {
+}
+- (IBAction)doneButtonTapped:(id)sender {
 }
 
 - (void)didReceiveMemoryWarning {

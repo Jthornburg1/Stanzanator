@@ -9,11 +9,20 @@
 #import "ProfileViewController.h"
 
 @interface ProfileViewController ()<UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) IBOutlet UIView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ageLabel;
+@property (weak, nonatomic) IBOutlet UILabel *homeTownLabel;
+@property (weak, nonatomic) IBOutlet UILabel *favLabel;
+@property (weak, nonatomic) IBOutlet UILabel *leastFavLabel;
+@property (weak, nonatomic) IBOutlet UILabel *passWord;
 
 @end
 
 @implementation ProfileViewController
+- (IBAction)editProfileButtonTapped:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

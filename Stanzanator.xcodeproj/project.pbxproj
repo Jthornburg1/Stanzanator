@@ -21,7 +21,7 @@
 		D2932A311B1A34F500531AF0 /* TitleOnlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A301B1A34F500531AF0 /* TitleOnlyViewController.m */; };
 		D2932A341B1A3B5A00531AF0 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A331B1A3B5A00531AF0 /* SearchViewController.m */; };
 		D2932A371B1A436300531AF0 /* TitleTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */; };
-		D2932A3A1B1A471800531AF0 /* CompletedWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A391B1A471800531AF0 /* CompletedWorkViewController.m */; };
+		D2932A3D1B1AC8C900531AF0 /* CompletedWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A3C1B1AC8C900531AF0 /* CompletedWorkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +62,8 @@
 		D2932A331B1A3B5A00531AF0 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		D2932A351B1A436300531AF0 /* TitleTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleTableTableViewController.h; sourceTree = "<group>"; };
 		D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleTableTableViewController.m; sourceTree = "<group>"; };
-		D2932A381B1A471800531AF0 /* CompletedWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedWorkViewController.h; sourceTree = "<group>"; };
-		D2932A391B1A471800531AF0 /* CompletedWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedWorkViewController.m; sourceTree = "<group>"; };
+		D2932A3B1B1AC8C900531AF0 /* CompletedWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompletedWorkViewController.h; path = ../CompletedWorkViewController.h; sourceTree = "<group>"; };
+		D2932A3C1B1AC8C900531AF0 /* CompletedWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompletedWorkViewController.m; path = ../CompletedWorkViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +107,11 @@
 			children = (
 				D2932A011B1A15B500531AF0 /* AppDelegate.h */,
 				D2932A021B1A15B500531AF0 /* AppDelegate.m */,
+				D2932A3B1B1AC8C900531AF0 /* CompletedWorkViewController.h */,
+				D2932A3C1B1AC8C900531AF0 /* CompletedWorkViewController.m */,
 				D2932A041B1A15B500531AF0 /* MainViewController.h */,
 				D2932A051B1A15B500531AF0 /* MainViewController.m */,
 				D2932A071B1A15B500531AF0 /* Main.storyboard */,
-				D2932A381B1A471800531AF0 /* CompletedWorkViewController.h */,
-				D2932A391B1A471800531AF0 /* CompletedWorkViewController.m */,
 				D2932A351B1A436300531AF0 /* TitleTableTableViewController.h */,
 				D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */,
 				D2932A321B1A3B5A00531AF0 /* SearchViewController.h */,
@@ -266,7 +266,7 @@
 				D2932A2B1B1A2C0F00531AF0 /* WriteChoiceViewController.m in Sources */,
 				D2932A341B1A3B5A00531AF0 /* SearchViewController.m in Sources */,
 				D2932A251B1A20B200531AF0 /* ProfileViewController.m in Sources */,
-				D2932A3A1B1A471800531AF0 /* CompletedWorkViewController.m in Sources */,
+				D2932A3D1B1AC8C900531AF0 /* CompletedWorkViewController.m in Sources */,
 				D2932A2E1B1A2F0100531AF0 /* StanzaURLViewController.m in Sources */,
 				D2932A001B1A15B500531AF0 /* main.m in Sources */,
 				D2932A311B1A34F500531AF0 /* TitleOnlyViewController.m in Sources */,
@@ -460,6 +460,7 @@
 				D2932A1F1B1A15B500531AF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2932A201B1A15B500531AF0 /* Build configuration list for PBXNativeTarget "StanzanatorTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +469,7 @@
 				D2932A221B1A15B500531AF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

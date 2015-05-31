@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CompletedWorkViewController : UITableViewController
+@interface CompletedWorkViewController : UIViewController
 
 @end

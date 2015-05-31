@@ -9,10 +9,18 @@
 #import "StanzaURLViewController.h"
 
 @interface StanzaURLViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *poemBodyTextView;
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 
 @end
 
 @implementation StanzaURLViewController
+- (IBAction)goToInternet:(id)sender {
+}
+- (IBAction)doneButtonTapped:(id)sender {
+}
+- (IBAction)makePrivate:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

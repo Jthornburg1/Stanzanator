@@ -22,13 +22,16 @@
                                 <state key="normal" title="Button" image="bird copy">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchForTitleOrUserName:" destination="Zdy-sL-xwQ" eventType="touchUpInside" id="eKR-G7-Jmx"/>
+                                </connections>
                             </button>
                             <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" placeholder="Enter a Username or Title" translatesAutoresizingMaskIntoConstraints="NO" id="YGN-K8-vM4">
                                 <rect key="frame" x="169" y="93" width="262" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93333339691162109" green="0.80000007152557373" blue="0.73333334922790527" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="YGN-K8-vM4" secondAttribute="centerX" id="Izf-sA-7TF"/>
                             <constraint firstItem="YGN-K8-vM4" firstAttribute="top" secondItem="m32-LY-AOC" secondAttribute="bottom" constant="73" id="X83-ly-ke4"/>
@@ -37,6 +40,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="YGN-K8-vM4" id="G4U-Om-QDd"/>
                         <outlet property="searchDisplayController" destination="Yxx-Na-Vbo" id="7s6-WX-j5h"/>
                     </connections>
                 </viewController>
@@ -126,7 +130,6 @@
         <!--Profile View Controller-->
         <scene sceneID="rUT-ES-jSo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NFk-VJ-cz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="HGX-3C-oqi" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sJ7-Wx-RpG"/>
@@ -144,6 +147,9 @@
                                 <state key="normal" title="Edit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="editProfileButtonTapped:" destination="HGX-3C-oqi" eventType="touchUpInside" id="EQp-Ge-yfz"/>
+                                </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvQ-z9-kVM">
                                 <rect key="frame" x="0.0" y="548" width="600" height="44"/>
@@ -246,9 +252,17 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="RcY-nP-Aig" id="J9m-Lt-jo7"/>
+                        <outlet property="ageLabel" destination="40p-Xe-VoX" id="eyh-Rv-sAK"/>
+                        <outlet property="favLabel" destination="Ueh-my-jrY" id="inO-7H-UWM"/>
+                        <outlet property="homeTownLabel" destination="yxe-Ou-Eff" id="Tta-CR-Olu"/>
+                        <outlet property="image" destination="fy1-bx-A4b" id="FiQ-FF-pbq"/>
+                        <outlet property="leastFavLabel" destination="Pil-IN-tCm" id="twi-RK-cbo"/>
+                        <outlet property="nameLabel" destination="JBd-fx-dWj" id="fmT-aZ-qcw"/>
+                        <outlet property="passWord" destination="qd3-Ey-41k" id="G8F-OS-bH1"/>
+                        <outlet property="tableView" destination="JBd-fx-dWj" id="guX-2p-PvM"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFk-VJ-cz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="412" y="1080"/>
         </scene>
@@ -340,6 +354,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="doneButtonTapped:" destination="8lx-cX-bgc" eventType="touchUpInside" id="x52-6X-VPk"/>
                                     <segue destination="vXZ-lx-hvc" kind="show" id="VSf-mG-bB4"/>
                                 </connections>
                             </button>
@@ -348,6 +363,9 @@
                                 <state key="normal" title="Make Private">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="makePrivateButtonTapped:" destination="8lx-cX-bgc" eventType="touchUpInside" id="8hz-K6-EJ6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -362,6 +380,10 @@
                             <constraint firstItem="9Uu-cI-oxd" firstAttribute="top" secondItem="RbX-FN-5Of" secondAttribute="bottom" constant="17" id="oGH-HX-gQ6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="poemBodyText" destination="dWP-U3-siW" id="vdj-Pq-YYv"/>
+                        <outlet property="titleLabel" destination="nw5-As-G6C" id="U5p-BS-W7f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="517-wn-7fL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -382,7 +404,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O4T-rc-uz8">
                                 <rect key="frame" x="164" y="137" width="270" height="268"/>
                                 <color key="backgroundColor" red="0.92549026012420654" green="0.91764712333679199" blue="0.97254908084869385" alpha="1" colorSpace="deviceRGB"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -391,6 +413,9 @@
                                 <state key="normal" title="Click Here First">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToInternet:" destination="WeD-80-Xks" eventType="touchUpInside" id="uuL-Bx-9Oa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMj-eZ-nDZ">
                                 <rect key="frame" x="274" y="436" width="37" height="30"/>
@@ -398,6 +423,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="doneButtonTapped:" destination="WeD-80-Xks" eventType="touchUpInside" id="k2U-es-iuJ"/>
                                     <segue destination="vXZ-lx-hvc" kind="show" id="I2i-lP-tQZ"/>
                                 </connections>
                             </button>
@@ -406,6 +432,9 @@
                                 <state key="normal" title="Make Private">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="makePrivate:" destination="WeD-80-Xks" eventType="touchUpInside" id="7yq-st-Dik"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OaV-zo-6kA">
                                 <rect key="frame" x="222" y="28" width="156" height="30"/>
@@ -427,6 +456,10 @@
                             <constraint firstItem="YMj-eZ-nDZ" firstAttribute="top" secondItem="O4T-rc-uz8" secondAttribute="bottom" constant="31" id="vMj-Y1-hPb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="poemBodyTextView" destination="O4T-rc-uz8" id="Msn-Zl-QjJ"/>
+                        <outlet property="titleTextField" destination="OaV-zo-6kA" id="o9f-ES-nng"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsT-ip-NKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -450,23 +483,50 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bnb-FW-Gjd">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnb-FW-Gjd">
                                 <rect key="frame" x="176" y="160" width="295" height="200"/>
                                 <color key="backgroundColor" red="0.97254908084869385" green="0.97254908084869385" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asW-Pl-sig">
+                                <rect key="frame" x="247" y="387" width="106" height="30"/>
+                                <state key="normal" title="Author's Profile">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToAuthorsProfie:" destination="zRh-JX-BCi" eventType="touchUpInside" id="pYt-hI-Rq9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gq-Yk-xtI">
+                                <rect key="frame" x="255" y="460" width="90" height="30"/>
+                                <state key="normal" title="Make Private">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="makePrivateButtonTapped:" destination="zRh-JX-BCi" eventType="touchUpInside" id="NHm-j0-zFC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96862751245498657" green="0.97254908084869385" blue="0.90588241815567017" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
+                            <constraint firstItem="asW-Pl-sig" firstAttribute="centerX" secondItem="3gq-Yk-xtI" secondAttribute="centerX" id="1gY-bv-Cw2"/>
                             <constraint firstAttribute="centerX" secondItem="bnb-FW-Gjd" secondAttribute="centerX" constant="-23.5" id="JcF-ya-wrK"/>
                             <constraint firstItem="gfx-6Q-xe6" firstAttribute="centerX" secondItem="bnb-FW-Gjd" secondAttribute="centerX" id="L1N-1P-0rr"/>
                             <constraint firstItem="gfx-6Q-xe6" firstAttribute="top" secondItem="3bn-vK-JAH" secondAttribute="bottom" constant="36" id="OaI-MO-hZq"/>
+                            <constraint firstItem="asW-Pl-sig" firstAttribute="top" secondItem="bnb-FW-Gjd" secondAttribute="bottom" constant="27" id="TQr-pg-qLd"/>
+                            <constraint firstItem="asW-Pl-sig" firstAttribute="centerX" secondItem="bnb-FW-Gjd" secondAttribute="centerX" constant="-23.5" id="ZVj-2h-SH0"/>
                             <constraint firstItem="bnb-FW-Gjd" firstAttribute="top" secondItem="gfx-6Q-xe6" secondAttribute="bottom" constant="79" id="a2g-jq-Abh"/>
+                            <constraint firstAttribute="centerX" secondItem="asW-Pl-sig" secondAttribute="centerX" id="aFn-3n-0f2"/>
+                            <constraint firstItem="3gq-Yk-xtI" firstAttribute="top" secondItem="asW-Pl-sig" secondAttribute="bottom" constant="43" id="g7a-KV-7op"/>
                             <constraint firstAttribute="centerX" secondItem="gfx-6Q-xe6" secondAttribute="centerX" id="jZE-L9-2O7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="poemTextView" destination="bnb-FW-Gjd" id="SqW-9Y-Nxy"/>
+                        <outlet property="titleLabel" destination="4lv-kV-ZsZ" id="CrI-me-6Yx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmV-5D-dWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -502,6 +562,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="doneButtonTapped:" destination="5wg-KE-wky" eventType="touchUpInside" id="k21-q6-q6n"/>
                                     <segue destination="vXZ-lx-hvc" kind="show" id="Dj6-Hr-9dZ"/>
                                 </connections>
                             </button>
@@ -510,6 +571,10 @@
                                 <state key="normal" title="Make Private">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="5wg-KE-wky" eventType="touchUpInside" id="9fj-My-GFw"/>
+                                    <action selector="makePrivateButtonTapped:" destination="5wg-KE-wky" eventType="touchUpInside" id="WXv-ZD-cFf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -524,6 +589,10 @@
                             <constraint firstItem="w9Z-wU-Ivn" firstAttribute="top" secondItem="AmK-gw-2AM" secondAttribute="bottom" constant="8" id="rTo-FV-r5o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="poemBodyText" destination="7O2-Be-BWa" id="wA2-VN-oSB"/>
+                        <outlet property="titleTextField" destination="WKm-0a-7qa" id="EvL-aZ-fuA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wfu-7F-Ag6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -578,8 +647,8 @@
         <image name="bird copy" width="207" height="243"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VSf-mG-bB4"/>
-        <segue reference="HBL-dl-kBu"/>
+        <segue reference="BfR-Bj-EyI"/>
         <segue reference="l1Y-G6-Wtn"/>
+        <segue reference="Dj6-Hr-9dZ"/>
     </inferredMetricsTieBreakers>
 </document>
