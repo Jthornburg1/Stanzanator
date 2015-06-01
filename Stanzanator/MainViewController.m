@@ -9,7 +9,6 @@
 #import "MainViewController.h"
 
 @interface MainViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *image;
 
 @end
 
