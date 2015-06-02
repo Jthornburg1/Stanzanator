@@ -8,6 +8,17 @@
 
 #import "Poem.h"
 
+static NSString * const poemClassName = @"Poem";
+
 @implementation Poem
+
+@dynamic title;
+@dynamic bodyText;
+@dynamic timestamp;
+
++ (NSString *)parseClassName
+{
+    return poemClassName;
+}
 
 @end

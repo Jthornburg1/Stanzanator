@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Poem.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +29,8 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     // ...
+    
+    [Poem registerSubclass];
     return YES;
 }
 

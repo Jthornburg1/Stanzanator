@@ -7,6 +7,8 @@
 //
 
 #import "TitleTableTableViewController.h"
+#import "Poem.h"
+#import "PoemController.h"
 
 @interface TitleTableTableViewController ()
 
@@ -38,15 +40,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 2;
+    return [PoemController sharedInstance].poems.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     
+    Poem *poem = [PoemController sharedInstance].poems[indexPath.row];
+    cell.textLabel.text = poem.title;
     return cell;
 }
 

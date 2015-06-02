@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
-@interface Poem : NSObject
+@interface Poem : PFObject <PFSubclassing>
 
-@property (strong, nonatomic, readonly) NSString *title;
-@property (strong, nonatomic, readonly) NSString *bodyText;
-@property (strong, nonatomic) NSDate *timestamp;
+@property (retain, nonatomic) NSString *title;
+@property (retain, nonatomic) NSString *bodyText;
+@property (retain, nonatomic) NSDate *timestamp;
+
++ (NSString *)parseClassName;
+
 
 @end

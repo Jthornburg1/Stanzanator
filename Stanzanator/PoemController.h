@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Poem.h"
 
 @interface PoemController : NSObject
+
+@property (strong, nonatomic, readonly) NSArray *poems;
+
++ (instancetype)sharedInstance;
+- (void)addPoemWithTitle:(NSString *)title bodyText:(NSString *)text date:(NSDate *)date;
+- (void)removePoem:(Poem *)poem;
+- (void)updatePoem:(Poem *)poem;
+
+
 
 @end

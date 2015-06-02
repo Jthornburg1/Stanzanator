@@ -17,8 +17,6 @@
 		D2932A251B1A20B200531AF0 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A241B1A20B200531AF0 /* ProfileViewController.m */; };
 		D2932A281B1A283C00531AF0 /* StanzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A271B1A283C00531AF0 /* StanzaViewController.m */; };
 		D2932A2B1B1A2C0F00531AF0 /* WriteChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A2A1B1A2C0F00531AF0 /* WriteChoiceViewController.m */; };
-		D2932A2E1B1A2F0100531AF0 /* StanzaURLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A2D1B1A2F0100531AF0 /* StanzaURLViewController.m */; };
-		D2932A311B1A34F500531AF0 /* TitleOnlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A301B1A34F500531AF0 /* TitleOnlyViewController.m */; };
 		D2932A341B1A3B5A00531AF0 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A331B1A3B5A00531AF0 /* SearchViewController.m */; };
 		D2932A371B1A436300531AF0 /* TitleTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */; };
 		D2932A3D1B1AC8C900531AF0 /* CompletedWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A3C1B1AC8C900531AF0 /* CompletedWorkViewController.m */; };
@@ -77,10 +75,6 @@
 		D2932A271B1A283C00531AF0 /* StanzaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StanzaViewController.m; sourceTree = "<group>"; };
 		D2932A291B1A2C0F00531AF0 /* WriteChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WriteChoiceViewController.h; sourceTree = "<group>"; };
 		D2932A2A1B1A2C0F00531AF0 /* WriteChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WriteChoiceViewController.m; sourceTree = "<group>"; };
-		D2932A2C1B1A2F0100531AF0 /* StanzaURLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StanzaURLViewController.h; sourceTree = "<group>"; };
-		D2932A2D1B1A2F0100531AF0 /* StanzaURLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StanzaURLViewController.m; sourceTree = "<group>"; };
-		D2932A2F1B1A34F500531AF0 /* TitleOnlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleOnlyViewController.h; sourceTree = "<group>"; };
-		D2932A301B1A34F500531AF0 /* TitleOnlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleOnlyViewController.m; sourceTree = "<group>"; };
 		D2932A321B1A3B5A00531AF0 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		D2932A331B1A3B5A00531AF0 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		D2932A351B1A436300531AF0 /* TitleTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleTableTableViewController.h; sourceTree = "<group>"; };
@@ -189,10 +183,6 @@
 				D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */,
 				D2932A321B1A3B5A00531AF0 /* SearchViewController.h */,
 				D2932A331B1A3B5A00531AF0 /* SearchViewController.m */,
-				D2932A2F1B1A34F500531AF0 /* TitleOnlyViewController.h */,
-				D2932A301B1A34F500531AF0 /* TitleOnlyViewController.m */,
-				D2932A2C1B1A2F0100531AF0 /* StanzaURLViewController.h */,
-				D2932A2D1B1A2F0100531AF0 /* StanzaURLViewController.m */,
 				D2932A291B1A2C0F00531AF0 /* WriteChoiceViewController.h */,
 				D2932A2A1B1A2C0F00531AF0 /* WriteChoiceViewController.m */,
 				D2932A261B1A283C00531AF0 /* StanzaViewController.h */,
@@ -376,9 +366,7 @@
 				D2932A251B1A20B200531AF0 /* ProfileViewController.m in Sources */,
 				D2932A3D1B1AC8C900531AF0 /* CompletedWorkViewController.m in Sources */,
 				D2932ABF1B1CCE4B00531AF0 /* ProfileController.m in Sources */,
-				D2932A2E1B1A2F0100531AF0 /* StanzaURLViewController.m in Sources */,
 				D2932A001B1A15B500531AF0 /* main.m in Sources */,
-				D2932A311B1A34F500531AF0 /* TitleOnlyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

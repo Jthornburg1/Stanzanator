@@ -7,22 +7,38 @@
 //
 
 #import "StanzaViewController.h"
+#import "PoemController.h"
 
-@interface StanzaViewController ()
+@interface StanzaViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *poemBodyText;
+@property (strong, nonatomic) Poem *poem;
 
 @end
 
 @implementation StanzaViewController
 - (IBAction)doneButtonTapped:(id)sender {
+    if (self.poem) {
+        self.poem.title = self.titleTextField.text;
+        self.poem.bodyText = self.poemBodyText.text;
+        self.poem.timestamp = [NSDate date];
+        [[PoemController sharedInstance] updatePoem:self.poem];
+    } else {
+        [[PoemController sharedInstance] addPoemWithTitle:self.titleTextField.text bodyText:self.poemBodyText.text date:[NSDate date]];
+    }
 }
 - (IBAction)makePrivateButtonTapped:(id)sender {
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+   // self.poemBodyText.text = @"";
 }
 
 - (void)didReceiveMemoryWarning {
