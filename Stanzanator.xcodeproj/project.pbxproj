@@ -19,7 +19,6 @@
 		D2932A2B1B1A2C0F00531AF0 /* WriteChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A2A1B1A2C0F00531AF0 /* WriteChoiceViewController.m */; };
 		D2932A341B1A3B5A00531AF0 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A331B1A3B5A00531AF0 /* SearchViewController.m */; };
 		D2932A371B1A436300531AF0 /* TitleTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */; };
-		D2932A3D1B1AC8C900531AF0 /* CompletedWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A3C1B1AC8C900531AF0 /* CompletedWorkViewController.m */; };
 		D2932AB61B1CCDD700531AF0 /* Poem.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932AB51B1CCDD700531AF0 /* Poem.m */; };
 		D2932AB91B1CCE0500531AF0 /* PoemController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932AB81B1CCE0500531AF0 /* PoemController.m */; };
 		D2932ABC1B1CCE2300531AF0 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932ABB1B1CCE2300531AF0 /* Profile.m */; };
@@ -43,6 +42,7 @@
 		D2932AE21B1CD33600531AF0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2932AE11B1CD33600531AF0 /* libsqlite3.dylib */; };
 		D2932AE41B1CD34500531AF0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2932AE31B1CD34500531AF0 /* Accounts.framework */; };
 		D2932AE61B1CD34E00531AF0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2932AE51B1CD34E00531AF0 /* Social.framework */; };
+		D2932B5F1B1E5B5F00531AF0 /* PoemToReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932B5E1B1E5B5F00531AF0 /* PoemToReadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,8 +79,6 @@
 		D2932A331B1A3B5A00531AF0 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		D2932A351B1A436300531AF0 /* TitleTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleTableTableViewController.h; sourceTree = "<group>"; };
 		D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleTableTableViewController.m; sourceTree = "<group>"; };
-		D2932A3B1B1AC8C900531AF0 /* CompletedWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompletedWorkViewController.h; path = ../CompletedWorkViewController.h; sourceTree = "<group>"; };
-		D2932A3C1B1AC8C900531AF0 /* CompletedWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompletedWorkViewController.m; path = ../CompletedWorkViewController.m; sourceTree = "<group>"; };
 		D2932AB41B1CCDD700531AF0 /* Poem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poem.h; sourceTree = "<group>"; };
 		D2932AB51B1CCDD700531AF0 /* Poem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poem.m; sourceTree = "<group>"; };
 		D2932AB71B1CCE0500531AF0 /* PoemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemController.h; sourceTree = "<group>"; };
@@ -108,6 +106,8 @@
 		D2932AE11B1CD33600531AF0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		D2932AE31B1CD34500531AF0 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		D2932AE51B1CD34E00531AF0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D2932B5D1B1E5B5F00531AF0 /* PoemToReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemToReadViewController.h; sourceTree = "<group>"; };
+		D2932B5E1B1E5B5F00531AF0 /* PoemToReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemToReadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,11 +170,11 @@
 			children = (
 				D2932A011B1A15B500531AF0 /* AppDelegate.h */,
 				D2932A021B1A15B500531AF0 /* AppDelegate.m */,
-				D2932A3B1B1AC8C900531AF0 /* CompletedWorkViewController.h */,
-				D2932A3C1B1AC8C900531AF0 /* CompletedWorkViewController.m */,
 				D2932A041B1A15B500531AF0 /* MainViewController.h */,
 				D2932A051B1A15B500531AF0 /* MainViewController.m */,
 				D2932A071B1A15B500531AF0 /* Main.storyboard */,
+				D2932B5D1B1E5B5F00531AF0 /* PoemToReadViewController.h */,
+				D2932B5E1B1E5B5F00531AF0 /* PoemToReadViewController.m */,
 				D2932AB41B1CCDD700531AF0 /* Poem.h */,
 				D2932AB51B1CCDD700531AF0 /* Poem.m */,
 				D2932AB71B1CCE0500531AF0 /* PoemController.h */,
@@ -360,11 +360,11 @@
 				D2932A371B1A436300531AF0 /* TitleTableTableViewController.m in Sources */,
 				D2932A2B1B1A2C0F00531AF0 /* WriteChoiceViewController.m in Sources */,
 				D2932ABC1B1CCE2300531AF0 /* Profile.m in Sources */,
+				D2932B5F1B1E5B5F00531AF0 /* PoemToReadViewController.m in Sources */,
 				D2932A341B1A3B5A00531AF0 /* SearchViewController.m in Sources */,
 				D2932AB91B1CCE0500531AF0 /* PoemController.m in Sources */,
 				D2932AB61B1CCDD700531AF0 /* Poem.m in Sources */,
 				D2932A251B1A20B200531AF0 /* ProfileViewController.m in Sources */,
-				D2932A3D1B1AC8C900531AF0 /* CompletedWorkViewController.m in Sources */,
 				D2932ABF1B1CCE4B00531AF0 /* ProfileController.m in Sources */,
 				D2932A001B1A15B500531AF0 /* main.m in Sources */,
 			);

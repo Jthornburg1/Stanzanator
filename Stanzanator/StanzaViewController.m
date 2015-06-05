@@ -17,6 +17,23 @@
 @end
 
 @implementation StanzaViewController
+- (IBAction)visitTheWebforIdeas:(id)sender {
+    // Links to yahoo.com: that string will be an index of an array of strings eventually
+    NSArray *URLArray = @[@"https//anncoulter.com",@"https//eonlone.com",@"https//thugkitchen.com",@"https//http://www.openbible.info/topics/m",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//"];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.yahoo.com"]];
+    // Needs to return the user to StanzaViewController
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self updateWithPoem:self.poem];
+}
+- (IBAction)titleChooserChoose:(id)sender {
+    int rand = arc4random_uniform(4);
+    NSArray *titleArray = @[@"Title1", @"Title2", @"Title3",@"Title4"];
+    self.titleTextField.text = titleArray[rand];
+}
 - (IBAction)doneButtonTapped:(id)sender {
     if (self.poem) {
         self.poem.title = self.titleTextField.text;
@@ -27,18 +44,22 @@
         [[PoemController sharedInstance] addPoemWithTitle:self.titleTextField.text bodyText:self.poemBodyText.text date:[NSDate date]];
     }
 }
+
 - (IBAction)makePrivateButtonTapped:(id)sender {
+
 }
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return YES;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-   // self.poemBodyText.text = @"";
+- (void)updateWithPoem:(Poem *)poem
+{
+    self.poem = poem;
+    self.titleTextField.text = poem.title;
+    self.poemBodyText.text = poem.bodyText;
 }
 
 - (void)didReceiveMemoryWarning {

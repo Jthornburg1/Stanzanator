@@ -52,7 +52,7 @@
     poem.timestamp = date;
     
     [poem pinInBackground];
-    [poem save];
+    [poem saveInBackground];
 }
 - (void)removePoem:(Poem *)poem
 {

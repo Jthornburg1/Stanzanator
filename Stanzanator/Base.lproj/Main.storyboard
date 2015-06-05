@@ -17,26 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf6-Jf-Z8f">
-                                <rect key="frame" x="232" y="169" width="238" height="248"/>
-                                <state key="normal" title="Button" image="bird copy">
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" placeholder="Enter a Username or Title" translatesAutoresizingMaskIntoConstraints="NO" id="YGN-K8-vM4">
+                                <rect key="frame" x="169" y="93" width="262" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf6-Jf-Z8f">
+                                <rect key="frame" x="131" y="167" width="300" height="243"/>
+                                <state key="normal" title="tap the bird" image="bird copy">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="searchForTitleOrUserName:" destination="Zdy-sL-xwQ" eventType="touchUpInside" id="eKR-G7-Jmx"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" placeholder="Enter a Username or Title" translatesAutoresizingMaskIntoConstraints="NO" id="YGN-K8-vM4">
-                                <rect key="frame" x="169" y="93" width="262" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.93333339691162109" green="0.80000007152557373" blue="0.73333334922790527" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="YGN-K8-vM4" secondAttribute="centerX" id="Izf-sA-7TF"/>
                             <constraint firstItem="YGN-K8-vM4" firstAttribute="top" secondItem="m32-LY-AOC" secondAttribute="bottom" constant="73" id="X83-ly-ke4"/>
-                            <constraint firstAttribute="centerX" secondItem="rf6-Jf-Z8f" secondAttribute="centerX" constant="-51" id="d1P-bk-uJm"/>
-                            <constraint firstItem="rf6-Jf-Z8f" firstAttribute="top" secondItem="YGN-K8-vM4" secondAttribute="bottom" constant="32" id="rc1-mG-hwh"/>
+                            <constraint firstAttribute="centerX" secondItem="rf6-Jf-Z8f" secondAttribute="centerX" constant="19" id="d1P-bk-uJm"/>
+                            <constraint firstItem="rf6-Jf-Z8f" firstAttribute="top" secondItem="YGN-K8-vM4" secondAttribute="bottom" constant="30" id="rc1-mG-hwh"/>
                         </constraints>
                     </view>
                     <connections>
@@ -268,74 +268,95 @@
             </objects>
             <point key="canvasLocation" x="1791" y="326"/>
         </scene>
-        <!--Completed Work View Controller-->
-        <scene sceneID="AQq-bv-Xe8">
+        <!--Poem To Read View Controller-->
+        <scene sceneID="C7M-dq-gfx">
             <objects>
-                <viewController id="zRh-JX-BCi" customClass="CompletedWorkViewController" sceneMemberID="viewController">
+                <viewController id="6nE-ay-RPZ" customClass="PoemToReadViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3bn-vK-JAH"/>
-                        <viewControllerLayoutGuide type="bottom" id="gdf-V2-1GE"/>
+                        <viewControllerLayoutGuide type="top" id="6fc-BN-7FJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="fv0-gD-ZGa"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4lv-kV-ZsZ">
+                    <view key="view" contentMode="scaleToFill" id="Fle-Uf-UqP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title of Poem" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfx-6Q-xe6">
-                                <rect key="frame" x="249" y="56" width="102" height="21"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Poem Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ii-X8-VwE">
+                                <rect key="frame" x="39" y="47" width="522" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="522" id="YUc-9l-IfW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnb-FW-Gjd">
-                                <rect key="frame" x="176" y="160" width="295" height="200"/>
-                                <color key="backgroundColor" red="0.97254908084869385" green="0.97254908084869385" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsX-4R-F3I">
+                                <rect key="frame" x="180" y="114" width="255" height="418"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asW-Pl-sig">
-                                <rect key="frame" x="247" y="387" width="106" height="30"/>
-                                <state key="normal" title="Author's Profile">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goToAuthorsProfie:" destination="zRh-JX-BCi" eventType="touchUpInside" id="pYt-hI-Rq9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gq-Yk-xtI">
-                                <rect key="frame" x="255" y="460" width="90" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1L-3y-RWT">
+                                <rect key="frame" x="46" y="0.0" width="90" height="30"/>
                                 <state key="normal" title="Make Private">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="makePrivateButtonTapped:" destination="zRh-JX-BCi" eventType="touchUpInside" id="NHm-j0-zFC"/>
+                                    <action selector="MakePrivateButtonTapped:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="XR8-qk-BUO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gac-oP-fo9">
+                                <rect key="frame" x="285" y="550" width="30" height="30"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="editButtonTapped:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="rXO-hU-agx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vE-ef-hlx">
+                                <rect key="frame" x="510" y="550" width="44" height="30"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deletePoem:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="mtu-2X-4Rr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiD-jU-xhH">
+                                <rect key="frame" x="46" y="550" width="90" height="30"/>
+                                <state key="normal" title="Make Private">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="makePrivatButtonTapped:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="e8h-x0-Zf0"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.96862751245498657" green="0.97254908084869385" blue="0.90588241815567017" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="asW-Pl-sig" firstAttribute="centerX" secondItem="3gq-Yk-xtI" secondAttribute="centerX" id="1gY-bv-Cw2"/>
-                            <constraint firstAttribute="centerX" secondItem="bnb-FW-Gjd" secondAttribute="centerX" constant="-23.5" id="JcF-ya-wrK"/>
-                            <constraint firstItem="gfx-6Q-xe6" firstAttribute="centerX" secondItem="bnb-FW-Gjd" secondAttribute="centerX" constant="-23.5" id="L1N-1P-0rr"/>
-                            <constraint firstItem="gfx-6Q-xe6" firstAttribute="top" secondItem="3bn-vK-JAH" secondAttribute="bottom" constant="36" id="OaI-MO-hZq"/>
-                            <constraint firstItem="asW-Pl-sig" firstAttribute="top" secondItem="bnb-FW-Gjd" secondAttribute="bottom" constant="27" id="TQr-pg-qLd"/>
-                            <constraint firstAttribute="centerX" secondItem="gfx-6Q-xe6" secondAttribute="centerX" id="WAb-Eh-cPk"/>
-                            <constraint firstItem="asW-Pl-sig" firstAttribute="centerX" secondItem="bnb-FW-Gjd" secondAttribute="centerX" constant="-23.5" id="ZVj-2h-SH0"/>
-                            <constraint firstItem="bnb-FW-Gjd" firstAttribute="top" secondItem="gfx-6Q-xe6" secondAttribute="bottom" constant="83" id="a2g-jq-Abh"/>
-                            <constraint firstAttribute="centerX" secondItem="asW-Pl-sig" secondAttribute="centerX" id="aFn-3n-0f2"/>
-                            <constraint firstItem="3gq-Yk-xtI" firstAttribute="top" secondItem="asW-Pl-sig" secondAttribute="bottom" constant="43" id="g7a-KV-7op"/>
-                            <constraint firstAttribute="centerX" secondItem="gfx-6Q-xe6" secondAttribute="centerX" id="jZE-L9-2O7"/>
-                            <constraint firstItem="bnb-FW-Gjd" firstAttribute="centerX" secondItem="gfx-6Q-xe6" secondAttribute="centerX" constant="23.5" id="xHA-9m-IU6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4vE-ef-hlx" secondAttribute="trailing" constant="30" id="NBF-Pf-nAb"/>
+                            <constraint firstItem="3ii-X8-VwE" firstAttribute="centerX" secondItem="JsX-4R-F3I" secondAttribute="centerX" constant="-7.5" id="PR2-u3-pLT"/>
+                            <constraint firstAttribute="centerX" secondItem="3ii-X8-VwE" secondAttribute="centerX" id="QAL-6N-re1"/>
+                            <constraint firstItem="JsX-4R-F3I" firstAttribute="top" secondItem="3ii-X8-VwE" secondAttribute="bottom" constant="40" id="Rrs-TH-IJR"/>
+                            <constraint firstItem="JsX-4R-F3I" firstAttribute="centerX" secondItem="Gac-oP-fo9" secondAttribute="centerX" constant="7.5" id="Se1-5N-gPb"/>
+                            <constraint firstItem="JsX-4R-F3I" firstAttribute="centerX" secondItem="3ii-X8-VwE" secondAttribute="centerX" constant="7.5" id="TwL-5k-COj"/>
+                            <constraint firstItem="Gac-oP-fo9" firstAttribute="centerY" secondItem="TiD-jU-xhH" secondAttribute="centerY" id="Xzu-hL-QQb"/>
+                            <constraint firstItem="TiD-jU-xhH" firstAttribute="leading" secondItem="Fle-Uf-UqP" secondAttribute="leadingMargin" constant="30" id="hGR-Xz-rQU"/>
+                            <constraint firstItem="fv0-gD-ZGa" firstAttribute="top" secondItem="4vE-ef-hlx" secondAttribute="bottom" constant="20" id="kfv-98-0W0"/>
+                            <constraint firstItem="3ii-X8-VwE" firstAttribute="top" secondItem="6fc-BN-7FJ" secondAttribute="bottom" constant="27" id="koZ-5o-yhp"/>
+                            <constraint firstItem="i1L-3y-RWT" firstAttribute="leading" secondItem="Fle-Uf-UqP" secondAttribute="leadingMargin" constant="30" id="nIJ-k6-9D4"/>
+                            <constraint firstItem="4vE-ef-hlx" firstAttribute="centerY" secondItem="Gac-oP-fo9" secondAttribute="centerY" id="pU4-VX-n3h"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="poemTextView" destination="bnb-FW-Gjd" id="SqW-9Y-Nxy"/>
-                        <outlet property="titleLabel" destination="4lv-kV-ZsZ" id="CrI-me-6Yx"/>
+                        <outlet property="poemBodyText" destination="JsX-4R-F3I" id="vc9-uQ-JRi"/>
+                        <outlet property="titleLabel" destination="3ii-X8-VwE" id="lIZ-2v-GrB"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wmV-5D-dWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o1G-ys-anh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2524" y="333"/>
+            <point key="canvasLocation" x="1791" y="-1177"/>
         </scene>
         <!--Stanza View Controller-->
         <scene sceneID="OJv-AY-IFo">
@@ -366,7 +387,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="238" id="pWu-Hf-jgb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmK-gw-2AM">
@@ -394,12 +415,18 @@
                                 <state key="normal" title="Stimulus">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="visitTheWebforIdeas:" destination="5wg-KE-wky" eventType="touchUpInside" id="K9b-4R-fwM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6G-04-POH">
                                 <rect key="frame" x="480" y="52" width="30" height="30"/>
                                 <state key="normal" title="Title">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="titleChooserChoose:" destination="5wg-KE-wky" eventType="touchUpInside" id="dMG-uV-U51"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -446,7 +473,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zRh-JX-BCi" kind="show" id="71i-Au-lB7"/>
+                                    <segue destination="6nE-ay-RPZ" kind="show" id="bZu-f6-LXv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -455,10 +482,13 @@
                             <outlet property="delegate" destination="YIg-eP-ysO" id="o8E-1c-tWf"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="jU4-6f-5sR" id="Eat-Jo-aO0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gmc-WK-tDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1801" y="-431"/>
+            <point key="canvasLocation" x="1847" y="-457"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0kb-6U-Mcu">
@@ -485,7 +515,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Dj6-Hr-9dZ"/>
+        <segue reference="HBL-dl-kBu"/>
         <segue reference="BIf-EO-UlY"/>
-        <segue reference="BfR-Bj-EyI"/>
     </inferredMetricsTieBreakers>
 </document>

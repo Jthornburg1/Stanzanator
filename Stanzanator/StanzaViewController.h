@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Poem.h"
+#import "PoemToReadViewController.h"
 
 @interface StanzaViewController : UIViewController
+
+- (void)updateWithPoem:(Poem *)poem;
 
 @end
