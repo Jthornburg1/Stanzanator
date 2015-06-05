@@ -31,7 +31,7 @@
 }
 - (IBAction)titleChooserChoose:(id)sender {
     int rand = arc4random_uniform(4);
-    NSArray *titleArray = @[@"Title1", @"Title2", @"Title3",@"Title4"];
+    NSArray *titleArray = @[@"Breakfast at Midnight", @"Title2", @"How to Raise Your Children",@"Title4"];
     self.titleTextField.text = titleArray[rand];
 }
 - (IBAction)doneButtonTapped:(id)sender {

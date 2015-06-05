@@ -27,7 +27,8 @@
         PFLogInViewController *login = [PFLogInViewController new];
         login.fields = PFLogInFieldsUsernameAndPassword | PFLogInFieldsFacebook | PFLogInFieldsTwitter | PFLogInFieldsSignUpButton | PFLogInFieldsLogInButton | PFLogInFieldsDismissButton;
         [self presentViewController:login animated:YES completion:nil];
-        
+       
+        // login.signUpController.emailAsUsername = YES;
         login.delegate = self;
         login.signUpController.delegate = self;
     }
