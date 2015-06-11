@@ -71,11 +71,6 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAV-Oh-lYQ">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Create Profile" id="TOl-5T-HrG">
-                                        <connections>
-                                            <segue destination="HGX-3C-oqi" kind="show" id="BIf-EO-UlY"/>
-                                        </connections>
-                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tMw-Bl-N1t"/>
                                     <barButtonItem title="Search" id="iDI-YR-Ygm">
                                         <connections>
@@ -88,6 +83,7 @@
                                             <segue destination="HGX-3C-oqi" kind="show" id="l1Y-G6-Wtn"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="152" style="plain" systemItem="fixedSpace" id="eYg-AI-yN6"/>
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLx-x7-cWI">
@@ -248,6 +244,7 @@
                         <outlet property="locationText" destination="zDd-Q4-HDo" id="pdr-aW-hNP"/>
                         <outlet property="nameText" destination="GQe-Nj-AUN" id="MQM-ta-YhW"/>
                         <outlet property="tableView" destination="SN2-YU-I7f" id="8KR-Mx-HHZ"/>
+                        <outlet property="uploadPhotoButton" destination="NST-dG-4Bz" id="vrc-Lc-r6x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFk-VJ-cz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -452,6 +449,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="1ps-QU-b2C">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="AaY-X7-Gf8">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -500,8 +502,7 @@
         <image name="images-1" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BfR-Bj-EyI"/>
-        <segue reference="BIf-EO-UlY"/>
         <segue reference="Dj6-Hr-9dZ"/>
+        <segue reference="BfR-Bj-EyI"/>
     </inferredMetricsTieBreakers>
 </document>

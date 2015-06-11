@@ -31,6 +31,7 @@
     // ...
     
     [Poem registerSubclass];
+    //[PFUser logOut];
     return YES;
 }
 

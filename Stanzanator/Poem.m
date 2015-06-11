@@ -15,6 +15,7 @@ static NSString * const poemClassName = @"Poem";
 @dynamic title;
 @dynamic bodyText;
 @dynamic timestamp;
+@dynamic writerOfPoem;
 
 + (NSString *)parseClassName
 {

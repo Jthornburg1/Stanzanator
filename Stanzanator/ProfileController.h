@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface ProfileController : NSObject
+
+@property (strong, nonatomic) NSArray *users;
+
++ (instancetype)sharedInstance;
+- (void)loadUsersFromParse;
+
+
 
 @end

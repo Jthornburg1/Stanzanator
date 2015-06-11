@@ -12,11 +12,14 @@
 @interface PoemController : NSObject
 
 @property (strong, nonatomic, readonly) NSArray *poems;
+@property (strong, nonatomic) NSArray *writersPoems;
 
 + (instancetype)sharedInstance;
 - (void)addPoemWithTitle:(NSString *)title bodyText:(NSString *)text date:(NSDate *)date;
 - (void)removePoem:(Poem *)poem;
 - (void)updatePoem:(Poem *)poem;
+- (void)loadWritersPoemsFromParse;
+
 
 
 

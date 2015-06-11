@@ -50,6 +50,7 @@
     poem.title = title;
     poem.bodyText = text;
     poem.timestamp = date;
+    poem.writerOfPoem = [PFUser currentUser];
     
     [poem pinInBackground];
     [poem saveInBackground];
@@ -63,6 +64,11 @@
 {
     [poem pinInBackground];
     [poem save];
+}
+
+- (void)loadWritersPoemsFromParse
+{
+    
 }
 
 @end

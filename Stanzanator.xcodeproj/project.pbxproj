@@ -21,7 +21,6 @@
 		D2932A371B1A436300531AF0 /* TitleTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */; };
 		D2932AB61B1CCDD700531AF0 /* Poem.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932AB51B1CCDD700531AF0 /* Poem.m */; };
 		D2932AB91B1CCE0500531AF0 /* PoemController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932AB81B1CCE0500531AF0 /* PoemController.m */; };
-		D2932ABC1B1CCE2300531AF0 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932ABB1B1CCE2300531AF0 /* Profile.m */; };
 		D2932ABF1B1CCE4B00531AF0 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932ABE1B1CCE4B00531AF0 /* ProfileController.m */; };
 		D2932AC71B1CD26B00531AF0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2932AC11B1CD26B00531AF0 /* Bolts.framework */; };
 		D2932AC81B1CD26B00531AF0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2932AC21B1CD26B00531AF0 /* Parse.framework */; };
@@ -83,8 +82,6 @@
 		D2932AB51B1CCDD700531AF0 /* Poem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poem.m; sourceTree = "<group>"; };
 		D2932AB71B1CCE0500531AF0 /* PoemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemController.h; sourceTree = "<group>"; };
 		D2932AB81B1CCE0500531AF0 /* PoemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemController.m; sourceTree = "<group>"; };
-		D2932ABA1B1CCE2300531AF0 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
-		D2932ABB1B1CCE2300531AF0 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		D2932ABD1B1CCE4B00531AF0 /* ProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileController.h; sourceTree = "<group>"; };
 		D2932ABE1B1CCE4B00531AF0 /* ProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileController.m; sourceTree = "<group>"; };
 		D2932AC11B1CD26B00531AF0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -189,8 +186,6 @@
 				D2932A271B1A283C00531AF0 /* StanzaViewController.m */,
 				D2932A231B1A20B200531AF0 /* ProfileViewController.h */,
 				D2932A241B1A20B200531AF0 /* ProfileViewController.m */,
-				D2932ABA1B1CCE2300531AF0 /* Profile.h */,
-				D2932ABB1B1CCE2300531AF0 /* Profile.m */,
 				D2932ABD1B1CCE4B00531AF0 /* ProfileController.h */,
 				D2932ABE1B1CCE4B00531AF0 /* ProfileController.m */,
 				D2932A0A1B1A15B500531AF0 /* Images.xcassets */,
@@ -359,7 +354,6 @@
 				D2932A031B1A15B500531AF0 /* AppDelegate.m in Sources */,
 				D2932A371B1A436300531AF0 /* TitleTableTableViewController.m in Sources */,
 				D2932A2B1B1A2C0F00531AF0 /* WriteChoiceViewController.m in Sources */,
-				D2932ABC1B1CCE2300531AF0 /* Profile.m in Sources */,
 				D2932B5F1B1E5B5F00531AF0 /* PoemToReadViewController.m in Sources */,
 				D2932A341B1A3B5A00531AF0 /* SearchViewController.m in Sources */,
 				D2932AB91B1CCE0500531AF0 /* PoemController.m in Sources */,

@@ -7,8 +7,9 @@
 //
 
 #import "MainViewController.h"
+#import "ProfileController.h"
 
-@interface MainViewController ()<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface MainViewController ()<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UISearchBarDelegate>
 
 @end
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [[ProfileController sharedInstance] loadUsersFromParse];
+    
     
 }
 - (void)viewDidAppear:(BOOL)animated

@@ -10,6 +10,7 @@
 #import "Poem.h"
 #import "PoemController.h"
 #import "PoemToReadViewController.h"
+#import "ProfileController.h"
 
 @interface TitleTableTableViewController () <UITableViewDelegate>
 
@@ -40,7 +41,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     
-    return 1;
+    return [ProfileController sharedInstance].users.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -55,6 +56,9 @@
     Poem *poem = [PoemController sharedInstance].poems[indexPath.row];
     cell.textLabel.text = poem.title;
     return cell;
+}
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return [[ProfileController sharedInstance].users[section] username];
 }
 
 //-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

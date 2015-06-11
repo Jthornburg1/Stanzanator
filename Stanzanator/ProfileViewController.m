@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
+@property (weak, nonatomic) IBOutlet UIButton *uploadPhotoButton;
 @property (nonatomic, readwrite) BOOL inEditingMode;
 @end
 
@@ -27,6 +28,11 @@
     
     self.nameText.text = [PFUser currentUser].username;
     
+    PFUser *user = [PFUser new];
+    
+    if ([PFUser currentUser]) {
+        
+    }
 }
 - (void)viewWillAppear:(BOOL)animated
 {
