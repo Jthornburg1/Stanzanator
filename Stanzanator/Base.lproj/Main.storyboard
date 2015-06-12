@@ -160,6 +160,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.97254908080000002" green="0.96862751250000001" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <connections>
+                                            <segue destination="6nE-ay-RPZ" kind="show" identifier="myPoem" id="1kv-KR-VeL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -505,6 +508,7 @@
         <image name="images-1" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="1kv-KR-VeL"/>
         <segue reference="Dj6-Hr-9dZ"/>
         <segue reference="BfR-Bj-EyI"/>
     </inferredMetricsTieBreakers>

@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "PoemController.h"
+#import "PoemToReadViewController.h"
 
 @interface ProfileViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameText;
@@ -136,8 +137,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [UITableViewCell new];
+    
+    Poem *poem = [PoemController sharedInstance].writersPoems[indexPath.row];
+    
     cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     cell.backgroundColor = [UIColor yellowColor];
+    cell.textLabel.text = poem.title;
     
     return cell;
 }
@@ -152,14 +157,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"myPoem"]) {
+        PoemToReadViewController *viewController = [segue destinationViewController];
+        NSIndexPath *path = [self.tableView indexPathForCell:sender];
+        
+        Poem *poem = [PoemController sharedInstance].writersPoems[path.row];
+        // As of now, this pushes to PTRVC but displays the wrong poem.
+        [viewController updateWithPoem:poem];
+    }
 }
-*/
+
 
 @end

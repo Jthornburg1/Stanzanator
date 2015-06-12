@@ -18,7 +18,6 @@
 - (void)addPoemWithTitle:(NSString *)title bodyText:(NSString *)text date:(NSDate *)date;
 - (void)removePoem:(Poem *)poem;
 - (void)updatePoem:(Poem *)poem;
-- (void)loadWritersPoemsFromParse;
 
 -(void)getPoemsFromWriter:(void (^)(BOOL success))completion;
 

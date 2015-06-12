@@ -79,9 +79,20 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.writersPoems = objects;
         completion(YES);
-    } ];
+    }];
     
     
+}
+
+-(void)writersPoemsforUser:(PFUser*)user completion:(void (^)(NSArray *poems))completion
+
+{
+    PFQuery *query = [PFQuery new];
+    [query whereKey:@"writersPoem" equalTo:user];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+    
+        completion(objects);
+    }];
 }
 
 @end
