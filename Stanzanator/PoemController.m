@@ -16,6 +16,8 @@
 
 @implementation PoemController
 
+@synthesize writersPoems = _writersPoems;
+
 + (instancetype)sharedInstance
 {
     static PoemController *sharedInstance = nil;
@@ -50,7 +52,8 @@
     poem.title = title;
     poem.bodyText = text;
     poem.timestamp = date;
-    poem.writerOfPoem = [PFUser currentUser];
+    //poem.writerOfPoem = [PFUser currentUser];
+    [poem setObject:[PFUser currentUser] forKey:@"writersPoems"];
     
     [poem pinInBackground];
     [poem saveInBackground];
@@ -66,8 +69,18 @@
     [poem save];
 }
 
-- (void)loadWritersPoemsFromParse
+-(void)getPoemsFromWriter:(void (^)(BOOL success))completion
 {
+    PFQuery *query = [Poem query];
+    
+    [query whereKey:@"writersPoems" equalTo:[PFUser currentUser]];
+    
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.writersPoems = objects;
+        completion(YES);
+    } ];
+    
     
 }
 

@@ -20,6 +20,7 @@
 - (void)updatePoem:(Poem *)poem;
 - (void)loadWritersPoemsFromParse;
 
+-(void)getPoemsFromWriter:(void (^)(BOOL success))completion;
 
 
 

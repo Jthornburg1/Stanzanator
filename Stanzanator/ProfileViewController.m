@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "PoemController.h"
 
 @interface ProfileViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameText;
@@ -30,12 +31,21 @@
     
     PFUser *user = [PFUser new];
     
+    
     if ([PFUser currentUser]) {
-        
+        self.editButton.enabled = YES;
+        self.uploadPhotoButton.enabled = YES;
+    }else{
+        self.editButton.enabled = NO;
+        self.uploadPhotoButton.enabled = NO;
     }
 }
 - (void)viewWillAppear:(BOOL)animated
 {
+    [[PoemController sharedInstance] getPoemsFromWriter:^(BOOL success) {
+        [self.tableView reloadData];
+    }];
+    
     PFUser *user = [PFUser currentUser];
     
     self.ageText.text = user[@"age"];
@@ -127,11 +137,14 @@
 {
     UITableViewCell *cell = [UITableViewCell new];
     cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+    cell.backgroundColor = [UIColor yellowColor];
+    
     return cell;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    
+    return [PoemController sharedInstance].writersPoems.count;
 }
 
 - (void)didReceiveMemoryWarning {

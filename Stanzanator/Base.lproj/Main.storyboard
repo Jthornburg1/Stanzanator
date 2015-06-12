@@ -162,6 +162,9 @@
                                         <color key="backgroundColor" red="0.97254908080000002" green="0.96862751250000001" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HGX-3C-oqi" id="za4-AS-NSy"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I've Written:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxw-pJ-yxd">
                                 <rect key="frame" x="26" y="280" width="92" height="21"/>
