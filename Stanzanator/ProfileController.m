@@ -7,6 +7,7 @@
 //
 
 #import "ProfileController.h"
+#import "PoemController.h"
 
 @implementation ProfileController
 
@@ -20,11 +21,13 @@
         return sharedInstance;
 }
 
-- (void)loadUsersFromParse
+- (void)loadUsersFromParseWithCompletion:(void (^)(bool boolean))completion
 {
     PFQuery *query = [PFUser query];
+    [query includeKey:@"Poems"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.users = objects;
+        completion(YES);
     }];
 }
 

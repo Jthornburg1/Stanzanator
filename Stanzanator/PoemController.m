@@ -7,16 +7,17 @@
 //
 
 #import "PoemController.h"
+#import "ProfileController.h"
 
 @interface PoemController()
 
-@property (strong, nonatomic) NSArray *poems;
+//@property (strong, nonatomic) NSArray *poems;
 
 @end
 
 @implementation PoemController
 
-@synthesize writersPoems = _writersPoems;
+@synthesize poemsByWriter = _poemsByWriter;
 
 + (instancetype)sharedInstance
 {
@@ -24,7 +25,6 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken,^{
         sharedInstance = [[PoemController alloc] init];
-        [sharedInstance loadPoemsFromParse];
     });
         return sharedInstance;
 }
@@ -34,17 +34,15 @@
     
     // Without notifications to update the tableview we'll need to restart the app to get the tableview to load
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        for (Poem *poem in objects) {
-            [poem pin];
-        }
+        self.poems = objects;
     }];
 }
-- (NSArray *)poems
-{
-    PFQuery *query = [Poem query];
-    [query fromLocalDatastore];
-    return [query findObjects];
-}
+//- (NSArray *)poems
+//{
+//    PFQuery *query = [Poem query];
+//    [query fromLocalDatastore];
+//    return [query findObjects];
+//}
 - (void)addPoemWithTitle:(NSString *)title bodyText:(NSString *)text date:(NSDate *)date
 {
     Poem *poem = [Poem object];
@@ -52,8 +50,8 @@
     poem.title = title;
     poem.bodyText = text;
     poem.timestamp = date;
-    //poem.writerOfPoem = [PFUser currentUser];
     [poem setObject:[PFUser currentUser] forKey:@"writersPoems"];
+//    [PFUser currentUser][@"Poems"] = poem;
     
     [poem pinInBackground];
     [poem saveInBackground];
@@ -69,30 +67,85 @@
     [poem save];
 }
 
--(void)getPoemsFromWriter:(void (^)(BOOL success))completion
+
+
+- (NSArray *)poemsByWriter:(PFUser *)writer
+//       withCompletion:(void (^)(NSArray *poems))completion
+{
+ 
+    PFQuery *poemQuery = [Poem query];
+    [poemQuery whereKey:@"writerOfPoem" equalTo:writer];
+    [poemQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.poemsByWriter = objects;
+//        completion(objects);
+    }];
+//    PFQuery *userQuery = [PFUser query];
+//    
+//    for (PFUser *user in [userQuery findObjects]) {
+//        PFQuery *query = [PFQuery queryWithClassName:@"Poem"];
+//        
+//        [query whereKey:@"writersPoems" equalTo:user];
+//        
+//    }
+    return self.poemsByWriter;
+}
+
+    
+////    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+////        self.poemsByWriter = objects;
+////    }];
+//    
+//    return [query findObjects];
+//}
+//
+//-(void)getPoemsFromWriter:(void (^)(BOOL success))completion
+//{
+//    PFQuery *query = [Poem query];
+//    
+//    [query whereKey:@"writersPoems" equalTo:[PFUser currentUser]];
+//    
+//    
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        self.poemsByWriter = objects;
+//        completion(YES);
+//    }];
+//    
+//    
+//}
+
+-(void)writersPoemsforUser:(PFUser*)user
 {
     PFQuery *query = [Poem query];
-    
-    [query whereKey:@"writersPoems" equalTo:[PFUser currentUser]];
-    
-    
+    [query includeKey:@"writersPoems"];
+    [query whereKey:@"writersPoems" equalTo:user];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        self.writersPoems = objects;
-        completion(YES);
-    }];
-    
-    
-}
-
--(void)writersPoemsforUser:(PFUser*)user completion:(void (^)(NSArray *poems))completion
-
-{
-    PFQuery *query = [PFQuery new];
-    [query whereKey:@"writersPoem" equalTo:user];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-    
-        completion(objects);
+        
+        for (Poem *poem in objects) {
+            user[@"Poems"] = poem;
+            [user saveInBackground];
+        }
     }];
 }
+
+
+//-(void)getPoemsFromUser:(PFUser *)user
+//{
+//    NSArray *arrayOfPoems = user[@"Poems"];
+//    
+//    for (Poem *poem in arrayOfPoems) {
+//        PFQuery *query = [Poem query];
+//        query whereKey:poem.objectId equalTo:
+//    }
+//    
+//
+//    
+//}
+
+//- (NSArray *)dictionaryPoems:(NSArray *)poems
+//{
+//    
+//}
+
+
 
 @end

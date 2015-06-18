@@ -14,6 +14,10 @@
 
 @interface TitleTableTableViewController () <UITableViewDelegate>
 
+@property (nonatomic, strong) NSArray *allPoems;
+@property (nonatomic, strong) NSMutableArray *writerPoems;
+@property (nonatomic, strong) NSArray *allWriters;
+
 @end
 
 @implementation TitleTableTableViewController
@@ -21,12 +25,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[PoemController sharedInstance] loadPoemsFromParse];
+    [[ProfileController sharedInstance]loadUsersFromParseWithCompletion:^(bool boolean) {
+        if (YES) {
+            [self createUserPoemDictionary];
+            [self.tableView reloadData];
+        }
+    }];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+
+-(void)createUserPoemDictionary {
+    
+    self.allPoems = [PoemController sharedInstance].poems;
+    self.allWriters = [ProfileController sharedInstance].users;
+    
+    NSDictionary *userDictionary = [NSDictionary new];
+    
+    for (PFUser *user in self.allWriters){
+        NSMutableArray *writersPoems = [NSMutableArray new];
+
+        for (Poem *poem in self.allPoems){
+            if (user == poem.writerOfPoem){
+                [writersPoems addObject:poem];
+            }
+        }
+        [userDictionary setValue:writersPoems forKey:[NSString stringWithFormat:@"%@",user]];
+        [self.writerPoems addObject:userDictionary];
+    }
 }
 -(void)viewWillAppear:(BOOL)animated{
     [self.tableView reloadData];
@@ -46,12 +78,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
+    
+    PFUser *user = [ProfileController sharedInstance].users[section];
+    self.writerPoems = user[@"Poem"];
     return [PoemController sharedInstance].poems.count;
+    
+//    return self.writerPoems.count;
+//    NSArray *arrayOfPoems = user[@"Poems"];
+    
+//    [[PoemController sharedInstance] poemsByWriter:user withCompletion:^(NSArray *poems) {
+//        self.writerPoems = poems;
+//    }];
+//    return self.writerPoems.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+    PFUser *user = [ProfileController sharedInstance].users[indexPath.section];
+    
+    
     
     Poem *poem = [PoemController sharedInstance].poems[indexPath.row];
     cell.textLabel.text = poem.title;
@@ -61,47 +107,6 @@
     return [[ProfileController sharedInstance].users[section] username];
 }
 
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    
-//
-//}
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
   
     PoemToReadViewController *viewController = [segue destinationViewController];

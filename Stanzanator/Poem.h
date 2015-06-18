@@ -14,7 +14,7 @@
 @property (retain, nonatomic) NSString *title;
 @property (retain, nonatomic) NSString *bodyText;
 @property (retain, nonatomic) NSDate *timestamp;
-//@property (strong, nonatomic) PFUser *writerOfPoem;
+@property (strong, nonatomic) PFUser *writerOfPoem;
 
 + (NSString *)parseClassName;
 

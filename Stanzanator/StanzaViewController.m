@@ -36,14 +36,8 @@
     self.titleTextField.text = titleArray[rand];
 }
 - (IBAction)doneButtonTapped:(id)sender {
-    if (self.poem) {
-        self.poem.title = self.titleTextField.text;
-        self.poem.bodyText = self.poemBodyText.text;
-        self.poem.timestamp = [NSDate date];
-        [[PoemController sharedInstance] updatePoem:self.poem];
-    } else {
-        [[PoemController sharedInstance] addPoemWithTitle:self.titleTextField.text bodyText:self.poemBodyText.text date:[NSDate date]];
-    }
+    
+    [[PoemController sharedInstance] addPoemWithTitle:self.titleTextField.text bodyText:self.poemBodyText.text date:[NSDate date]];
 }
 
 - (IBAction)makePrivateButtonTapped:(id)sender {

@@ -83,44 +83,72 @@
                                             <segue destination="HGX-3C-oqi" kind="show" id="l1Y-G6-Wtn"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="152" style="plain" systemItem="fixedSpace" id="eYg-AI-yN6"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="waI-3v-0zw"/>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLx-x7-cWI">
-                                <rect key="frame" x="481" y="502" width="36" height="30"/>
-                                <state key="normal" title="Read">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="YIg-eP-ysO" kind="show" id="kht-IT-DWq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNt-xL-fBW">
-                                <rect key="frame" x="88" y="502" width="36" height="30"/>
-                                <state key="normal" title="Write">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="5wg-KE-wky" kind="show" id="Usd-SZ-Ift"/>
-                                </connections>
-                            </button>
+                            <visualEffectView opaque="NO" alpha="0.74999999999999978" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTQ-y6-uYX">
+                                <rect key="frame" x="0.0" y="-7" width="600" height="563"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MXy-oF-3Fq">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="563"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLx-x7-cWI">
+                                            <rect key="frame" x="228" y="450" width="129" height="33"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="33" id="PUE-Ks-zxG"/>
+                                                <constraint firstAttribute="width" constant="129" id="crs-O7-fz3"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="42"/>
+                                            <state key="normal" title="Read">
+                                                <color key="titleColor" red="0.96470594409999999" green="0.93725496529999996" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="YIg-eP-ysO" kind="show" id="kht-IT-DWq"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNt-xL-fBW">
+                                            <rect key="frame" x="236" y="126" width="112" height="64"/>
+                                            <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="42"/>
+                                            <state key="normal" title="Write">
+                                                <color key="titleColor" red="0.96470594409999999" green="0.93725496529999996" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="5wg-KE-wky" kind="show" id="Usd-SZ-Ift"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerX" secondItem="QLx-x7-cWI" secondAttribute="centerX" constant="7.5" id="5GZ-iI-xSv"/>
+                                        <constraint firstAttribute="bottom" secondItem="QLx-x7-cWI" secondAttribute="bottom" constant="80" id="EZX-SR-bwC"/>
+                                        <constraint firstItem="jNt-xL-fBW" firstAttribute="top" secondItem="MXy-oF-3Fq" secondAttribute="top" constant="126" id="KNa-iY-Tje"/>
+                                        <constraint firstItem="jNt-xL-fBW" firstAttribute="centerX" secondItem="QLx-x7-cWI" secondAttribute="centerX" constant="-0.5" id="fkM-zU-zFY"/>
+                                        <constraint firstItem="QLx-x7-cWI" firstAttribute="top" secondItem="jNt-xL-fBW" secondAttribute="bottom" constant="260" id="oOA-5p-kQz"/>
+                                        <constraint firstAttribute="centerX" secondItem="jNt-xL-fBW" secondAttribute="centerX" constant="8" id="y07-yo-1MZ"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="563" id="hHb-rO-8y2"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.23921570181846619" green="0.29803922772407532" blue="0.086274512112140656" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="PAV-Oh-lYQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="A9g-VG-jFy"/>
-                            <constraint firstItem="jNt-xL-fBW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="72" id="Dju-eC-wUl"/>
-                            <constraint firstAttribute="trailing" secondItem="PAV-Oh-lYQ" secondAttribute="trailing" id="JZH-8T-HkZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QLx-x7-cWI" secondAttribute="trailing" constant="72" id="ORS-5c-LjY"/>
-                            <constraint firstItem="PAV-Oh-lYQ" firstAttribute="top" secondItem="QLx-x7-cWI" secondAttribute="bottom" constant="24" id="Oe5-vy-zEj"/>
-                            <constraint firstItem="jNt-xL-fBW" firstAttribute="baseline" secondItem="QLx-x7-cWI" secondAttribute="baseline" id="q73-T6-CZc"/>
-                            <constraint firstItem="PAV-Oh-lYQ" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="rWR-1z-gxI"/>
+                            <constraint firstItem="PAV-Oh-lYQ" firstAttribute="top" secondItem="RTQ-y6-uYX" secondAttribute="bottom" id="29P-mw-RN4"/>
+                            <constraint firstItem="PAV-Oh-lYQ" firstAttribute="leading" secondItem="RTQ-y6-uYX" secondAttribute="leading" id="78P-1h-HmW"/>
+                            <constraint firstItem="PAV-Oh-lYQ" firstAttribute="trailing" secondItem="RTQ-y6-uYX" secondAttribute="trailing" id="GSm-Vk-tpX"/>
+                            <constraint firstItem="RTQ-y6-uYX" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-7" id="XhP-9J-J9K"/>
+                            <constraint firstItem="RTQ-y6-uYX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="ewL-ce-tDW"/>
+                            <constraint firstItem="RTQ-y6-uYX" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" constant="16" id="qZr-Pq-0tB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KMJ-Qt-2Hi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072" y="326"/>
+            <point key="canvasLocation" x="1044" y="326"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="rUT-ES-jSo">
@@ -508,8 +536,8 @@
         <image name="images-1" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1kv-KR-VeL"/>
+        <segue reference="HBL-dl-kBu"/>
         <segue reference="Dj6-Hr-9dZ"/>
-        <segue reference="BfR-Bj-EyI"/>
+        <segue reference="bZu-f6-LXv"/>
     </inferredMetricsTieBreakers>
 </document>

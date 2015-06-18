@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "ProfileController.h"
+#import "PoemController.h"
 
 @interface MainViewController ()<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UISearchBarDelegate>
 
@@ -18,7 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [[ProfileController sharedInstance] loadUsersFromParse];
+    [[ProfileController sharedInstance] loadUsersFromParseWithCompletion:^(bool boolean) {
+        [[PoemController sharedInstance] poemsByWriter];
+    }];
     
     
 }

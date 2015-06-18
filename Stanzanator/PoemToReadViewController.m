@@ -21,7 +21,7 @@
     
     [[PoemController sharedInstance]removePoem:self.poem];
     [self.navigationController popToRootViewControllerAnimated:YES];
-    //[self.poem delete];
+    [self.poem deleteInBackground];
 }
 
 

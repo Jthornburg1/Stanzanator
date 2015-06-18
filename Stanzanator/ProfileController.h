@@ -12,9 +12,10 @@
 @interface ProfileController : NSObject
 
 @property (strong, nonatomic) NSArray *users;
+@property (strong, nonatomic) NSMutableArray *poemsFromAUser;
 
 + (instancetype)sharedInstance;
-- (void)loadUsersFromParse;
+- (void)loadUsersFromParseWithCompletion:(void (^)(bool boolean))completion;
 
 
 

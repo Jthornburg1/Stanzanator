@@ -138,7 +138,7 @@
 {
     UITableViewCell *cell = [UITableViewCell new];
     
-    Poem *poem = [PoemController sharedInstance].writersPoems[indexPath.row];
+    Poem *poem = [PoemController sharedInstance].poemsByWriter[indexPath.row];
     
     cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     cell.backgroundColor = [UIColor yellowColor];
@@ -149,7 +149,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return [PoemController sharedInstance].writersPoems.count;
+    return [PoemController sharedInstance].poemsByWriter.count;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -163,7 +163,7 @@
         PoemToReadViewController *viewController = [segue destinationViewController];
         NSIndexPath *path = [self.tableView indexPathForCell:sender];
         
-        Poem *poem = [PoemController sharedInstance].writersPoems[path.row];
+        Poem *poem = [PoemController sharedInstance].poemsByWriter[path.row];
         // As of now, this pushes to PTRVC but displays the wrong poem.
         [viewController updateWithPoem:poem];
     }

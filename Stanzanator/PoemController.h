@@ -8,19 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import "Poem.h"
+#include "MainViewController.h"
 
 @interface PoemController : NSObject
 
-@property (strong, nonatomic, readonly) NSArray *poems;
-@property (strong, nonatomic) NSArray *writersPoems;
+@property (strong, nonatomic) NSArray *poems;
+@property (strong, nonatomic) NSArray *poemsByWriter;
 
 + (instancetype)sharedInstance;
 - (void)addPoemWithTitle:(NSString *)title bodyText:(NSString *)text date:(NSDate *)date;
 - (void)removePoem:(Poem *)poem;
 - (void)updatePoem:(Poem *)poem;
+- (void)loadPoemsFromParse;
 
 -(void)getPoemsFromWriter:(void (^)(BOOL success))completion;
 
+-(void)writersPoemsforUser:(PFUser*)user;
 
+//- (void)poemsByWriter:(PFUser *)writer withCompletion:(void (^)(NSArray *poems))completion;
+- (NSArray *)poemsByWriter:(PFUser *)writer;
 
 @end
