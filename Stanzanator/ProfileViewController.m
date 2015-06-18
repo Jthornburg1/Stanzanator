@@ -43,9 +43,11 @@
 }
 - (void)viewWillAppear:(BOOL)animated
 {
-    [[PoemController sharedInstance] getPoemsFromWriter:^(BOOL success) {
-        [self.tableView reloadData];
-    }];
+//    [[PoemController sharedInstance] getPoemsFromWriter:^(BOOL success) {
+//        [self.tableView reloadData];
+//    }];
+    
+    [self.tableView reloadData];
     
     PFUser *user = [PFUser currentUser];
     
