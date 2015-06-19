@@ -18,6 +18,16 @@
 @end
 
 @implementation StanzaViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self updateWithPoem:self.poem];
+    
+    self.titleTextField.text = self.updatePoem.title;
+    self.poemBodyText.text = self.updatePoem.bodyText;
+    
+}
+
 - (IBAction)visitTheWebforIdeas:(id)sender {
     // Links to yahoo.com: that string will be an index of an array of strings eventually
     NSArray *URLArray = @[@"https//anncoulter.com",@"https//eonlone.com",@"https//thugkitchen.com",@"https//http://www.openbible.info/topics/m",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//"];
@@ -25,11 +35,6 @@
     // Needs to return the user to StanzaViewController
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self updateWithPoem:self.poem];
-}
 - (IBAction)titleChooserChoose:(id)sender {
     int rand = arc4random_uniform(4);
     NSArray *titleArray = @[@"Breakfast at Midnight", @"Title2", @"How to Raise Your Children",@"Just a Little Innocent Fun"];

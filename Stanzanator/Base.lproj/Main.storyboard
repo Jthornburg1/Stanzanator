@@ -392,6 +392,7 @@
                     <connections>
                         <outlet property="poemBodyText" destination="JsX-4R-F3I" id="vc9-uQ-JRi"/>
                         <outlet property="titleLabel" destination="3ii-X8-VwE" id="lIZ-2v-GrB"/>
+                        <segue destination="5wg-KE-wky" kind="show" identifier="editTapped" id="dHG-GG-CnW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1G-ys-anh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -576,8 +577,9 @@
         <image name="images-1" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="31F-qC-aA6"/>
         <segue reference="bZu-f6-LXv"/>
+        <segue reference="Dj6-Hr-9dZ"/>
+        <segue reference="dHG-GG-CnW"/>
         <segue reference="izb-TF-rN2"/>
         <segue reference="BfR-Bj-EyI"/>
     </inferredMetricsTieBreakers>

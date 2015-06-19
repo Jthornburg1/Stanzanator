@@ -42,8 +42,8 @@
         }];
     }
         else {
-            self.editButton.enabled = NO;
-            self.uploadPhotoButton.enabled = NO;
+            self.editButton.hidden = YES;
+            self.uploadPhotoButton.hidden = YES;
             [self updateProfileForNewUser:self.userProfile];
         }
 }
