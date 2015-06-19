@@ -41,6 +41,7 @@
 		D2932AE41B1CD34500531AF0 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2932AE31B1CD34500531AF0 /* Accounts.framework */; };
 		D2932AE61B1CD34E00531AF0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2932AE51B1CD34E00531AF0 /* Social.framework */; };
 		D2932B5F1B1E5B5F00531AF0 /* PoemToReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932B5E1B1E5B5F00531AF0 /* PoemToReadViewController.m */; };
+		D2DBC0FB1B3369840079C15A /* CustomCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DBC0FA1B3369840079C15A /* CustomCellTableViewCell.m */; };
 		D2FA96C21B31F8D900496731 /* PoemByWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D2FA96C11B31F8D900496731 /* PoemByWriter.m */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,8 @@
 		D2932AE51B1CD34E00531AF0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		D2932B5D1B1E5B5F00531AF0 /* PoemToReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemToReadViewController.h; sourceTree = "<group>"; };
 		D2932B5E1B1E5B5F00531AF0 /* PoemToReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemToReadViewController.m; sourceTree = "<group>"; };
+		D2DBC0F91B3369840079C15A /* CustomCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellTableViewCell.h; sourceTree = "<group>"; };
+		D2DBC0FA1B3369840079C15A /* CustomCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellTableViewCell.m; sourceTree = "<group>"; };
 		D2FA96C01B31F8D900496731 /* PoemByWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemByWriter.h; sourceTree = "<group>"; };
 		D2FA96C11B31F8D900496731 /* PoemByWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemByWriter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +173,8 @@
 				D2932A041B1A15B500531AF0 /* MainViewController.h */,
 				D2932A051B1A15B500531AF0 /* MainViewController.m */,
 				D2932A071B1A15B500531AF0 /* Main.storyboard */,
+				D2DBC0F91B3369840079C15A /* CustomCellTableViewCell.h */,
+				D2DBC0FA1B3369840079C15A /* CustomCellTableViewCell.m */,
 				D2932B5D1B1E5B5F00531AF0 /* PoemToReadViewController.h */,
 				D2932B5E1B1E5B5F00531AF0 /* PoemToReadViewController.m */,
 				D2932AB41B1CCDD700531AF0 /* Poem.h */,
@@ -352,6 +357,7 @@
 				D2932A281B1A283C00531AF0 /* StanzaViewController.m in Sources */,
 				D2932A061B1A15B500531AF0 /* MainViewController.m in Sources */,
 				D2FA96C21B31F8D900496731 /* PoemByWriter.m in Sources */,
+				D2DBC0FB1B3369840079C15A /* CustomCellTableViewCell.m in Sources */,
 				D2932A031B1A15B500531AF0 /* AppDelegate.m in Sources */,
 				D2932A371B1A436300531AF0 /* TitleTableTableViewController.m in Sources */,
 				D2932B5F1B1E5B5F00531AF0 /* PoemToReadViewController.m in Sources */,

@@ -513,10 +513,24 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="cellID" id="AaY-X7-Gf8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="cellID" textLabel="lbH-IZ-Gby" detailTextLabel="62Q-Ia-Pob" style="IBUITableViewCellStyleValue1" id="AaY-X7-Gf8">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AaY-X7-Gf8" id="zNr-8p-pIb">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lbH-IZ-Gby">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="62Q-Ia-Pob">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.98823535439999999" green="0.96862751250000001" blue="0.96470594409999999" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
@@ -531,6 +545,7 @@
                     </tableView>
                     <connections>
                         <outlet property="tableView" destination="jU4-6f-5sR" id="Eat-Jo-aO0"/>
+                        <segue destination="HGX-3C-oqi" kind="show" identifier="showProfile" id="izb-TF-rN2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gmc-WK-tDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -562,7 +577,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="31F-qC-aA6"/>
-        <segue reference="HBL-dl-kBu"/>
-        <segue reference="1kv-KR-VeL"/>
+        <segue reference="bZu-f6-LXv"/>
+        <segue reference="izb-TF-rN2"/>
+        <segue reference="BfR-Bj-EyI"/>
     </inferredMetricsTieBreakers>
 </document>

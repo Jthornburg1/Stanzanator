@@ -11,4 +11,7 @@
 
 @interface ProfileViewController : UIViewController
 
+- (void)updateProfileForNewUser:(PFUser *)user;
+@property (nonatomic, strong)PFUser *userProfile;
+
 @end

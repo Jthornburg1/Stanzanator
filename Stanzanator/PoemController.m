@@ -50,11 +50,17 @@
     poem.title = title;
     poem.bodyText = text;
     poem.timestamp = date;
-    [poem setObject:[PFUser currentUser] forKey:@"writersPoems"];
+    poem.writerOfPoem = [PFUser currentUser];
+
+   // [poem setObject:[PFUser currentUser] forKey:@"writersPoems"];
 //    [PFUser currentUser][@"Poems"] = poem;
     
     [poem pinInBackground];
     [poem saveInBackground];
+    
+    PFUser *user = [PFUser currentUser];
+    PFRelation *relation = [user relationForKey:@"Poem"];
+    
 }
 - (void)removePoem:(Poem *)poem
 {

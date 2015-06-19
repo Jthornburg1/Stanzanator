@@ -10,6 +10,8 @@
 #import "StanzaViewController.h"
 #import "PoemController.h"
 
+static NSString * const isPrivateNotification = @"isPrivateNotification";
+
 @interface PoemToReadViewController : UIViewController
 
 

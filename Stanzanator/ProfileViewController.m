@@ -25,21 +25,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.inEditingMode = NO;
     
-    self.nameText.text = [PFUser currentUser].username;
-    
-    PFUser *user = [PFUser new];
-    
-    
-    if ([PFUser currentUser]) {
-        self.editButton.enabled = YES;
-        self.uploadPhotoButton.enabled = YES;
-    }else{
-        self.editButton.enabled = NO;
-        self.uploadPhotoButton.enabled = NO;
+    if (self.userProfile[@"username"] == nil) {
+        
+        PFUser *user = [PFUser currentUser];
+        self.nameText.text = user.username;
+        self.ageText.text = user[@"age"];
+        self.locationText.text = user[@"location"];
+        PFFile *photoFile = user[@"photo"];
+        [photoFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.image.image = [UIImage imageWithData:data];
+            });
+        }];
     }
+        else {
+            self.editButton.enabled = NO;
+            self.uploadPhotoButton.enabled = NO;
+            [self updateProfileForNewUser:self.userProfile];
+        }
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -48,9 +54,24 @@
 //    }];
     
     [self.tableView reloadData];
+//    
+//    PFUser *user = [PFUser currentUser];
+//    
+//    self.ageText.text = user[@"age"];
+//    self.locationText.text = user[@"location"];
+//    PFFile *photoFile = user[@"photo"];
+//    [photoFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            self.image.image = [UIImage imageWithData:data];
+//        });
+//    }];
+}
+
+- (void)updateProfileForNewUser:(PFUser *)user
+{
     
-    PFUser *user = [PFUser currentUser];
-    
+    self.nameText.text = user.username;
     self.ageText.text = user[@"age"];
     self.locationText.text = user[@"location"];
     PFFile *photoFile = user[@"photo"];
@@ -60,7 +81,9 @@
             self.image.image = [UIImage imageWithData:data];
         });
     }];
+
 }
+
 
 
 - (IBAction)editProfileButtonTapped:(id)sender {

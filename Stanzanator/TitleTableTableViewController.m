@@ -11,6 +11,7 @@
 #import "PoemController.h"
 #import "PoemToReadViewController.h"
 #import "ProfileController.h"
+#import "ProfileViewController.h"
 
 @interface TitleTableTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -38,6 +39,8 @@
 -(void)viewWillAppear:(BOOL)animated{
     [self.tableView reloadData];
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -56,19 +59,42 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     
     Poem *poem = [PoemController sharedInstance].poems[indexPath.row];
+    PFUser *user = poem.writerOfPoem;
+    
     cell.textLabel.text = poem.title;
+    cell.detailTextLabel.text = user[@"username"];
+    
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:@"showProfile" sender:[tableView cellForRowAtIndexPath:indexPath]];
+    
+    
+}
+
+- (void)respondToNotification:(NSNotification *)notification
+{
+    
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  
-    PoemToReadViewController *viewController = [segue destinationViewController];
     
-    NSIndexPath *path = [self.tableView indexPathForCell:sender];
+    if ([[segue identifier] isEqualToString:@"showProfile"]) {
+        ProfileViewController *profileViewController = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        Poem *poem = [PoemController sharedInstance].poems[indexPath.row];
+        PFUser *user = poem.writerOfPoem;
+        profileViewController.userProfile = user;
+    } else {
+                PoemToReadViewController *viewController = [segue destinationViewController];
+        
+                NSIndexPath *path = [self.tableView indexPathForCell:sender];
     
-    Poem *poem = [PoemController sharedInstance].poems[path.row];
-    [viewController updateWithPoem:poem];
+                Poem *poem = [PoemController sharedInstance].poems[path.row];
     
+                [viewController updateWithPoem:poem];
+    }
 }
 
 
