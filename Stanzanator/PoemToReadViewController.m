@@ -7,6 +7,7 @@
 //
 
 #import "PoemToReadViewController.h"
+#import "StanzaViewController.h"
 
 @interface PoemToReadViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -45,11 +46,29 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)editButtonTapped:(id)sender {
+    [self performSegueWithIdentifier:@"editTapped" sender:sender];
+    self.titleLabel.text = @"";
+    self.poemBodyText.text = @"";
+    [[PoemController sharedInstance]removePoem:self.poem];
+    [self.poem deleteInBackground];
+
+
 }
 - (void)updateWithPoem:(Poem *)poem
 {
     self.poem = poem;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"editTapped"]) {
+        StanzaViewController *stanzaViewController = segue.destinationViewController;
+        stanzaViewController.updatePoem = self.poem;
+        
+        
+        
+    }
 }
 
 /*

@@ -24,12 +24,16 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.yahoo.com"]];
     // Needs to return the user to StanzaViewController
 }
-
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
-    
     [self updateWithPoem:self.poem];
+    
+    self.titleTextField.text = self.updatePoem.title;
+    self.poemBodyText.text = self.updatePoem.bodyText;
+    
 }
+
+
 - (IBAction)titleChooserChoose:(id)sender {
     int rand = arc4random_uniform(4);
     NSArray *titleArray = @[@"Breakfast at Midnight", @"Title2", @"How to Raise Your Children",@"Just a Little Innocent Fun"];

@@ -392,6 +392,7 @@
                     <connections>
                         <outlet property="poemBodyText" destination="JsX-4R-F3I" id="vc9-uQ-JRi"/>
                         <outlet property="titleLabel" destination="3ii-X8-VwE" id="lIZ-2v-GrB"/>
+                        <segue destination="5wg-KE-wky" kind="show" identifier="editTapped" id="wcd-ie-fhp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1G-ys-anh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -577,8 +578,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="31F-qC-aA6"/>
-        <segue reference="bZu-f6-LXv"/>
         <segue reference="izb-TF-rN2"/>
+        <segue reference="bZu-f6-LXv"/>
         <segue reference="BfR-Bj-EyI"/>
+        <segue reference="wcd-ie-fhp"/>
     </inferredMetricsTieBreakers>
 </document>
