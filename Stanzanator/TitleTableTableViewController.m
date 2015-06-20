@@ -15,6 +15,9 @@
 
 @interface TitleTableTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, strong) NSArray *allPoems;
+@property (nonatomic, strong) NSMutableArray *writerPoems;
+@property (nonatomic, strong) NSArray *allWriters;
 
 @end
 

@@ -12,8 +12,6 @@
 
 @interface StanzaViewController : UIViewController
 
-@property (nonatomic, strong)Poem *updatePoem;
-
 - (void)updateWithPoem:(Poem *)poem;
 
 @end

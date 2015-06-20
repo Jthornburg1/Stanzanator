@@ -7,7 +7,6 @@
 //
 
 #import "PoemToReadViewController.h"
-#import "StanzaViewController.h"
 
 @interface PoemToReadViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -47,22 +46,12 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)editButtonTapped:(id)sender {
-    [self performSegueWithIdentifier:@"editTapped" sender:sender];
-    
 }
 - (void)updateWithPoem:(Poem *)poem
 {
     self.poem = poem;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([[segue identifier] isEqualToString:@"editTapped"]) {
-        StanzaViewController *stanzaViewController = segue.destinationViewController;
-        stanzaViewController.updatePoem = self.poem;
-        
-    
-}
-}
 /*
 #pragma mark - Navigation
 
