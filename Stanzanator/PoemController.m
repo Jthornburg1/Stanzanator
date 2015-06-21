@@ -59,10 +59,7 @@
     
     [poem pinInBackground];
     [poem saveInBackground];
-    
-    PFUser *user = [PFUser currentUser];
-    PFRelation *relation = [user relationForKey:@"Poem"];
-    
+        
 
 }
 - (void)removePoem:(Poem *)poem
@@ -78,49 +75,19 @@
 
 
 
-- (NSArray *)poemsByWriter:(PFUser *)writer
-//       withCompletion:(void (^)(NSArray *poems))completion
+- (void)poemsByWriter:(PFUser *)writer
+       withCompletion:(void (^)(NSArray *poems))completion
 {
  
     PFQuery *poemQuery = [Poem query];
-    [poemQuery whereKey:@"writerOfPoem" equalTo:writer];
+    [poemQuery whereKey:@"writersPoems" equalTo:writer];
     [poemQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.poemsByWriter = objects;
-//        completion(objects);
+        completion(objects);
     }];
-//    PFQuery *userQuery = [PFUser query];
-//    
-//    for (PFUser *user in [userQuery findObjects]) {
-//        PFQuery *query = [PFQuery queryWithClassName:@"Poem"];
-//        
-//        [query whereKey:@"writersPoems" equalTo:user];
-//        
-//    }
-    return self.poemsByWriter;
 }
 
     
-////    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-////        self.poemsByWriter = objects;
-////    }];
-//    
-//    return [query findObjects];
-//}
-//
-//-(void)getPoemsFromWriter:(void (^)(BOOL success))completion
-//{
-//    PFQuery *query = [Poem query];
-//    
-//    [query whereKey:@"writersPoems" equalTo:[PFUser currentUser]];
-//    
-//    
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        self.poemsByWriter = objects;
-//        completion(YES);
-//    }];
-//    
-//    
-//}
 
 -(void)writersPoemsforUser:(PFUser*)user
 {
@@ -137,23 +104,8 @@
 }
 
 
-//-(void)getPoemsFromUser:(PFUser *)user
-//{
-//    NSArray *arrayOfPoems = user[@"Poems"];
-//    
-//    for (Poem *poem in arrayOfPoems) {
-//        PFQuery *query = [Poem query];
-//        query whereKey:poem.objectId equalTo:
-//    }
-//    
-//
-//    
-//}
 
-//- (NSArray *)dictionaryPoems:(NSArray *)poems
-//{
-//    
-//}
+
 
 
 

@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIButton *uploadPhotoButton;
 @property (nonatomic, readwrite) BOOL inEditingMode;
+
+@property (nonatomic, strong) NSArray *poems;
 @end
 
 @implementation ProfileViewController
@@ -52,6 +54,11 @@
 //    [[PoemController sharedInstance] getPoemsFromWriter:^(BOOL success) {
 //        [self.tableView reloadData];
 //    }];
+    
+    [[PoemController sharedInstance] poemsByWriter:[PFUser currentUser] withCompletion:^(NSArray *poems) {
+        self.poems = poems;
+        [self.tableView reloadData];
+    }];
     
     [self.tableView reloadData];
 //    
@@ -163,10 +170,10 @@
 {
     UITableViewCell *cell = [UITableViewCell new];
     
-    Poem *poem = [PoemController sharedInstance].poemsByWriter[indexPath.row];
+    Poem *poem = self.poems[indexPath.row];
     
     cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
-    cell.backgroundColor = [UIColor yellowColor];
+    cell.backgroundColor = [UIColor cyanColor];
     cell.textLabel.text = poem.title;
     
     return cell;
@@ -175,6 +182,7 @@
 {
     
     return [PoemController sharedInstance].poemsByWriter.count;
+    //return self.poems.count;
 }
 
 - (void)didReceiveMemoryWarning {

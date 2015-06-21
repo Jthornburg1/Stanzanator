@@ -7,7 +7,6 @@
 //
 
 #import "TitleTableTableViewController.h"
-#import "Poem.h"
 #import "PoemController.h"
 #import "PoemToReadViewController.h"
 #import "ProfileController.h"
@@ -15,9 +14,6 @@
 
 @interface TitleTableTableViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSArray *allPoems;
-@property (nonatomic, strong) NSMutableArray *writerPoems;
-@property (nonatomic, strong) NSArray *allWriters;
 
 @end
 
@@ -32,6 +28,13 @@
             [self.tableView reloadData];
         
     }];
+    self.poem.isPrivate = NO;
+    if (self.poem.isPrivate == YES) {
+        CustomCellTableViewCell *cell = [CustomCellTableViewCell new];
+        cell.detailTextLabel.text = @"private";
+        cell.userInteractionEnabled = NO;
+                                
+    }
 }
 
 
@@ -75,7 +78,9 @@
 
 - (void)respondToNotification:(NSNotification *)notification
 {
-    
+    NSIndexPath *indexPath = [NSIndexPath new];
+    Poem *poem = [PoemController sharedInstance].poems[indexPath.row];
+    poem.isPrivate = YES;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -95,6 +100,11 @@
     
                 [viewController updateWithPoem:poem];
     }
+//    NSIndexPath *indexPath = [NSIndexPath new];
+//    if ([PoemController sharedInstance].poems[indexPath.row].isPrivate == YES) {
+//        //here is where either an alert is sprung and no segue is permitted or the detailTextLabel.text is changed to private and no segue is permitted.
+//        NSLog(@"PRIVATE");
+//    } // or segue is performed.
 }
 
 

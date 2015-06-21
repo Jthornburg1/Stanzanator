@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Poem.h"
+#import "CustomCellTableViewCell.h"
+
+
 
 @interface TitleTableTableViewController : UITableViewController
 //@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) Poem *poem;
 
 @end

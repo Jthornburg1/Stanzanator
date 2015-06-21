@@ -21,11 +21,9 @@
 - (void)updatePoem:(Poem *)poem;
 - (void)loadPoemsFromParse;
 
--(void)getPoemsFromWriter:(void (^)(BOOL success))completion;
 
 -(void)writersPoemsforUser:(PFUser*)user;
 
-//- (void)poemsByWriter:(PFUser *)writer withCompletion:(void (^)(NSArray *poems))completion;
-- (NSArray *)poemsByWriter:(PFUser *)writer;
+- (void)poemsByWriter:(PFUser *)writer withCompletion:(void (^)(NSArray *poems))completion;
 
 @end

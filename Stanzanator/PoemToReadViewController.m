@@ -12,7 +12,6 @@
 @interface PoemToReadViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *poemBodyText;
-@property (nonatomic) BOOL isPrivate;
 
 @end
 
@@ -31,15 +30,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.titleLabel.text = self.poem.title;
-    self.poemBodyText.text = self.poem.bodyText;
-    self.isPrivate = NO;
-    
+    self.poemBodyText.text = self.poem.bodyText;    
 }
-- (IBAction)makePrivatButtonTapped:(id)sender {
-    self.isPrivate = YES;
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:isPrivateNotification object:nil];
-}
+
+
 
 
 - (void)didReceiveMemoryWarning {

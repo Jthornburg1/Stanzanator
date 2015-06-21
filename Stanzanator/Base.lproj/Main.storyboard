@@ -345,15 +345,6 @@
                                     <action selector="MakePrivateButtonTapped:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="XR8-qk-BUO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gac-oP-fo9">
-                                <rect key="frame" x="285" y="550" width="30" height="30"/>
-                                <state key="normal" title="Edit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="editButtonTapped:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="rXO-hU-agx"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vE-ef-hlx">
                                 <rect key="frame" x="510" y="550" width="44" height="30"/>
                                 <state key="normal" title="Delete">
@@ -363,30 +354,28 @@
                                     <action selector="deletePoem:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="mtu-2X-4Rr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiD-jU-xhH">
-                                <rect key="frame" x="46" y="550" width="90" height="30"/>
-                                <state key="normal" title="Make Private">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gac-oP-fo9">
+                                <rect key="frame" x="46" y="550" width="30" height="30"/>
+                                <state key="normal" title="Edit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="makePrivatButtonTapped:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="e8h-x0-Zf0"/>
+                                    <action selector="editButtonTapped:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="rXO-hU-agx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Gac-oP-fo9" firstAttribute="leading" secondItem="i1L-3y-RWT" secondAttribute="leading" id="2r1-wS-SwE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4vE-ef-hlx" secondAttribute="trailing" constant="30" id="NBF-Pf-nAb"/>
                             <constraint firstItem="3ii-X8-VwE" firstAttribute="centerX" secondItem="JsX-4R-F3I" secondAttribute="centerX" constant="-7.5" id="PR2-u3-pLT"/>
                             <constraint firstAttribute="centerX" secondItem="3ii-X8-VwE" secondAttribute="centerX" id="QAL-6N-re1"/>
                             <constraint firstItem="JsX-4R-F3I" firstAttribute="top" secondItem="3ii-X8-VwE" secondAttribute="bottom" constant="40" id="Rrs-TH-IJR"/>
-                            <constraint firstItem="JsX-4R-F3I" firstAttribute="centerX" secondItem="Gac-oP-fo9" secondAttribute="centerX" constant="7.5" id="Se1-5N-gPb"/>
                             <constraint firstItem="JsX-4R-F3I" firstAttribute="centerX" secondItem="3ii-X8-VwE" secondAttribute="centerX" constant="7.5" id="TwL-5k-COj"/>
-                            <constraint firstItem="Gac-oP-fo9" firstAttribute="centerY" secondItem="TiD-jU-xhH" secondAttribute="centerY" id="Xzu-hL-QQb"/>
-                            <constraint firstItem="TiD-jU-xhH" firstAttribute="leading" secondItem="Fle-Uf-UqP" secondAttribute="leadingMargin" constant="30" id="hGR-Xz-rQU"/>
                             <constraint firstItem="fv0-gD-ZGa" firstAttribute="top" secondItem="4vE-ef-hlx" secondAttribute="bottom" constant="20" id="kfv-98-0W0"/>
                             <constraint firstItem="3ii-X8-VwE" firstAttribute="top" secondItem="6fc-BN-7FJ" secondAttribute="bottom" constant="27" id="koZ-5o-yhp"/>
                             <constraint firstItem="i1L-3y-RWT" firstAttribute="leading" secondItem="Fle-Uf-UqP" secondAttribute="leadingMargin" constant="30" id="nIJ-k6-9D4"/>
-                            <constraint firstItem="4vE-ef-hlx" firstAttribute="centerY" secondItem="Gac-oP-fo9" secondAttribute="centerY" id="pU4-VX-n3h"/>
+                            <constraint firstItem="Gac-oP-fo9" firstAttribute="baseline" secondItem="4vE-ef-hlx" secondAttribute="baseline" id="qSt-hw-TxK"/>
                         </constraints>
                     </view>
                     <connections>
@@ -514,7 +503,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="cellID" textLabel="lbH-IZ-Gby" detailTextLabel="62Q-Ia-Pob" style="IBUITableViewCellStyleValue1" id="AaY-X7-Gf8">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="cellID" textLabel="lbH-IZ-Gby" detailTextLabel="62Q-Ia-Pob" style="IBUITableViewCellStyleValue1" id="AaY-X7-Gf8" customClass="CustomCellTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AaY-X7-Gf8" id="zNr-8p-pIb">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -535,7 +524,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.98823535439999999" green="0.96862751250000001" blue="0.96470594409999999" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
-                                    <segue destination="6nE-ay-RPZ" kind="show" id="bZu-f6-LXv"/>
+                                    <segue destination="6nE-ay-RPZ" kind="show" identifier="showPoem" id="bZu-f6-LXv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
