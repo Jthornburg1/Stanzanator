@@ -186,7 +186,6 @@
         NSIndexPath *path = [self.tableView indexPathForCell:sender];
         
         Poem *poem = [PoemController sharedInstance].poemsByWriter[path.row];
-        // As of now, this pushes to PTRVC but displays the wrong poem.
         [viewController updateWithPoem:poem];
     }
 }

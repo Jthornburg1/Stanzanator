@@ -16,7 +16,7 @@
 @property (strong, nonatomic) NSArray *poemsByWriter;
 
 + (instancetype)sharedInstance;
-- (void)addPoemWithTitle:(NSString *)title bodyText:(NSString *)text date:(NSDate *)date private:(BOOL)privateSet;
+- (Poem *)addPoemWithTitle:(NSString *)title bodyText:(NSString *)text date:(NSDate *)date private:(BOOL)privateSet;
 - (void)removePoem:(Poem *)poem;
 - (void)updatePoem:(Poem *)poem;
 - (void)loadPoemsFromParse;

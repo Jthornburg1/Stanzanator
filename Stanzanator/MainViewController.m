@@ -10,6 +10,7 @@
 #import "ProfileViewController.h"
 #import "PoemController.h"
 #import "ProfileController.h"
+#import "StanzaViewController.h"
 
 @interface MainViewController ()<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UISearchBarDelegate>
 
@@ -83,6 +84,13 @@
         ProfileViewController *profileViewController = [segue destinationViewController];
 
         profileViewController.userProfile = user;
+    }
+    
+    if ([segue.identifier isEqualToString:@"toWrite"])
+    {
+        StanzaViewController *stanzaVC = [segue destinationViewController];
+        
+        [stanzaVC updateWithPoem:[[PoemController sharedInstance] addPoemWithTitle:@"" bodyText:@"" date:[NSDate date] private:NO]];
     }
 }
 

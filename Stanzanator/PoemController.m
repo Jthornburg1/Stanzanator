@@ -43,7 +43,7 @@
 //    [query fromLocalDatastore];
 //    return [query findObjects];
 //}
-- (void)addPoemWithTitle:(NSString *)title bodyText:(NSString *)text date:(NSDate *)date private:(BOOL)privateSet
+- (Poem *)addPoemWithTitle:(NSString *)title bodyText:(NSString *)text date:(NSDate *)date private:(BOOL)privateSet
 {
     Poem *poem = [Poem object];
     
@@ -61,9 +61,11 @@
     
     [poem pinInBackground];
     [poem saveInBackground];
-        
-
+    
+    return poem;
 }
+
+
 - (void)removePoem:(Poem *)poem
 {
     [poem unpinInBackground];

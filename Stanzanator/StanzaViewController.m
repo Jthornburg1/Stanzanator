@@ -27,7 +27,7 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     [self updateWithPoem:self.poem];
-    self.poem.isPrivate = FALSE;
+    self.poem.isPrivate = NO;
     
     self.titleTextField.text = self.updatePoem.title;
     self.poemBodyText.text = self.updatePoem.bodyText;
@@ -46,7 +46,13 @@
 }
 
 - (IBAction)makePrivateButtonTapped:(id)sender {
-    self.poem.isPrivate = TRUE;
+    
+    self.poem.isPrivate = !self.poem.isPrivate;
+    if (self.poem.isPrivate) {
+        self.view.backgroundColor = [UIColor redColor];
+    } else {
+        self.view.backgroundColor = [UIColor whiteColor];
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -60,6 +66,9 @@
     self.poem = poem;
     self.titleTextField.text = poem.title;
     self.poemBodyText.text = poem.bodyText;
+    self.poem.isPrivate = poem.isPrivate;
+    [self.poem saveInBackground];
+    [self.poem pinInBackground];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,14 +76,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

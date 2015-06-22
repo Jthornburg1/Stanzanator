@@ -29,12 +29,12 @@
         
     }];
     self.poem.isPrivate = NO;
-    if (self.poem.isPrivate == YES) {
-        CustomCellTableViewCell *cell = [CustomCellTableViewCell new];
-        cell.detailTextLabel.text = @"private";
-        cell.userInteractionEnabled = NO;
-                                
-    }
+//    if (self.poem.isPrivate == YES) {
+//        CustomCellTableViewCell *cell = [CustomCellTableViewCell new];
+//        cell.detailTextLabel.text = @"private";
+//        cell.userInteractionEnabled = NO;
+//    
+//    }
 }
 
 
@@ -66,16 +66,16 @@
     
     cell.textLabel.text = poem.title;
     
-    if ((poem.isPrivate == NO)) {
-        cell.detailTextLabel.text = user[@"username"];
-        cell.userInteractionEnabled = YES;
-    }else{
+    if (poem.isPrivate) {
         cell.detailTextLabel.text = @"private";
         if (poem.writerOfPoem == [PFUser currentUser]) {
             cell.userInteractionEnabled = YES;
-        }else{
+        } else {
             cell.userInteractionEnabled = NO;
         }
+    } else {
+        cell.detailTextLabel.text = user[@"username"];
+        cell.userInteractionEnabled = YES;
     }
     
     
@@ -88,12 +88,7 @@
     
 }
 
-//- (void)respondToNotification:(NSNotification *)notification
-//{
-//    NSIndexPath *indexPath = [NSIndexPath new];
-//    Poem *poem = [PoemController sharedInstance].poems[indexPath.row];
-//    poem.isPrivate = YES;
-//}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
