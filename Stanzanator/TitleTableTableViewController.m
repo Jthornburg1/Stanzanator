@@ -65,7 +65,19 @@
     PFUser *user = poem.writerOfPoem;
     
     cell.textLabel.text = poem.title;
-    cell.detailTextLabel.text = user[@"username"];
+    
+    if ((poem.isPrivate == NO)) {
+        cell.detailTextLabel.text = user[@"username"];
+        cell.userInteractionEnabled = YES;
+    }else{
+        cell.detailTextLabel.text = @"private";
+        if (poem.writerOfPoem == [PFUser currentUser]) {
+            cell.userInteractionEnabled = YES;
+        }else{
+            cell.userInteractionEnabled = NO;
+        }
+    }
+    
     
     return cell;
 }
@@ -76,12 +88,12 @@
     
 }
 
-- (void)respondToNotification:(NSNotification *)notification
-{
-    NSIndexPath *indexPath = [NSIndexPath new];
-    Poem *poem = [PoemController sharedInstance].poems[indexPath.row];
-    poem.isPrivate = YES;
-}
+//- (void)respondToNotification:(NSNotification *)notification
+//{
+//    NSIndexPath *indexPath = [NSIndexPath new];
+//    Poem *poem = [PoemController sharedInstance].poems[indexPath.row];
+//    poem.isPrivate = YES;
+//}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     

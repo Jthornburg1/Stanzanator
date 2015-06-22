@@ -27,6 +27,7 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     [self updateWithPoem:self.poem];
+    self.poem.isPrivate = FALSE;
     
     self.titleTextField.text = self.updatePoem.title;
     self.poemBodyText.text = self.updatePoem.bodyText;
@@ -35,17 +36,17 @@
 
 
 - (IBAction)titleChooserChoose:(id)sender {
-    int rand = arc4random_uniform(4);
-    NSArray *titleArray = @[@"Breakfast at Midnight", @"Title2", @"How to Raise Your Children",@"Just a Little Innocent Fun"];
+    int rand = arc4random_uniform(9);
+    NSArray *titleArray = @[@"Breakfast at Midnight", @"Title2", @"How to Raise Your Children",@"Just a Little Innocent Fun",@"She Presents Herself", @"He Presents Himself"];
     self.titleTextField.text = titleArray[rand];
 }
 - (IBAction)doneButtonTapped:(id)sender {
-    
-    [[PoemController sharedInstance] addPoemWithTitle:self.titleTextField.text bodyText:self.poemBodyText.text date:[NSDate date]];
+    [[PoemController sharedInstance]addPoemWithTitle:self.titleTextField.text bodyText:self.poemBodyText.text date:[NSDate date] private:self.poem.isPrivate];
+    //[[PoemController sharedInstance] addPoemWithTitle:self.titleTextField.text bodyText:self.poemBodyText.text date:[NSDate date]];
 }
 
 - (IBAction)makePrivateButtonTapped:(id)sender {
-
+    self.poem.isPrivate = TRUE;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

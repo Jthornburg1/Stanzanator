@@ -10,6 +10,8 @@
 #import "StanzaViewController.h"
 
 @interface PoemToReadViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *poemBodyText;
 
@@ -30,8 +32,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.titleLabel.text = self.poem.title;
-    self.poemBodyText.text = self.poem.bodyText;    
+    self.poemBodyText.text = self.poem.bodyText;
+    
+    if (self.poem.writerOfPoem == [PFUser currentUser]) {
+        self.editButton.enabled = YES;
+        self.deleteButton.enabled = YES;
+    }else{
+        self.editButton.hidden = YES;
+        self.deleteButton.hidden = YES;
+    }
 }
+
+
 
 
 
@@ -59,20 +71,9 @@
     if ([[segue identifier] isEqualToString:@"editTapped"]) {
         StanzaViewController *stanzaViewController = segue.destinationViewController;
         stanzaViewController.updatePoem = self.poem;
-        
-        
-        
     }
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

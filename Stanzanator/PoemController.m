@@ -43,13 +43,15 @@
 //    [query fromLocalDatastore];
 //    return [query findObjects];
 //}
-- (void)addPoemWithTitle:(NSString *)title bodyText:(NSString *)text date:(NSDate *)date
+- (void)addPoemWithTitle:(NSString *)title bodyText:(NSString *)text date:(NSDate *)date private:(BOOL)privateSet
 {
     Poem *poem = [Poem object];
     
     poem.title = title;
     poem.bodyText = text;
     poem.timestamp = date;
+    poem.isPrivate = privateSet;
+    
     
     [poem setObject:[PFUser currentUser] forKey:@"writersPoems"];
     poem.writerOfPoem = [PFUser currentUser];

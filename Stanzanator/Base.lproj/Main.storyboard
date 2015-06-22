@@ -80,7 +80,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="uTp-62-cNx"/>
                                     <barButtonItem title="Profile" id="Fao-10-9Gv">
                                         <connections>
-                                            <segue destination="HGX-3C-oqi" kind="show" id="l1Y-G6-Wtn"/>
+                                            <segue destination="HGX-3C-oqi" kind="show" identifier="mainToProfile" id="EXI-S9-qrJ"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="waI-3v-0zw"/>
@@ -207,7 +207,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kWC-eP-dxs" id="6Kh-qW-ncI">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.97254908080000002" green="0.96862751250000001" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="backgroundColor" red="0.79607850313186646" green="0.91372555494308472" blue="0.56470590829849243" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
                                             <segue destination="6nE-ay-RPZ" kind="show" identifier="myPoem" id="1kv-KR-VeL"/>
                                         </connections>
@@ -379,6 +379,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deleteButton" destination="4vE-ef-hlx" id="ciy-WM-NGy"/>
+                        <outlet property="editButton" destination="Gac-oP-fo9" id="SCB-LU-ndv"/>
                         <outlet property="poemBodyText" destination="JsX-4R-F3I" id="vc9-uQ-JRi"/>
                         <outlet property="titleLabel" destination="3ii-X8-VwE" id="lIZ-2v-GrB"/>
                         <segue destination="5wg-KE-wky" kind="show" identifier="editTapped" id="wcd-ie-fhp"/>
@@ -436,7 +438,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="doneButtonTapped:" destination="5wg-KE-wky" eventType="touchUpInside" id="9fj-My-GFw"/>
                                     <action selector="makePrivateButtonTapped:" destination="5wg-KE-wky" eventType="touchUpInside" id="WXv-ZD-cFf"/>
                                 </connections>
                             </button>
@@ -566,10 +567,10 @@
         <image name="images-1" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="31F-qC-aA6"/>
-        <segue reference="izb-TF-rN2"/>
-        <segue reference="bZu-f6-LXv"/>
-        <segue reference="BfR-Bj-EyI"/>
+        <segue reference="Dj6-Hr-9dZ"/>
         <segue reference="wcd-ie-fhp"/>
+        <segue reference="bZu-f6-LXv"/>
+        <segue reference="EXI-S9-qrJ"/>
+        <segue reference="HBL-dl-kBu"/>
     </inferredMetricsTieBreakers>
 </document>

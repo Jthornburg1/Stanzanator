@@ -29,7 +29,7 @@
     [super viewDidLoad];
     self.inEditingMode = NO;
     
-    if (self.userProfile[@"username"] == nil) {
+    if (self.userProfile == [PFUser currentUser]) {
         
         PFUser *user = [PFUser currentUser];
         self.nameText.text = user.username;
@@ -46,33 +46,20 @@
         else {
             self.editButton.enabled = NO;
             self.uploadPhotoButton.enabled = NO;
+            self.nameText.userInteractionEnabled = NO;
+            self.ageText.userInteractionEnabled = NO;
+            self.locationText.userInteractionEnabled = NO;
             [self updateProfileForNewUser:self.userProfile];
         }
 }
 - (void)viewWillAppear:(BOOL)animated
 {
-//    [[PoemController sharedInstance] getPoemsFromWriter:^(BOOL success) {
-//        [self.tableView reloadData];
-//    }];
-    
-    [[PoemController sharedInstance] poemsByWriter:[PFUser currentUser] withCompletion:^(NSArray *poems) {
+    [[PoemController sharedInstance] poemsByWriter:self.userProfile withCompletion:^(NSArray *poems) {
         self.poems = poems;
         [self.tableView reloadData];
     }];
     
     [self.tableView reloadData];
-//    
-//    PFUser *user = [PFUser currentUser];
-//    
-//    self.ageText.text = user[@"age"];
-//    self.locationText.text = user[@"location"];
-//    PFFile *photoFile = user[@"photo"];
-//    [photoFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-//        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            self.image.image = [UIImage imageWithData:data];
-//        });
-//    }];
 }
 
 - (void)updateProfileForNewUser:(PFUser *)user
@@ -172,8 +159,10 @@
     
     Poem *poem = self.poems[indexPath.row];
     
+    PFUser *user = self.userProfile;
+    
     cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
-    cell.backgroundColor = [UIColor cyanColor];
+    //cell.backgroundColor = [UIColor blueColor];
     cell.textLabel.text = poem.title;
     
     return cell;

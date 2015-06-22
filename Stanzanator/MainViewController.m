@@ -7,8 +7,9 @@
 //
 
 #import "MainViewController.h"
-#import "ProfileController.h"
+#import "ProfileViewController.h"
 #import "PoemController.h"
+#import "ProfileController.h"
 
 @interface MainViewController ()<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UISearchBarDelegate>
 
@@ -23,7 +24,11 @@
         [[PoemController sharedInstance] poemsByWriter];
     }];
     
-    
+//    PFUser *user = [PFUser currentUser];
+//    
+//    ProfileViewController *profileViewController = [ProfileViewController new];
+//    
+//    profileViewController.userProfile = user;
 }
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -38,6 +43,13 @@
         login.delegate = self;
         login.signUpController.delegate = self;
     }
+    
+    
+//        PFUser *user = [PFUser currentUser];
+//    
+//        ProfileViewController *profileViewController = [ProfileViewController new];
+//    
+//        profileViewController.userProfile = user;
 
 }
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user
@@ -60,6 +72,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"mainToProfile"]) {
+
+        PFUser *user = [PFUser currentUser];
+        
+        ProfileViewController *profileViewController = [segue destinationViewController];
+
+        profileViewController.userProfile = user;
+    }
 }
 
 @end
