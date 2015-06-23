@@ -86,12 +86,12 @@
         profileViewController.userProfile = user;
     }
     
-    if ([segue.identifier isEqualToString:@"toWrite"])
-    {
-        StanzaViewController *stanzaVC = [segue destinationViewController];
-        
-        [stanzaVC updateWithPoem:[[PoemController sharedInstance] addPoemWithTitle:@"" bodyText:@"" date:[NSDate date] private:NO]];
-    }
+//    if ([segue.identifier isEqualToString:@"toWrite"])
+//    {
+//        StanzaViewController *stanzaVC = [segue destinationViewController];
+//        
+//        [stanzaVC updateWithPoem:[[PoemController sharedInstance] addPoemWithTitle:@"" bodyText:@"" date:[NSDate date] private:NO]];
+//    }
 }
 
 @end

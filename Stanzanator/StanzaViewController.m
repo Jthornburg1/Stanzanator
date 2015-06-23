@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *poemBodyText;
 @property (strong, nonatomic) Poem *poem;
-
+@property (nonatomic) BOOL privateFileOnly;
 
 @end
 
@@ -41,14 +41,15 @@
     self.titleTextField.text = titleArray[rand];
 }
 - (IBAction)doneButtonTapped:(id)sender {
-    [[PoemController sharedInstance]addPoemWithTitle:self.titleTextField.text bodyText:self.poemBodyText.text date:[NSDate date] private:self.poem.isPrivate];
-    //[[PoemController sharedInstance] addPoemWithTitle:self.titleTextField.text bodyText:self.poemBodyText.text date:[NSDate date]];
+    [[PoemController sharedInstance]addPoemWithTitle:self.titleTextField.text bodyText:self.poemBodyText.text date:[NSDate date] private:self.privateFileOnly];
+
+    
+    
 }
 
 - (IBAction)makePrivateButtonTapped:(id)sender {
-    //Maybe instantiate a new Poem here; as it is, a blank poem is created--prepforseg.
-    self.poem.isPrivate = !self.poem.isPrivate;
-    if (self.poem.isPrivate) {
+    self.privateFileOnly = !self.privateFileOnly;
+    if (self.privateFileOnly) {
         self.view.backgroundColor = [UIColor redColor];
     } else {
         self.view.backgroundColor = [UIColor whiteColor];
@@ -67,13 +68,11 @@
     self.titleTextField.text = poem.title;
     self.poemBodyText.text = poem.bodyText;
     self.poem.isPrivate = poem.isPrivate;
-    [self.poem saveInBackground];
-    [self.poem pinInBackground];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
