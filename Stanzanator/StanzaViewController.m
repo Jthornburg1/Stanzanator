@@ -46,7 +46,7 @@
 }
 
 - (IBAction)makePrivateButtonTapped:(id)sender {
-    
+    //Maybe instantiate a new Poem here; as it is, a blank poem is created--prepforseg.
     self.poem.isPrivate = !self.poem.isPrivate;
     if (self.poem.isPrivate) {
         self.view.backgroundColor = [UIColor redColor];

@@ -29,12 +29,6 @@
         
     }];
     self.poem.isPrivate = NO;
-//    if (self.poem.isPrivate == YES) {
-//        CustomCellTableViewCell *cell = [CustomCellTableViewCell new];
-//        cell.detailTextLabel.text = @"private";
-//        cell.userInteractionEnabled = NO;
-//    
-//    }
 }
 
 
