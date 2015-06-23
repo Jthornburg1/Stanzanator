@@ -70,7 +70,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"editTapped"]) {
         StanzaViewController *stanzaViewController = segue.destinationViewController;
-        stanzaViewController.updatePoem = self.poem;
+        [stanzaViewController updateWithPoem:self.poem];
     }
 }
 

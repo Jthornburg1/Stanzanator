@@ -11,7 +11,7 @@
 
 @interface Poem : PFObject <PFSubclassing>
 
-@property (retain, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *title;
 @property (retain, nonatomic) NSString *bodyText;
 @property (retain, nonatomic) NSDate *timestamp;
 @property (strong, nonatomic) PFUser *writerOfPoem;

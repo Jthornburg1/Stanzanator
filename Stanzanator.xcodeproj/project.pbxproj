@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D24627511B39D38F00A5C296 /* SeachListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24627501B39D38F00A5C296 /* SeachListTableViewController.m */; };
 		D2932A001B1A15B500531AF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D29329FF1B1A15B500531AF0 /* main.m */; };
 		D2932A031B1A15B500531AF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A021B1A15B500531AF0 /* AppDelegate.m */; };
 		D2932A061B1A15B500531AF0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A051B1A15B500531AF0 /* MainViewController.m */; };
@@ -55,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D246274F1B39D38F00A5C296 /* SeachListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeachListTableViewController.h; sourceTree = "<group>"; };
+		D24627501B39D38F00A5C296 /* SeachListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeachListTableViewController.m; sourceTree = "<group>"; };
 		D29329FA1B1A15B500531AF0 /* Stanzanator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stanzanator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29329FE1B1A15B500531AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D29329FF1B1A15B500531AF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -165,12 +168,12 @@
 		D29329FC1B1A15B500531AF0 /* Stanzanator */ = {
 			isa = PBXGroup;
 			children = (
+				D2DBC0F91B3369840079C15A /* CustomCellTableViewCell.h */,
 				D2932A011B1A15B500531AF0 /* AppDelegate.h */,
 				D2932A021B1A15B500531AF0 /* AppDelegate.m */,
 				D2932A041B1A15B500531AF0 /* MainViewController.h */,
 				D2932A051B1A15B500531AF0 /* MainViewController.m */,
 				D2932A071B1A15B500531AF0 /* Main.storyboard */,
-				D2DBC0F91B3369840079C15A /* CustomCellTableViewCell.h */,
 				D2DBC0FA1B3369840079C15A /* CustomCellTableViewCell.m */,
 				D2932B5D1B1E5B5F00531AF0 /* PoemToReadViewController.h */,
 				D2932B5E1B1E5B5F00531AF0 /* PoemToReadViewController.m */,
@@ -180,6 +183,8 @@
 				D2932AB81B1CCE0500531AF0 /* PoemController.m */,
 				D2932A351B1A436300531AF0 /* TitleTableTableViewController.h */,
 				D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */,
+				D246274F1B39D38F00A5C296 /* SeachListTableViewController.h */,
+				D24627501B39D38F00A5C296 /* SeachListTableViewController.m */,
 				D2932A321B1A3B5A00531AF0 /* SearchViewController.h */,
 				D2932A331B1A3B5A00531AF0 /* SearchViewController.m */,
 				D2932A261B1A283C00531AF0 /* StanzaViewController.h */,
@@ -353,6 +358,7 @@
 				D2932A061B1A15B500531AF0 /* MainViewController.m in Sources */,
 				D2DBC0FB1B3369840079C15A /* CustomCellTableViewCell.m in Sources */,
 				D2932A031B1A15B500531AF0 /* AppDelegate.m in Sources */,
+				D24627511B39D38F00A5C296 /* SeachListTableViewController.m in Sources */,
 				D2932A371B1A436300531AF0 /* TitleTableTableViewController.m in Sources */,
 				D2932B5F1B1E5B5F00531AF0 /* PoemToReadViewController.m in Sources */,
 				D2932A341B1A3B5A00531AF0 /* SearchViewController.m in Sources */,

@@ -11,8 +11,14 @@
 #import "PoemToReadViewController.h"
 #import "ProfileController.h"
 #import "ProfileViewController.h"
+#import "SeachListTableViewController.h"
 
-@interface TitleTableTableViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TitleTableTableViewController () <UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate>
+
+@property (strong, nonatomic) UISearchController *searchController;
+@property (strong, nonatomic) NSArray *filteredSearchResults;
+@property (strong, nonatomic) NSPredicate *searchPredicate;
+@property (strong, nonatomic) SeachListTableViewController *filteredTableViewController;
 
 
 @end
@@ -24,11 +30,24 @@
     
     [[PoemController sharedInstance] loadPoemsFromParse];
     [[ProfileController sharedInstance]loadUsersFromParseWithCompletion:^(bool boolean) {
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
-        
+        });
     }];
-    self.poem.isPrivate = NO;
+    
+    self.filteredTableViewController = [SeachListTableViewController new];
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.filteredTableViewController];
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.searchController.searchBar.scopeButtonTitles = @[@"Title",@"Username"];
+    
+    self.searchController.searchBar.delegate = self;
+    // self should be the delegate for the filtered table so DidSelectRowAtIndexPath is called for both tables 
+    self.filteredTableViewController.tableView.delegate = self;
+    
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    self.definesPresentationContext = YES;
+    [self.searchController.searchBar sizeToFit];
 }
 
 
@@ -36,6 +55,44 @@
 -(void)viewWillAppear:(BOOL)animated{
     [self.tableView reloadData];
 }
+
+# pragma mark - SearchController Methods
+
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
+{
+    NSString *searchString = searchController.searchBar.text;
+    [self searchForText:searchString scope:searchController.searchBar.selectedScopeButtonIndex];
+    [self.filteredTableViewController.tableView reloadData];
+}
+
+- (void)searchForText:(NSString *)searchText scope:(NSInteger)scopeOption
+{
+    NSString *predicateFormat = @"%K CONTAINS[cd] %@";
+    NSString *searchAtrribute = @"title";
+    
+    if (scopeOption == 1) {
+        searchAtrribute = @"writersOfPoem.@userName";
+    }
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAtrribute, searchText];
+    
+    self.filteredSearchResults = [[PoemController sharedInstance].poems filteredArrayUsingPredicate:predicate];
+    self.filteredTableViewController.searchResultsList = self.filteredSearchResults;
+    
+    NSLog(@"~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    
+    for (Poem *poem in self.filteredSearchResults) {
+        
+        NSLog(@"%@", poem.title);
+    }
+}
+
+/*
+- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope
+{
+}
+ */
 
 
 - (void)didReceiveMemoryWarning {

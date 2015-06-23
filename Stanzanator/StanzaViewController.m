@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *poemBodyText;
 @property (strong, nonatomic) Poem *poem;
 @property (nonatomic) BOOL privateFileOnly;
+@property (weak, nonatomic) IBOutlet UIButton *privateButton;
 
 @end
 
@@ -26,12 +27,11 @@
 }
 -(void)viewDidLoad {
     [super viewDidLoad];
-    [self updateWithPoem:self.poem];
-    self.poem.isPrivate = NO;
-    
-    self.titleTextField.text = self.updatePoem.title;
-    self.poemBodyText.text = self.updatePoem.bodyText;
-    
+    if (self.poem) {
+        self.titleTextField.text = self.poem.title;
+        self.poemBodyText.text = self.poem.bodyText;
+        self.privateFileOnly = self.poem.isPrivate;
+    }
 }
 
 
@@ -48,12 +48,14 @@
 }
 
 - (IBAction)makePrivateButtonTapped:(id)sender {
+   
+    
     self.privateFileOnly = !self.privateFileOnly;
-    if (self.privateFileOnly) {
-        self.view.backgroundColor = [UIColor redColor];
-    } else {
-        self.view.backgroundColor = [UIColor whiteColor];
-    }
+//    if (self.privateFileOnly) {
+//        self.privateFileOnly = NO;
+//    } else {
+//        self.privateFileOnly = YES;
+//    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -65,10 +67,6 @@
 - (void)updateWithPoem:(Poem *)poem
 {
     self.poem = poem;
-    self.titleTextField.text = poem.title;
-    self.poemBodyText.text = poem.bodyText;
-    self.poem.isPrivate = poem.isPrivate;
-    
 }
 
 - (void)didReceiveMemoryWarning {
