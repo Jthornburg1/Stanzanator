@@ -88,6 +88,12 @@
     }
 }
 
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+}
+
 /*
 - (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope
 {
@@ -164,6 +170,8 @@
         Poem *poem;
         
         if (sender == self.filteredTableViewController.tableView) {
+            NSIndexPath *path = [sender indexPathForSelectedRow];
+
             //filtered tableview tapped
             poem = self.filteredSearchResults[path.row];
         }
