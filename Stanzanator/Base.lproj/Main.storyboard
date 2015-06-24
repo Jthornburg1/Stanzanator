@@ -548,11 +548,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ipO-D5-6oP">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filteredCell" id="ipO-D5-6oP" customClass="CustomCellTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ipO-D5-6oP" id="1xU-ib-U9v">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.18823531269999999" green="0.1215686351" blue="0.5647059083" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <segue destination="6nE-ay-RPZ" kind="show" id="57V-Xx-pI6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -593,6 +597,6 @@
         <segue reference="Dj6-Hr-9dZ"/>
         <segue reference="Usd-SZ-Ift"/>
         <segue reference="izb-TF-rN2"/>
-        <segue reference="bZu-f6-LXv"/>
+        <segue reference="57V-Xx-pI6"/>
     </inferredMetricsTieBreakers>
 </document>

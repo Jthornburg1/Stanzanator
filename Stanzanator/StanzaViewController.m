@@ -51,11 +51,9 @@
    
     
     self.privateFileOnly = !self.privateFileOnly;
-//    if (self.privateFileOnly) {
-//        self.privateFileOnly = NO;
-//    } else {
-//        self.privateFileOnly = YES;
-//    }
+    if (self.privateFileOnly) {
+        [self.privateButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
