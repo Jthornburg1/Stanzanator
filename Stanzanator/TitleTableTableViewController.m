@@ -72,7 +72,7 @@
     NSString *searchAtrribute = @"title";
     
     if (scopeOption == 1) {
-        searchAtrribute = @"writersOfPoem.@userName";
+        searchAtrribute = @"writersOfPoem.@username";
     }
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAtrribute, searchText];

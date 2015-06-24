@@ -159,11 +159,15 @@
     
     Poem *poem = self.poems[indexPath.row];
     
-    PFUser *user = self.userProfile;
+    //PFUser *user = self.userProfile;
     
     cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     //cell.backgroundColor = [UIColor blueColor];
     cell.textLabel.text = poem.title;
+    
+    if (poem.isPrivate == YES) {
+        cell.userInteractionEnabled = NO;
+    }
     
     return cell;
 }
