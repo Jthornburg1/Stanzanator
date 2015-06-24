@@ -598,10 +598,10 @@
         <image name="images-1" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HBL-dl-kBu"/>
-        <segue reference="Dj6-Hr-9dZ"/>
         <segue reference="Usd-SZ-Ift"/>
+        <segue reference="Dj6-Hr-9dZ"/>
+        <segue reference="HBL-dl-kBu"/>
         <segue reference="izb-TF-rN2"/>
-        <segue reference="57V-Xx-pI6"/>
+        <segue reference="bZu-f6-LXv"/>
     </inferredMetricsTieBreakers>
 </document>

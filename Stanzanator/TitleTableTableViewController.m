@@ -139,6 +139,13 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == self.filteredTableViewController.tableView) {
+        [self performSegueWithIdentifier:@"showPoem" sender:self.filteredTableViewController.tableView];
+    }
+}
+
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -154,15 +161,19 @@
         
                 NSIndexPath *path = [self.tableView indexPathForCell:sender];
     
-                Poem *poem = [PoemController sharedInstance].poems[path.row];
-    
-                [viewController updateWithPoem:poem];
+        Poem *poem;
+        
+        if (sender == self.filteredTableViewController.tableView) {
+            //filtered tableview tapped
+            poem = self.filteredSearchResults[path.row];
+        }
+        else
+        {//regular table view
+            poem = [PoemController sharedInstance].poems[path.row];
+        }
+        [viewController updateWithPoem:poem];
     }
-//    NSIndexPath *indexPath = [NSIndexPath new];
-//    if ([PoemController sharedInstance].poems[indexPath.row].isPrivate == YES) {
-//        //here is where either an alert is sprung and no segue is permitted or the detailTextLabel.text is changed to private and no segue is permitted.
-//        NSLog(@"PRIVATE");
-//    } // or segue is performed.
+
 }
 
 
