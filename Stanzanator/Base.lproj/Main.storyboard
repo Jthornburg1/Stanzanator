@@ -423,22 +423,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmK-gw-2AM">
-                                <rect key="frame" x="277" y="395" width="37" height="30"/>
+                                <rect key="frame" x="282" y="395" width="37" height="30"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="5wg-KE-wky" eventType="touchUpInside" id="k21-q6-q6n"/>
                                     <segue destination="vXZ-lx-hvc" kind="show" id="Dj6-Hr-9dZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9Z-wU-Ivn">
-                                <rect key="frame" x="255" y="433" width="90" height="30"/>
-                                <state key="normal" title="Make Private">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="makePrivateButtonTapped:" destination="5wg-KE-wky" eventType="touchUpInside" id="WXv-ZD-cFf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRj-wJ-8zD">
@@ -459,6 +450,18 @@
                                     <action selector="titleChooserChoose:" destination="5wg-KE-wky" eventType="touchUpInside" id="dMG-uV-U51"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ALd-TV-hP5">
+                                <rect key="frame" x="358" y="469" width="51" height="31"/>
+                                <connections>
+                                    <action selector="makePrivateSwitched:" destination="5wg-KE-wky" eventType="valueChanged" id="QZv-xw-k2p"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="make private" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2n-P5-kw0">
+                                <rect key="frame" x="219" y="474" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -467,22 +470,24 @@
                             <constraint firstAttribute="centerX" secondItem="WKm-0a-7qa" secondAttribute="centerX" constant="1.5" id="1Xw-Co-Zxe"/>
                             <constraint firstItem="7O2-Be-BWa" firstAttribute="top" secondItem="WKm-0a-7qa" secondAttribute="bottom" constant="58" id="2xu-lh-CpJ"/>
                             <constraint firstItem="e6G-04-POH" firstAttribute="baseline" secondItem="LRj-wJ-8zD" secondAttribute="baseline" id="4nd-oW-uXC"/>
-                            <constraint firstItem="AmK-gw-2AM" firstAttribute="top" secondItem="TIN-cd-0FU" secondAttribute="bottom" constant="375" id="5Ip-z4-nHe"/>
                             <constraint firstItem="LRj-wJ-8zD" firstAttribute="leading" secondItem="YzE-lc-tdG" secondAttribute="leadingMargin" constant="52" id="CCm-rx-Fvn"/>
                             <constraint firstItem="LRj-wJ-8zD" firstAttribute="leading" secondItem="YzE-lc-tdG" secondAttribute="leadingMargin" constant="52" id="Cgb-I1-gwJ"/>
-                            <constraint firstItem="w9Z-wU-Ivn" firstAttribute="centerX" secondItem="AmK-gw-2AM" secondAttribute="centerX" constant="4.5" id="S5t-S5-buT"/>
+                            <constraint firstItem="AmK-gw-2AM" firstAttribute="centerX" secondItem="ALd-TV-hP5" secondAttribute="centerX" constant="-82" id="FKl-gp-9zB"/>
+                            <constraint firstItem="ALd-TV-hP5" firstAttribute="top" secondItem="AmK-gw-2AM" secondAttribute="bottom" constant="44" id="OtK-fu-5lI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e6G-04-POH" secondAttribute="trailing" constant="74" id="Wmm-Tm-xWf"/>
-                            <constraint firstItem="AmK-gw-2AM" firstAttribute="top" secondItem="7O2-Be-BWa" secondAttribute="bottom" constant="21" id="WpC-bx-iGm"/>
+                            <constraint firstItem="ALd-TV-hP5" firstAttribute="leading" secondItem="r2n-P5-kw0" secondAttribute="trailing" constant="40" id="XXq-M6-Z3h"/>
+                            <constraint firstItem="ALd-TV-hP5" firstAttribute="centerX" secondItem="7O2-Be-BWa" secondAttribute="centerX" constant="82.5" id="ZoH-IV-xbV"/>
+                            <constraint firstItem="AmK-gw-2AM" firstAttribute="top" secondItem="7O2-Be-BWa" secondAttribute="bottom" constant="21" id="a7k-26-J7N"/>
+                            <constraint firstAttribute="bottom" secondItem="AmK-gw-2AM" secondAttribute="bottom" constant="175" id="fFx-Se-6RF"/>
                             <constraint firstItem="WKm-0a-7qa" firstAttribute="top" secondItem="TIN-cd-0FU" secondAttribute="bottom" id="fNq-uH-OIf"/>
                             <constraint firstItem="7O2-Be-BWa" firstAttribute="centerX" secondItem="WKm-0a-7qa" secondAttribute="centerX" id="iYV-0b-vu4"/>
-                            <constraint firstItem="w9Z-wU-Ivn" firstAttribute="top" secondItem="AmK-gw-2AM" secondAttribute="bottom" constant="8" id="rTo-FV-r5o"/>
-                            <constraint firstItem="7O2-Be-BWa" firstAttribute="centerX" secondItem="w9Z-wU-Ivn" secondAttribute="centerX" id="tbT-ZY-P4n"/>
+                            <constraint firstItem="r2n-P5-kw0" firstAttribute="centerY" secondItem="ALd-TV-hP5" secondAttribute="centerY" id="jlt-wy-EJi"/>
                             <constraint firstItem="LRj-wJ-8zD" firstAttribute="leading" secondItem="YzE-lc-tdG" secondAttribute="leadingMargin" constant="52" id="wyL-df-Och"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="poemBodyText" destination="7O2-Be-BWa" id="wA2-VN-oSB"/>
-                        <outlet property="privateButton" destination="w9Z-wU-Ivn" id="0SY-uF-gmf"/>
+                        <outlet property="privateSwitch" destination="ALd-TV-hP5" id="8ie-SQ-GN0"/>
                         <outlet property="titleTextField" destination="WKm-0a-7qa" id="EvL-aZ-fuA"/>
                     </connections>
                 </viewController>
