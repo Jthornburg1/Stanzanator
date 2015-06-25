@@ -118,13 +118,23 @@
                                                 <segue destination="5wg-KE-wky" kind="show" identifier="toWrite" id="Usd-SZ-Ift"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainPageImage" translatesAutoresizingMaskIntoConstraints="NO" id="8O5-fW-k6B">
+                                            <rect key="frame" x="153" y="204" width="278" height="204"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="278" id="vc4-VS-3ay"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.074509806931018829" green="0.22352942824363708" blue="0.062745101749897003" alpha="1" colorSpace="deviceRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="centerX" secondItem="QLx-x7-cWI" secondAttribute="centerX" constant="7.5" id="5GZ-iI-xSv"/>
                                         <constraint firstAttribute="bottom" secondItem="QLx-x7-cWI" secondAttribute="bottom" constant="80" id="EZX-SR-bwC"/>
                                         <constraint firstItem="jNt-xL-fBW" firstAttribute="top" secondItem="MXy-oF-3Fq" secondAttribute="top" constant="126" id="KNa-iY-Tje"/>
+                                        <constraint firstItem="8O5-fW-k6B" firstAttribute="top" secondItem="jNt-xL-fBW" secondAttribute="bottom" constant="14" id="Pew-76-j1F"/>
                                         <constraint firstItem="jNt-xL-fBW" firstAttribute="centerX" secondItem="QLx-x7-cWI" secondAttribute="centerX" constant="-0.5" id="fkM-zU-zFY"/>
+                                        <constraint firstItem="8O5-fW-k6B" firstAttribute="centerX" secondItem="QLx-x7-cWI" secondAttribute="centerX" id="ksI-fv-lDd"/>
                                         <constraint firstItem="QLx-x7-cWI" firstAttribute="top" secondItem="jNt-xL-fBW" secondAttribute="bottom" constant="260" id="oOA-5p-kQz"/>
+                                        <constraint firstItem="QLx-x7-cWI" firstAttribute="top" secondItem="8O5-fW-k6B" secondAttribute="bottom" constant="42" id="sfw-F3-F02"/>
                                         <constraint firstAttribute="centerX" secondItem="jNt-xL-fBW" secondAttribute="centerX" constant="8" id="y07-yo-1MZ"/>
                                     </constraints>
                                 </view>
@@ -459,7 +469,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="make private" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2n-P5-kw0">
                                 <rect key="frame" x="219" y="474" width="99" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -513,7 +523,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lbH-IZ-Gby">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="62Q-Ia-Pob">
@@ -596,12 +606,13 @@
     <resources>
         <image name="bird copy" width="207" height="243"/>
         <image name="images-1" width="225" height="225"/>
+        <image name="mainPageImage" width="286" height="173"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Usd-SZ-Ift"/>
-        <segue reference="Dj6-Hr-9dZ"/>
-        <segue reference="HBL-dl-kBu"/>
-        <segue reference="izb-TF-rN2"/>
         <segue reference="bZu-f6-LXv"/>
+        <segue reference="Dj6-Hr-9dZ"/>
+        <segue reference="Usd-SZ-Ift"/>
+        <segue reference="HBL-dl-kBu"/>
+        <segue reference="EXI-S9-qrJ"/>
     </inferredMetricsTieBreakers>
 </document>
