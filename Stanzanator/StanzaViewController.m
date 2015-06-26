@@ -19,12 +19,8 @@
 @end
 
 @implementation StanzaViewController
-- (IBAction)visitTheWebforIdeas:(id)sender {
-    // Links to yahoo.com: that string will be an index of an array of strings eventually
-    NSArray *URLArray = @[@"https//anncoulter.com",@"https//eonline.com",@"https//thugkitchen.com",@"https//http://www.openbible.info/topics/m",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//",@"https//"];
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.yahoo.com"]];
-    // Needs to return the user to StanzaViewController
-}
+
+
 -(void)viewDidLoad {
     [super viewDidLoad];
     if (self.poem) {
@@ -67,6 +63,8 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+
 
 
 

@@ -442,15 +442,6 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="Dj6-Hr-9dZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRj-wJ-8zD">
-                                <rect key="frame" x="68" y="52" width="60" height="30"/>
-                                <state key="normal" title="Stimulus">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="visitTheWebforIdeas:" destination="5wg-KE-wky" eventType="touchUpInside" id="K9b-4R-fwM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6G-04-POH">
                                 <rect key="frame" x="480" y="52" width="30" height="30"/>
                                 <state key="normal" title="Title">
@@ -472,16 +463,24 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ou-hr-nKe">
+                                <rect key="frame" x="71" y="52" width="72" height="30"/>
+                                <state key="normal" title="Thesaurus">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zO7-8w-ExI" kind="show" identifier="showThesaurus" id="mf2-Xp-lQ5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7O2-Be-BWa" firstAttribute="centerX" secondItem="YzE-lc-tdG" secondAttribute="centerX" id="0U6-Uj-buX"/>
-                            <constraint firstItem="LRj-wJ-8zD" firstAttribute="top" secondItem="TIN-cd-0FU" secondAttribute="bottom" constant="32" id="0eh-B6-F6Z"/>
                             <constraint firstAttribute="centerX" secondItem="WKm-0a-7qa" secondAttribute="centerX" constant="1.5" id="1Xw-Co-Zxe"/>
+                            <constraint firstItem="0Ou-hr-nKe" firstAttribute="baseline" secondItem="e6G-04-POH" secondAttribute="baseline" id="2lD-WJ-JyC"/>
                             <constraint firstItem="7O2-Be-BWa" firstAttribute="top" secondItem="WKm-0a-7qa" secondAttribute="bottom" constant="58" id="2xu-lh-CpJ"/>
-                            <constraint firstItem="e6G-04-POH" firstAttribute="baseline" secondItem="LRj-wJ-8zD" secondAttribute="baseline" id="4nd-oW-uXC"/>
-                            <constraint firstItem="LRj-wJ-8zD" firstAttribute="leading" secondItem="YzE-lc-tdG" secondAttribute="leadingMargin" constant="52" id="CCm-rx-Fvn"/>
-                            <constraint firstItem="LRj-wJ-8zD" firstAttribute="leading" secondItem="YzE-lc-tdG" secondAttribute="leadingMargin" constant="52" id="Cgb-I1-gwJ"/>
+                            <constraint firstItem="0Ou-hr-nKe" firstAttribute="leading" secondItem="YzE-lc-tdG" secondAttribute="leadingMargin" constant="55" id="3OU-zG-hrU"/>
+                            <constraint firstItem="0Ou-hr-nKe" firstAttribute="top" secondItem="TIN-cd-0FU" secondAttribute="bottom" constant="32" id="DMH-2L-MPM"/>
                             <constraint firstItem="AmK-gw-2AM" firstAttribute="centerX" secondItem="ALd-TV-hP5" secondAttribute="centerX" constant="-82" id="FKl-gp-9zB"/>
                             <constraint firstItem="ALd-TV-hP5" firstAttribute="top" secondItem="AmK-gw-2AM" secondAttribute="bottom" constant="44" id="OtK-fu-5lI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e6G-04-POH" secondAttribute="trailing" constant="74" id="Wmm-Tm-xWf"/>
@@ -492,7 +491,6 @@
                             <constraint firstItem="WKm-0a-7qa" firstAttribute="top" secondItem="TIN-cd-0FU" secondAttribute="bottom" id="fNq-uH-OIf"/>
                             <constraint firstItem="7O2-Be-BWa" firstAttribute="centerX" secondItem="WKm-0a-7qa" secondAttribute="centerX" id="iYV-0b-vu4"/>
                             <constraint firstItem="r2n-P5-kw0" firstAttribute="centerY" secondItem="ALd-TV-hP5" secondAttribute="centerY" id="jlt-wy-EJi"/>
-                            <constraint firstItem="LRj-wJ-8zD" firstAttribute="leading" secondItem="YzE-lc-tdG" secondAttribute="leadingMargin" constant="52" id="wyL-df-Och"/>
                         </constraints>
                     </view>
                     <connections>
@@ -554,16 +552,25 @@
             </objects>
             <point key="canvasLocation" x="1807" y="-446"/>
         </scene>
-        <!--Seach List Table View Controller-->
+        <!--Thesaurus Table View Controller-->
         <scene sceneID="z6f-b2-zZg">
             <objects>
-                <tableViewController id="zO7-8w-ExI" customClass="SeachListTableViewController" sceneMemberID="viewController">
+                <tableViewController id="zO7-8w-ExI" customClass="ThesaurusTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="s1s-dj-X8k">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textField key="tableHeaderView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="thesaurus entry here" textAlignment="center" minimumFontSize="17" id="dHO-W5-mfi">
+                            <rect key="frame" x="0.0" y="-30" width="600" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="zO7-8w-ExI" id="twm-Jy-dGA"/>
+                            </connections>
+                        </textField>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="filteredCell" id="ipO-D5-6oP" customClass="CustomCellTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="thesaurusCell" id="ipO-D5-6oP" customClass="CustomCellTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ipO-D5-6oP" id="1xU-ib-U9v">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -579,6 +586,9 @@
                             <outlet property="delegate" destination="zO7-8w-ExI" id="a6m-rT-weT"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="thesaurusTextField" destination="dHO-W5-mfi" id="2lp-FB-lrn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAr-jJ-F5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -609,9 +619,9 @@
         <image name="mainPageImage" width="286" height="173"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bZu-f6-LXv"/>
-        <segue reference="Dj6-Hr-9dZ"/>
+        <segue reference="57V-Xx-pI6"/>
         <segue reference="Usd-SZ-Ift"/>
+        <segue reference="Dj6-Hr-9dZ"/>
         <segue reference="HBL-dl-kBu"/>
         <segue reference="EXI-S9-qrJ"/>
     </inferredMetricsTieBreakers>

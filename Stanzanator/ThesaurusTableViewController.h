@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ThesaurusController.h"
+#import "Thesaurus.h"
 
-@interface SeachListTableViewController : UITableViewController
+@interface ThesaurusTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *searchResultsList;
 
