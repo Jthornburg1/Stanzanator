@@ -34,7 +34,7 @@
 
 - (void)synonymsForWords:(NSString *)word completion:(void (^)(BOOL success))completion {
     
-    NSString *urlString = [NSString stringWithFormat:@"http://words.bighugelabs.com/api/2/ojG5fHRnt34HJ5hLJzmJ/%@/json", word];
+    NSString *urlString = [NSString stringWithFormat:@"http://words.bighugelabs.com/api/2/8a6556b707b238b1f8c60c394627d24f/%@/json", word];
     
     NSURL *url = [NSURL URLWithString:urlString];
     
