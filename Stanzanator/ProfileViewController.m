@@ -164,9 +164,20 @@
     cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     //cell.backgroundColor = [UIColor blueColor];
     cell.textLabel.text = poem.title;
+    cell.detailTextLabel.text = @"";
+    
     
     if (poem.isPrivate == YES) {
-        cell.userInteractionEnabled = NO;
+        if (poem.writerOfPoem == [PFUser currentUser]) {
+            cell.userInteractionEnabled = YES;
+            //cell.detailTextLabel.text = @"private";
+        } else {
+            cell.userInteractionEnabled = NO;
+            cell.detailTextLabel.text = @"private";
+
+        }
+    } else {
+        cell.userInteractionEnabled = YES;
     }
     
     return cell;

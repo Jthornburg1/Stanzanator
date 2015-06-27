@@ -211,11 +211,25 @@
                                     <constraint firstAttribute="height" constant="203" id="hbs-pz-RKQ"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="kWC-eP-dxs">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" editingAccessoryType="detailDisclosureButton" textLabel="r9O-jo-hxy" detailTextLabel="MLf-LQ-pO6" style="IBUITableViewCellStyleValue1" id="kWC-eP-dxs">
                                         <rect key="frame" x="0.0" y="0.0" width="552" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kWC-eP-dxs" id="6Kh-qW-ncI">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r9O-jo-hxy">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MLf-LQ-pO6">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.79607850313186646" green="0.91372555494308472" blue="0.56470590829849243" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
@@ -560,6 +574,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexColor" red="0.97254908080000002" green="0.96862751250000001" blue="0.21568629149999999" alpha="1" colorSpace="deviceRGB"/>
                         <textField key="tableHeaderView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="thesaurus entry here" textAlignment="center" minimumFontSize="17" id="dHO-W5-mfi">
                             <rect key="frame" x="0.0" y="-30" width="600" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -575,7 +590,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ipO-D5-6oP" id="1xU-ib-U9v">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.18823531269999999" green="0.1215686351" blue="0.5647059083" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.79607850309999995" green="0.91372555489999996" blue="0.5647059083" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <segue destination="6nE-ay-RPZ" kind="show" id="57V-Xx-pI6"/>
                                 </connections>
@@ -619,10 +634,10 @@
         <image name="mainPageImage" width="286" height="173"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="57V-Xx-pI6"/>
         <segue reference="Usd-SZ-Ift"/>
         <segue reference="Dj6-Hr-9dZ"/>
-        <segue reference="HBL-dl-kBu"/>
         <segue reference="EXI-S9-qrJ"/>
+        <segue reference="BfR-Bj-EyI"/>
+        <segue reference="1kv-KR-VeL"/>
     </inferredMetricsTieBreakers>
 </document>
