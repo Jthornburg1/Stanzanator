@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Poem.h"
 #import "PoemToReadViewController.h"
+#import "ThesaurusTableViewController.h"
 
 @interface StanzaViewController : UIViewController
 @property (nonatomic, strong)Poem *updatePoem;

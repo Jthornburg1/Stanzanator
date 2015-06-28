@@ -1,5 +1,5 @@
 //
-//  SeachListTableViewController.m
+//  ThesaurusTableViewController.m
 //  Stanzanator
 //
 //  Created by jonathan thornburg on 6/23/15.

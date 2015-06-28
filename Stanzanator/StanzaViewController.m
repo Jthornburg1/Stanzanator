@@ -41,9 +41,6 @@
 }
 - (IBAction)doneButtonTapped:(id)sender {
     [[PoemController sharedInstance]addPoemWithTitle:self.titleTextField.text bodyText:self.poemBodyText.text date:[NSDate date] private:self.privateFileOnly];
-
-    
-    
 }
 
 
