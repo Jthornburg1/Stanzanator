@@ -54,7 +54,6 @@
 }
 
 - (IBAction)editButtonTapped:(id)sender {
-    [self performSegueWithIdentifier:@"editTapped" sender:sender];
     self.titleLabel.text = @"";
     self.poemBodyText.text = @"";
     [[PoemController sharedInstance]removePoem:self.poem];
