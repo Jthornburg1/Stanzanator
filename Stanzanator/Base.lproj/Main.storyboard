@@ -453,7 +453,6 @@
                                 </state>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="5wg-KE-wky" eventType="touchUpInside" id="k21-q6-q6n"/>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="Dj6-Hr-9dZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6G-04-POH">
@@ -633,8 +632,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="BfR-Bj-EyI"/>
         <segue reference="EXI-S9-qrJ"/>
-        <segue reference="Dj6-Hr-9dZ"/>
-        <segue reference="v5e-sq-TEA"/>
         <segue reference="fDd-uQ-G1o"/>
+        <segue reference="v5e-sq-TEA"/>
     </inferredMetricsTieBreakers>
 </document>
