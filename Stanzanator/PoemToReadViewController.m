@@ -23,8 +23,8 @@
     self.poemBodyText.text = @"";
     
     [[PoemController sharedInstance]removePoem:self.poem];
-    [self.navigationController popToRootViewControllerAnimated:YES];
     [self.poem deleteInBackground];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

@@ -9,6 +9,7 @@
 #import "StanzaViewController.h"
 #import "PoemController.h"
 
+
 @interface StanzaViewController ()<UITextFieldDelegate, ThesaurusWordDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *privateSwitch;
@@ -45,7 +46,7 @@
 }
 - (IBAction)doneButtonTapped:(id)sender {
     [[PoemController sharedInstance]addPoemWithTitle:self.titleTextField.text bodyText:self.poemBodyText.text date:[NSDate date] private:self.privateFileOnly];
-    [self.navigationController popViewControllerAnimated:YES];
+    //[self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -71,8 +72,15 @@
     if ([segue.identifier isEqual:@"showThesaurus"]) {
         ThesaurusTableViewController *thesaurusTVC = [segue destinationViewController];
         thesaurusTVC.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"doneToProfile"]) {
+        PFUser *user = [PFUser currentUser];
+        ProfileViewController *profileViewController = [segue destinationViewController];
+        profileViewController.userProfile = user;
     }
 }
+
+
+
 
 
 

@@ -21,7 +21,7 @@
                                 <rect key="frame" x="169" y="93" width="262" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf6-Jf-Z8f">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rf6-Jf-Z8f">
                                 <rect key="frame" x="131" y="167" width="300" height="243"/>
                                 <state key="normal" title="tap the bird" image="bird copy">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -287,7 +287,7 @@
                                     <action selector="uploadPhotoButtonTapped:" destination="HGX-3C-oqi" eventType="touchUpInside" id="5Vr-ER-5FA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIm-rn-Ay1">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIm-rn-Ay1">
                                 <rect key="frame" x="532" y="28" width="30" height="30"/>
                                 <state key="normal" title="Edit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -330,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFk-VJ-cz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="270"/>
+            <point key="canvasLocation" x="1828" y="302"/>
         </scene>
         <!--Poem To Read View Controller-->
         <scene sceneID="C7M-dq-gfx">
@@ -426,7 +426,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WKm-0a-7qa">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WKm-0a-7qa">
                                 <rect key="frame" x="188" y="20" width="225" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="0Rr-SC-Erm"/>
@@ -437,7 +437,7 @@
                                     <outlet property="delegate" destination="5wg-KE-wky" id="LJ7-8P-Usc"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7O2-Be-BWa">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7O2-Be-BWa">
                                 <rect key="frame" x="181" y="108" width="238" height="266"/>
                                 <color key="backgroundColor" red="0.97254908084869385" green="0.97254908084869385" blue="0.90980398654937744" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
@@ -453,9 +453,10 @@
                                 </state>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="5wg-KE-wky" eventType="touchUpInside" id="k21-q6-q6n"/>
+                                    <segue destination="HGX-3C-oqi" kind="show" identifier="doneToProfile" id="F7w-N6-4JW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6G-04-POH">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6G-04-POH">
                                 <rect key="frame" x="480" y="52" width="30" height="30"/>
                                 <state key="normal" title="Title">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -476,7 +477,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ou-hr-nKe">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ou-hr-nKe">
                                 <rect key="frame" x="71" y="52" width="72" height="30"/>
                                 <state key="normal" title="Thesaurus">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -630,9 +631,9 @@
         <image name="mainPageImage" width="286" height="173"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BfR-Bj-EyI"/>
-        <segue reference="EXI-S9-qrJ"/>
+        <segue reference="Usd-SZ-Ift"/>
+        <segue reference="F7w-N6-4JW"/>
         <segue reference="fDd-uQ-G1o"/>
-        <segue reference="v5e-sq-TEA"/>
+        <segue reference="BfR-Bj-EyI"/>
     </inferredMetricsTieBreakers>
 </document>

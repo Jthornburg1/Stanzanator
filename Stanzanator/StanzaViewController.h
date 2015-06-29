@@ -10,6 +10,7 @@
 #import "Poem.h"
 #import "PoemToReadViewController.h"
 #import "ThesaurusTableViewController.h"
+#import "ProfileViewController.h"
 
 @interface StanzaViewController : UIViewController
 @property (nonatomic, strong)Poem *updatePoem;
