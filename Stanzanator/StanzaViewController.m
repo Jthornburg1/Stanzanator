@@ -9,7 +9,7 @@
 #import "StanzaViewController.h"
 #import "PoemController.h"
 
-@interface StanzaViewController ()<UITextFieldDelegate>
+@interface StanzaViewController ()<UITextFieldDelegate, ThesaurusWordDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *privateSwitch;
 @property (weak, nonatomic) IBOutlet UITextView *poemBodyText;
@@ -20,6 +20,10 @@
 
 @implementation StanzaViewController
 
+-(void)wordSelected:(NSString *)word
+{
+    self.poemBodyText.text = [self.poemBodyText.text stringByAppendingString:word];
+}
 
 -(void)viewDidLoad {
     [super viewDidLoad];
@@ -59,6 +63,14 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqual:@"showThesaurus"]) {
+        ThesaurusTableViewController *thesaurusTVC = [segue destinationViewController];
+        thesaurusTVC.delegate = self;
+    }
 }
 
 

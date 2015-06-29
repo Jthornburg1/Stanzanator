@@ -61,6 +61,15 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    NSString *poemWithAddedSynonym = [NSString stringWithFormat:@" %@", cell.textLabel.text];
+    [self.delegate wordSelected:poemWithAddedSynonym];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];

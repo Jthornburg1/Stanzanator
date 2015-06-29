@@ -10,8 +10,16 @@
 #import "ThesaurusController.h"
 #import "Thesaurus.h"
 
+@protocol ThesaurusWordDelegate <NSObject>
+
+- (void)wordSelected:(NSString *)word;
+
+@end
+
+
 @interface ThesaurusTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *searchResultsList;
+@property (strong, nonatomic) id <ThesaurusWordDelegate>delegate;
 
 @end
