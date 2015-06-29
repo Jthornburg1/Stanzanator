@@ -85,9 +85,11 @@
     self.inEditingMode = !self.inEditingMode;
     
     self.ageText.borderStyle = UITextBorderStyleRoundedRect;
+    self.ageText.backgroundColor = [UIColor brownColor];
     self.ageText.userInteractionEnabled = YES;
     
     self.locationText.borderStyle = UITextBorderStyleRoundedRect;
+    self.locationText.backgroundColor = [UIColor brownColor];
     self.locationText.userInteractionEnabled = YES;
 }
 
@@ -98,11 +100,13 @@
         user[@"age"] = textField.text;
         textField.borderStyle = UITextBorderStyleNone;
         textField.userInteractionEnabled = NO;
+        textField.backgroundColor = [UIColor clearColor];
         [user saveInBackground];
     }else{
         user[@"location"] = textField.text;
         textField.borderStyle = UITextBorderStyleNone;
         textField.userInteractionEnabled = NO;
+        textField.backgroundColor = [UIColor clearColor];
         [user saveInBackground];
     }
     
