@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D24627511B39D38F00A5C296 /* ThesaurusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24627501B39D38F00A5C296 /* ThesaurusTableViewController.m */; };
+		D27C32C31B43395900AA9FCD /* StanzifestoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C32C21B43395900AA9FCD /* StanzifestoViewController.m */; };
 		D2932A001B1A15B500531AF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D29329FF1B1A15B500531AF0 /* main.m */; };
 		D2932A031B1A15B500531AF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A021B1A15B500531AF0 /* AppDelegate.m */; };
 		D2932A061B1A15B500531AF0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A051B1A15B500531AF0 /* MainViewController.m */; };
@@ -60,6 +61,8 @@
 /* Begin PBXFileReference section */
 		D246274F1B39D38F00A5C296 /* ThesaurusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThesaurusTableViewController.h; sourceTree = "<group>"; };
 		D24627501B39D38F00A5C296 /* ThesaurusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThesaurusTableViewController.m; sourceTree = "<group>"; };
+		D27C32C11B43395900AA9FCD /* StanzifestoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StanzifestoViewController.h; sourceTree = "<group>"; };
+		D27C32C21B43395900AA9FCD /* StanzifestoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StanzifestoViewController.m; sourceTree = "<group>"; };
 		D29329FA1B1A15B500531AF0 /* Stanzanator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stanzanator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29329FE1B1A15B500531AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D29329FF1B1A15B500531AF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				D2932A041B1A15B500531AF0 /* MainViewController.h */,
 				D2932A051B1A15B500531AF0 /* MainViewController.m */,
 				D2932A071B1A15B500531AF0 /* Main.storyboard */,
+				D27C32C11B43395900AA9FCD /* StanzifestoViewController.h */,
+				D27C32C21B43395900AA9FCD /* StanzifestoViewController.m */,
 				D2A4EF511B3DA347006F19FE /* Thesaurus.h */,
 				D2A4EF521B3DA347006F19FE /* Thesaurus.m */,
 				D2A4EF541B3DC01F006F19FE /* ThesaurusController.h */,
@@ -379,6 +384,7 @@
 				D2932A251B1A20B200531AF0 /* ProfileViewController.m in Sources */,
 				D2932ABF1B1CCE4B00531AF0 /* ProfileController.m in Sources */,
 				D2932A001B1A15B500531AF0 /* main.m in Sources */,
+				D27C32C31B43395900AA9FCD /* StanzifestoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
