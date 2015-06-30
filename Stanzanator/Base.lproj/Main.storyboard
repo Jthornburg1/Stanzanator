@@ -24,6 +24,17 @@
                                     <constraint firstAttribute="width" constant="91" id="hXW-37-AVB"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKF-y2-t7n">
+                                <rect key="frame" x="168" y="157" width="265" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="375" id="5dW-ns-fY5"/>
+                                    <constraint firstAttribute="width" constant="265" id="I9l-L5-Nqx"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You should use this app to write poetry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzR-xZ-2ci">
                                 <rect key="frame" x="151" y="128" width="299" height="21"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
@@ -40,17 +51,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKF-y2-t7n">
-                                <rect key="frame" x="168" y="157" width="265" height="375"/>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gvb-LB-n54">
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="375" id="5dW-ns-fY5"/>
-                                    <constraint firstAttribute="width" constant="265" id="I9l-L5-Nqx"/>
-                                </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="ZcE-NH-956"/>
+                                    <tabBarItem systemItem="more" id="MJ9-l9-iqd"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="0.96862751250000001" green="0.97254908080000002" blue="0.90588241820000004" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -390,7 +398,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="522" id="YUc-9l-IfW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -424,10 +432,17 @@
                                     <segue destination="5wg-KE-wky" kind="show" identifier="editTapped" id="v5e-sq-TEA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld2-UF-BFg">
+                                <rect key="frame" x="279" y="85" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="stk-2C-QFU" firstAttribute="bottom" secondItem="fv0-gD-ZGa" secondAttribute="top" id="AhC-Ox-nKK"/>
+                            <constraint firstItem="JsX-4R-F3I" firstAttribute="top" secondItem="Ld2-UF-BFg" secondAttribute="bottom" constant="8" symbolic="YES" id="JSk-6h-aex"/>
                             <constraint firstItem="stk-2C-QFU" firstAttribute="top" secondItem="Fle-Uf-UqP" secondAttribute="top" id="Lir-D8-miO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4vE-ef-hlx" secondAttribute="trailing" constant="30" id="NBF-Pf-nAb"/>
                             <constraint firstItem="fv0-gD-ZGa" firstAttribute="top" secondItem="JsX-4R-F3I" secondAttribute="bottom" constant="68" id="Ou4-TO-w0E"/>
@@ -438,6 +453,7 @@
                             <constraint firstItem="Gac-oP-fo9" firstAttribute="leading" secondItem="Fle-Uf-UqP" secondAttribute="leadingMargin" constant="30" id="fHk-kK-gNZ"/>
                             <constraint firstItem="fv0-gD-ZGa" firstAttribute="top" secondItem="4vE-ef-hlx" secondAttribute="bottom" constant="20" id="kfv-98-0W0"/>
                             <constraint firstItem="3ii-X8-VwE" firstAttribute="top" secondItem="6fc-BN-7FJ" secondAttribute="bottom" constant="27" id="koZ-5o-yhp"/>
+                            <constraint firstItem="Ld2-UF-BFg" firstAttribute="centerX" secondItem="3ii-X8-VwE" secondAttribute="centerX" id="mkE-M8-FO7"/>
                             <constraint firstItem="Gac-oP-fo9" firstAttribute="baseline" secondItem="4vE-ef-hlx" secondAttribute="baseline" id="qSt-hw-TxK"/>
                             <constraint firstItem="stk-2C-QFU" firstAttribute="leading" secondItem="Fle-Uf-UqP" secondAttribute="leading" id="w1v-5x-9h0"/>
                             <constraint firstItem="stk-2C-QFU" firstAttribute="centerX" secondItem="3ii-X8-VwE" secondAttribute="centerX" id="zc2-du-zw9"/>
@@ -452,6 +468,7 @@
                         <outlet property="deleteButton" destination="4vE-ef-hlx" id="ciy-WM-NGy"/>
                         <outlet property="editButton" destination="Gac-oP-fo9" id="SCB-LU-ndv"/>
                         <outlet property="poemBodyText" destination="JsX-4R-F3I" id="vc9-uQ-JRi"/>
+                        <outlet property="timeStampLabel" destination="Ld2-UF-BFg" id="CcV-xF-qiK"/>
                         <outlet property="titleLabel" destination="3ii-X8-VwE" id="lIZ-2v-GrB"/>
                     </connections>
                 </viewController>
@@ -674,7 +691,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="EXI-S9-qrJ"/>
         <segue reference="HBL-dl-kBu"/>
-        <segue reference="Usd-SZ-Ift"/>
         <segue reference="fDd-uQ-G1o"/>
+        <segue reference="v5e-sq-TEA"/>
     </inferredMetricsTieBreakers>
 </document>

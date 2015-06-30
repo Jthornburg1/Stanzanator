@@ -9,11 +9,13 @@
 #import "PoemToReadViewController.h"
 #import "StanzaViewController.h"
 
+
 @interface PoemToReadViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *poemBodyText;
+@property (weak, nonatomic) IBOutlet UILabel *timeStampLabel;
 
 @end
 
@@ -33,6 +35,10 @@
     // Do any additional setup after loading the view.
     self.titleLabel.text = self.poem.title;
     self.poemBodyText.text = self.poem.bodyText;
+    NSDateFormatter *dateformatter = [NSDateFormatter new];
+  
+    [dateformatter setDateFormat:@"MM/dd/YYYY"];
+    self.timeStampLabel.text = [dateformatter stringFromDate:self.poem.timestamp];
     
     if (self.poem.writerOfPoem == [PFUser currentUser]) {
         self.editButton.enabled = YES;
@@ -42,7 +48,6 @@
         self.deleteButton.hidden = YES;
     }
 }
-
 
 
 
