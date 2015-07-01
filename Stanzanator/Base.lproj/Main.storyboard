@@ -296,7 +296,7 @@
                                 <color key="textColor" red="0.98823535439999999" green="0.96862751250000001" blue="0.96470594409999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="images-1" translatesAutoresizingMaskIntoConstraints="NO" id="fy1-bx-A4b">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-1" translatesAutoresizingMaskIntoConstraints="NO" id="fy1-bx-A4b">
                                 <rect key="frame" x="430" y="139" width="132" height="142"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="132" id="VLa-kr-UeM"/>
@@ -309,7 +309,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NNO-cw-wkI">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NNO-cw-wkI">
                                 <rect key="frame" x="26" y="139" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jdU-ZM-ZU6"/>
@@ -334,7 +334,7 @@
                                     <outlet property="delegate" destination="HGX-3C-oqi" id="KyC-6Z-oBg"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NST-dG-4Bz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NST-dG-4Bz">
                                 <rect key="frame" x="467" y="101" width="95" height="30"/>
                                 <state key="normal" title="Upload Photo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -343,7 +343,7 @@
                                     <action selector="uploadPhotoButtonTapped:" destination="HGX-3C-oqi" eventType="touchUpInside" id="5Vr-ER-5FA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIm-rn-Ay1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIm-rn-Ay1">
                                 <rect key="frame" x="532" y="72" width="30" height="30"/>
                                 <state key="normal" title="Edit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -518,7 +518,7 @@
                                             <action selector="makePrivateSwitched:" destination="5wg-KE-wky" eventType="valueChanged" id="QZv-xw-k2p"/>
                                         </connections>
                                     </switch>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7O2-Be-BWa">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7O2-Be-BWa">
                                         <rect key="frame" x="181" y="157" width="238" height="222"/>
                                         <color key="backgroundColor" red="0.96470594409999999" green="0.93725496529999996" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
                                         <color key="textColor" red="0.15686275059999999" green="0.054901964960000001" blue="0.20000001789999999" alpha="1" colorSpace="deviceRGB"/>
