@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Stanzifesto View Controller-->
+        <!--about-->
         <scene sceneID="UMq-IF-tLC">
             <objects>
                 <viewController id="Zdy-sL-xwQ" customClass="StanzifestoViewController" sceneMemberID="viewController">
@@ -25,24 +25,18 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKF-y2-t7n">
-                                <rect key="frame" x="168" y="157" width="265" height="375"/>
+                                <rect key="frame" x="168" y="126" width="265" height="372"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="375" id="5dW-ns-fY5"/>
+                                    <constraint firstAttribute="height" constant="372" id="5dW-ns-fY5"/>
                                     <constraint firstAttribute="width" constant="265" id="I9l-L5-Nqx"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You should use this app to write poetry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzR-xZ-2ci">
-                                <rect key="frame" x="151" y="128" width="299" height="21"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stanzifesto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzX-NM-XM9">
-                                <rect key="frame" x="239" y="99" width="123" height="21"/>
+                                <rect key="frame" x="239" y="81" width="123" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="123" id="YE8-ab-ik1"/>
                                     <constraint firstAttribute="height" constant="21" id="cds-zV-82O"/>
@@ -51,28 +45,30 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gvb-LB-n54">
-                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="ZcE-NH-956"/>
-                                    <tabBarItem systemItem="more" id="MJ9-l9-iqd"/>
-                                </items>
-                            </tabBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You should use this app to write poetry." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NzR-xZ-2ci">
+                                <rect key="frame" x="139" y="105" width="324" height="24"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96862751250000001" green="0.97254908080000002" blue="0.90588241820000004" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="OzX-NM-XM9" firstAttribute="centerX" secondItem="JKF-y2-t7n" secondAttribute="centerX" id="7YP-d4-20X"/>
+                            <constraint firstItem="JKF-y2-t7n" firstAttribute="top" secondItem="NzR-xZ-2ci" secondAttribute="bottom" constant="-3" id="GGA-Vf-A92"/>
                             <constraint firstItem="wjp-kp-ebE" firstAttribute="top" secondItem="m32-LY-AOC" secondAttribute="bottom" constant="8" symbolic="YES" id="IvR-z9-zzb"/>
                             <constraint firstItem="OzX-NM-XM9" firstAttribute="centerX" secondItem="Ter-qp-Onp" secondAttribute="centerX" id="WxT-K3-taq"/>
-                            <constraint firstItem="NzR-xZ-2ci" firstAttribute="top" secondItem="OzX-NM-XM9" secondAttribute="bottom" constant="8" symbolic="YES" id="X0S-1Z-zud"/>
+                            <constraint firstItem="NzR-xZ-2ci" firstAttribute="top" secondItem="OzX-NM-XM9" secondAttribute="bottom" constant="3" id="X0S-1Z-zud"/>
+                            <constraint firstItem="OzX-NM-XM9" firstAttribute="top" secondItem="m32-LY-AOC" secondAttribute="bottom" constant="17" id="X4Y-fM-Lhh"/>
                             <constraint firstItem="wjp-kp-ebE" firstAttribute="leading" secondItem="Ter-qp-Onp" secondAttribute="leadingMargin" constant="-6" id="Zp6-1g-Rgm"/>
                             <constraint firstItem="OzX-NM-XM9" firstAttribute="centerX" secondItem="NzR-xZ-2ci" secondAttribute="centerX" id="ei0-wy-Tc0"/>
-                            <constraint firstItem="JKF-y2-t7n" firstAttribute="top" secondItem="NzR-xZ-2ci" secondAttribute="bottom" constant="8" symbolic="YES" id="fQS-nP-oNa"/>
-                            <constraint firstItem="7ll-oQ-wDM" firstAttribute="top" secondItem="JKF-y2-t7n" secondAttribute="bottom" constant="68" id="jBD-eP-M4e"/>
-                            <constraint firstItem="OzX-NM-XM9" firstAttribute="top" secondItem="m32-LY-AOC" secondAttribute="bottom" constant="35" id="rta-Ai-fPb"/>
+                            <constraint firstItem="JKF-y2-t7n" firstAttribute="top" secondItem="NzR-xZ-2ci" secondAttribute="bottom" constant="-3" id="fQS-nP-oNa"/>
+                            <constraint firstItem="7ll-oQ-wDM" firstAttribute="top" secondItem="JKF-y2-t7n" secondAttribute="bottom" constant="53" id="jBD-eP-M4e"/>
+                            <constraint firstItem="OzX-NM-XM9" firstAttribute="top" secondItem="m32-LY-AOC" secondAttribute="bottom" constant="17" id="rta-Ai-fPb"/>
+                            <constraint firstItem="NzR-xZ-2ci" firstAttribute="top" secondItem="OzX-NM-XM9" secondAttribute="bottom" constant="3" id="yfQ-I1-CSq"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="about" id="tQH-lT-NXu"/>
                     <connections>
                         <outlet property="festoTextView" destination="JKF-y2-t7n" id="3gV-VQ-TLZ"/>
                         <outlet property="searchDisplayController" destination="Yxx-Na-Vbo" id="7s6-WX-j5h"/>
@@ -88,7 +84,26 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1828" y="1824"/>
+            <point key="canvasLocation" x="2640" y="1824"/>
+        </scene>
+        <!--sonnet-->
+        <scene sceneID="bHy-bj-uwe">
+            <objects>
+                <viewController id="7yh-Vy-kMp" customClass="SonnetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BD7-gN-lLE"/>
+                        <viewControllerLayoutGuide type="bottom" id="v0d-vn-1UG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pJf-dP-rl3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="sonnet" id="EKw-bQ-gtI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9rI-x4-GHW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2588" y="2532"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -108,7 +123,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tMw-Bl-N1t"/>
                                     <barButtonItem title="Search" id="iDI-YR-Ygm">
                                         <connections>
-                                            <segue destination="Zdy-sL-xwQ" kind="show" id="HBL-dl-kBu"/>
+                                            <segue destination="RfH-dn-GAF" kind="show" id="HBL-dl-kBu"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="uTp-62-cNx"/>
@@ -232,7 +247,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ohs-Jt-PfZ"/>
                                     <barButtonItem title="Search" id="0vg-mR-8P1">
                                         <connections>
-                                            <segue destination="Zdy-sL-xwQ" kind="show" id="BfR-Bj-EyI"/>
+                                            <segue destination="RfH-dn-GAF" kind="show" id="BfR-Bj-EyI"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5Ma-JJ-Y53"/>
@@ -393,8 +408,8 @@
                             <imageView userInteractionEnabled="NO" alpha="0.74999999999999978" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OldPaper" translatesAutoresizingMaskIntoConstraints="NO" id="stk-2C-QFU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Poem Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ii-X8-VwE">
-                                <rect key="frame" x="39" y="47" width="522" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poem Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ii-X8-VwE">
+                                <rect key="frame" x="39" y="45" width="522" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="522" id="YUc-9l-IfW"/>
                                 </constraints>
@@ -681,6 +696,65 @@
             </objects>
             <point key="canvasLocation" x="332" y="337"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aHd-cA-Zry">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="RfH-dn-GAF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="qwh-Hf-N3f">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Zdy-sL-xwQ" kind="relationship" relationship="viewControllers" id="nle-1A-DpB"/>
+                        <segue destination="dGf-RO-4US" kind="relationship" relationship="viewControllers" id="hGZ-3p-NqS"/>
+                        <segue destination="7yh-Vy-kMp" kind="relationship" relationship="viewControllers" id="2M7-LN-LB9"/>
+                        <segue destination="umq-Sg-KNB" kind="relationship" relationship="viewControllers" id="Eas-vF-E7B"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S36-Ns-jue" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828" y="1824"/>
+        </scene>
+        <!--ballad-->
+        <scene sceneID="6ZG-5P-BOG">
+            <objects>
+                <viewController id="umq-Sg-KNB" customClass="BalladViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ohs-3V-oSR"/>
+                        <viewControllerLayoutGuide type="bottom" id="bxx-ny-J7A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rB1-z7-baB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ballad" id="frh-u5-qE5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xwe-i7-PTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="2516"/>
+        </scene>
+        <!--LimerickViewController-->
+        <scene sceneID="TWA-cI-YyE">
+            <objects>
+                <viewController title="LimerickViewController" id="dGf-RO-4US" customClass="LimerickViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jRY-cm-p8P"/>
+                        <viewControllerLayoutGuide type="bottom" id="uiQ-iz-kYL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MIF-uj-F0I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="limerick" id="xLu-Rl-4Jl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYW-pb-iMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874" y="2508"/>
+        </scene>
     </scenes>
     <resources>
         <image name="OldPaper" width="181" height="279"/>
@@ -689,9 +763,9 @@
         <image name="mainPageImage" width="286" height="173"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EXI-S9-qrJ"/>
         <segue reference="HBL-dl-kBu"/>
-        <segue reference="fDd-uQ-G1o"/>
+        <segue reference="F7w-N6-4JW"/>
         <segue reference="v5e-sq-TEA"/>
+        <segue reference="fDd-uQ-G1o"/>
     </inferredMetricsTieBreakers>
 </document>

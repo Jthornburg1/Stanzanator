@@ -1,18 +1,18 @@
 //
-//  SearchViewController.m
+//  AboutTabBarControllerViewController.m
 //  Stanzanator
 //
-//  Created by jonathan thornburg on 5/30/15.
+//  Created by jonathan thornburg on 7/1/15.
 //  Copyright (c) 2015 jonathan thornburg. All rights reserved.
 //
 
-#import "SearchViewController.h"
+#import "AboutTabBarController.h"
 
-@interface SearchViewController ()
+@interface AboutTabBarController ()
 
 @end
 
-@implementation SearchViewController
+@implementation AboutTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +23,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 /*
 #pragma mark - Navigation

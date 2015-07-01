@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.festoTextView.text = @"";
+    self.festoTextView.text = @"If you’ve ever been compelled by the force of concise, minimal statements of poetry, try your hand at it with an audience. Stanzanator is at your disposal during moments of joy or suffering that you wish to rivet down in time so that you can spectate on them, share them, and deepen your perspective on being a person.\n\nThe surest path to writing a great poem is the same as the path toward making any great thing: make stacks of bad ones first. For this reason, Stanzanator allows you to flick a switch and keep any piece you choose private. You are equipped with a thesaurus tool and outlines of some common poetic forms available on the bar below.";
 
 }
 
