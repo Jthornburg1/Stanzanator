@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchListTableTableViewController : UITableViewController
+@interface SearchListTableViewController : UITableViewController
+
+@property (strong, nonatomic) NSArray *searchResultsList;
 
 @end

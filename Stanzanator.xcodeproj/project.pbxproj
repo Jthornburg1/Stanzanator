@@ -13,7 +13,7 @@
 		D27C32FE1B44554C00AA9FCD /* LimerickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C32FD1B44554C00AA9FCD /* LimerickViewController.m */; };
 		D27C33011B44562500AA9FCD /* SonnetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C33001B44562500AA9FCD /* SonnetViewController.m */; };
 		D27C33041B4456ED00AA9FCD /* BalladViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C33031B4456ED00AA9FCD /* BalladViewController.m */; };
-		D27C33071B445A4F00AA9FCD /* SearchListTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C33061B445A4F00AA9FCD /* SearchListTableTableViewController.m */; };
+		D27C33071B445A4F00AA9FCD /* SearchListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C33061B445A4F00AA9FCD /* SearchListTableViewController.m */; };
 		D2932A001B1A15B500531AF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D29329FF1B1A15B500531AF0 /* main.m */; };
 		D2932A031B1A15B500531AF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A021B1A15B500531AF0 /* AppDelegate.m */; };
 		D2932A061B1A15B500531AF0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A051B1A15B500531AF0 /* MainViewController.m */; };
@@ -76,8 +76,8 @@
 		D27C33001B44562500AA9FCD /* SonnetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SonnetViewController.m; sourceTree = "<group>"; };
 		D27C33021B4456ED00AA9FCD /* BalladViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalladViewController.h; sourceTree = "<group>"; };
 		D27C33031B4456ED00AA9FCD /* BalladViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalladViewController.m; sourceTree = "<group>"; };
-		D27C33051B445A4F00AA9FCD /* SearchListTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchListTableTableViewController.h; sourceTree = "<group>"; };
-		D27C33061B445A4F00AA9FCD /* SearchListTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchListTableTableViewController.m; sourceTree = "<group>"; };
+		D27C33051B445A4F00AA9FCD /* SearchListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchListTableViewController.h; sourceTree = "<group>"; };
+		D27C33061B445A4F00AA9FCD /* SearchListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchListTableViewController.m; sourceTree = "<group>"; };
 		D29329FA1B1A15B500531AF0 /* Stanzanator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stanzanator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29329FE1B1A15B500531AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D29329FF1B1A15B500531AF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -217,8 +217,8 @@
 				D24627501B39D38F00A5C296 /* ThesaurusTableViewController.m */,
 				D2932B5D1B1E5B5F00531AF0 /* PoemToReadViewController.h */,
 				D2932B5E1B1E5B5F00531AF0 /* PoemToReadViewController.m */,
-				D27C33051B445A4F00AA9FCD /* SearchListTableTableViewController.h */,
-				D27C33061B445A4F00AA9FCD /* SearchListTableTableViewController.m */,
+				D27C33051B445A4F00AA9FCD /* SearchListTableViewController.h */,
+				D27C33061B445A4F00AA9FCD /* SearchListTableViewController.m */,
 				D2932AB41B1CCDD700531AF0 /* Poem.h */,
 				D2932AB51B1CCDD700531AF0 /* Poem.m */,
 				D2932AB71B1CCE0500531AF0 /* PoemController.h */,
@@ -408,7 +408,7 @@
 				D2932AB91B1CCE0500531AF0 /* PoemController.m in Sources */,
 				D2932AB61B1CCDD700531AF0 /* Poem.m in Sources */,
 				D2932A251B1A20B200531AF0 /* ProfileViewController.m in Sources */,
-				D27C33071B445A4F00AA9FCD /* SearchListTableTableViewController.m in Sources */,
+				D27C33071B445A4F00AA9FCD /* SearchListTableViewController.m in Sources */,
 				D2932ABF1B1CCE4B00531AF0 /* ProfileController.m in Sources */,
 				D27C33011B44562500AA9FCD /* SonnetViewController.m in Sources */,
 				D27C32FE1B44554C00AA9FCD /* LimerickViewController.m in Sources */,

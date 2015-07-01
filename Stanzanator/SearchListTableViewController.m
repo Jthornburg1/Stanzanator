@@ -1,25 +1,24 @@
 //
-//  SearchListTableTableViewController.m
+//  SeachListTableViewController.m
 //  Stanzanator
 //
-//  Created by jonathan thornburg on 7/1/15.
+//  Created by jonathan thornburg on 6/23/15.
 //  Copyright (c) 2015 jonathan thornburg. All rights reserved.
 //
 
-#import "SearchListTableTableViewController.h"
+#import "SearchListTableViewController.h"
 #import "Poem.h"
 #import "PoemController.h"
 #import "PoemToReadViewController.h"
 #import "TitleTableTableViewController.h"
 
-@interface SearchListTableTableViewController ()
+@interface SearchListTableViewController ()
 
 @property (strong, nonatomic) TitleTableTableViewController *titleVC;
 
-
 @end
 
-@implementation SearchListTableTableViewController
+@implementation SearchListTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,8 +34,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - TableView Delegate Methods
 
 #pragma mark - TableView Delegate
 
@@ -56,8 +53,9 @@
 //
 //}
 
-
 #pragma mark - Table view data source
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
@@ -67,11 +65,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FilteredListCell"];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FilteredListCell"];
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
     }
     
@@ -80,11 +76,21 @@
     
     cell.textLabel.text = poem.title;
     
-    cell.userInteractionEnabled = YES;
+    if (poem.isPrivate) {
+        cell.detailTextLabel.text = @"private";
+        if (poem.writerOfPoem == [PFUser currentUser]) {
+            cell.userInteractionEnabled = YES;
+        } else {
+            cell.userInteractionEnabled = NO;
+        }
+    } else {
+        cell.detailTextLabel.text = user[@"username"];
+        cell.userInteractionEnabled = YES;
+    }
+    
+    
+    return cell;
 }
 
-
-return cell;
-}
 
 @end
