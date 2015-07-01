@@ -12,6 +12,7 @@
 #import "ProfileController.h"
 #import "ProfileViewController.h"
 #import "ThesaurusTableViewController.h"
+#include "SearchListTableViewController.h"
 
 @interface TitleTableTableViewController () <UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate>
 
