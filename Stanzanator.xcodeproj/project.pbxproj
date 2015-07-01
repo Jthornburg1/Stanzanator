@@ -23,7 +23,6 @@
 		D2932A1A1B1A15B500531AF0 /* StanzanatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A191B1A15B500531AF0 /* StanzanatorTests.m */; };
 		D2932A251B1A20B200531AF0 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A241B1A20B200531AF0 /* ProfileViewController.m */; };
 		D2932A281B1A283C00531AF0 /* StanzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A271B1A283C00531AF0 /* StanzaViewController.m */; };
-		D2932A341B1A3B5A00531AF0 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A331B1A3B5A00531AF0 /* SearchViewController.m */; };
 		D2932A371B1A436300531AF0 /* TitleTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */; };
 		D2932AB61B1CCDD700531AF0 /* Poem.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932AB51B1CCDD700531AF0 /* Poem.m */; };
 		D2932AB91B1CCE0500531AF0 /* PoemController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932AB81B1CCE0500531AF0 /* PoemController.m */; };
@@ -95,8 +94,6 @@
 		D2932A241B1A20B200531AF0 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		D2932A261B1A283C00531AF0 /* StanzaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StanzaViewController.h; sourceTree = "<group>"; };
 		D2932A271B1A283C00531AF0 /* StanzaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StanzaViewController.m; sourceTree = "<group>"; };
-		D2932A321B1A3B5A00531AF0 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		D2932A331B1A3B5A00531AF0 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		D2932A351B1A436300531AF0 /* TitleTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleTableTableViewController.h; sourceTree = "<group>"; };
 		D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleTableTableViewController.m; sourceTree = "<group>"; };
 		D2932AB41B1CCDD700531AF0 /* Poem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poem.h; sourceTree = "<group>"; };
@@ -171,6 +168,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D27C33081B4470BA00AA9FCD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2A4EF511B3DA347006F19FE /* Thesaurus.h */,
+				D2A4EF521B3DA347006F19FE /* Thesaurus.m */,
+				D2932AB41B1CCDD700531AF0 /* Poem.h */,
+				D2932AB51B1CCDD700531AF0 /* Poem.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D27C33091B44710E00AA9FCD /* TabBarControllerFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D27C33021B4456ED00AA9FCD /* BalladViewController.h */,
+				D27C33031B4456ED00AA9FCD /* BalladViewController.m */,
+				D27C32FF1B44562500AA9FCD /* SonnetViewController.h */,
+				D27C33001B44562500AA9FCD /* SonnetViewController.m */,
+				D27C32FC1B44554C00AA9FCD /* LimerickViewController.h */,
+				D27C32FD1B44554C00AA9FCD /* LimerickViewController.m */,
+				D27C32F91B44462A00AA9FCD /* AboutTabBarController.h */,
+				D27C32FA1B44462A00AA9FCD /* AboutTabBarController.m */,
+				D27C32C11B43395900AA9FCD /* StanzifestoViewController.h */,
+				D27C32C21B43395900AA9FCD /* StanzifestoViewController.m */,
+			);
+			name = TabBarControllerFiles;
+			sourceTree = "<group>";
+		};
+		D27C330A1B44718800AA9FCD /* ControllerClasses */ = {
+			isa = PBXGroup;
+			children = (
+				D2932ABD1B1CCE4B00531AF0 /* ProfileController.h */,
+				D2932ABE1B1CCE4B00531AF0 /* ProfileController.m */,
+				D2932AB81B1CCE0500531AF0 /* PoemController.m */,
+				D2932AB71B1CCE0500531AF0 /* PoemController.h */,
+				D2A4EF541B3DC01F006F19FE /* ThesaurusController.h */,
+				D2A4EF551B3DC01F006F19FE /* ThesaurusController.m */,
+			);
+			name = ControllerClasses;
+			sourceTree = "<group>";
+		};
+		D27C330B1B44723E00AA9FCD /* NonTabBarViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2932A041B1A15B500531AF0 /* MainViewController.h */,
+				D2932A051B1A15B500531AF0 /* MainViewController.m */,
+				D2932B5D1B1E5B5F00531AF0 /* PoemToReadViewController.h */,
+				D2932B5E1B1E5B5F00531AF0 /* PoemToReadViewController.m */,
+				D27C33051B445A4F00AA9FCD /* SearchListTableViewController.h */,
+				D27C33061B445A4F00AA9FCD /* SearchListTableViewController.m */,
+				D2932A351B1A436300531AF0 /* TitleTableTableViewController.h */,
+				D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */,
+				D2932A261B1A283C00531AF0 /* StanzaViewController.h */,
+				D2932A271B1A283C00531AF0 /* StanzaViewController.m */,
+				D2932A231B1A20B200531AF0 /* ProfileViewController.h */,
+				D2932A241B1A20B200531AF0 /* ProfileViewController.m */,
+				D246274F1B39D38F00A5C296 /* ThesaurusTableViewController.h */,
+				D24627501B39D38F00A5C296 /* ThesaurusTableViewController.m */,
+			);
+			name = NonTabBarViewControllers;
+			sourceTree = "<group>";
+		};
 		D29329F11B1A15B500531AF0 = {
 			isa = PBXGroup;
 			children = (
@@ -196,43 +255,11 @@
 				D2DBC0FA1B3369840079C15A /* CustomCellTableViewCell.m */,
 				D2932A011B1A15B500531AF0 /* AppDelegate.h */,
 				D2932A021B1A15B500531AF0 /* AppDelegate.m */,
-				D2932A041B1A15B500531AF0 /* MainViewController.h */,
-				D2932A051B1A15B500531AF0 /* MainViewController.m */,
 				D2932A071B1A15B500531AF0 /* Main.storyboard */,
-				D27C33021B4456ED00AA9FCD /* BalladViewController.h */,
-				D27C33031B4456ED00AA9FCD /* BalladViewController.m */,
-				D27C32FF1B44562500AA9FCD /* SonnetViewController.h */,
-				D27C33001B44562500AA9FCD /* SonnetViewController.m */,
-				D27C32FC1B44554C00AA9FCD /* LimerickViewController.h */,
-				D27C32FD1B44554C00AA9FCD /* LimerickViewController.m */,
-				D27C32F91B44462A00AA9FCD /* AboutTabBarController.h */,
-				D27C32FA1B44462A00AA9FCD /* AboutTabBarController.m */,
-				D27C32C11B43395900AA9FCD /* StanzifestoViewController.h */,
-				D27C32C21B43395900AA9FCD /* StanzifestoViewController.m */,
-				D2A4EF511B3DA347006F19FE /* Thesaurus.h */,
-				D2A4EF521B3DA347006F19FE /* Thesaurus.m */,
-				D2A4EF541B3DC01F006F19FE /* ThesaurusController.h */,
-				D2A4EF551B3DC01F006F19FE /* ThesaurusController.m */,
-				D246274F1B39D38F00A5C296 /* ThesaurusTableViewController.h */,
-				D24627501B39D38F00A5C296 /* ThesaurusTableViewController.m */,
-				D2932B5D1B1E5B5F00531AF0 /* PoemToReadViewController.h */,
-				D2932B5E1B1E5B5F00531AF0 /* PoemToReadViewController.m */,
-				D27C33051B445A4F00AA9FCD /* SearchListTableViewController.h */,
-				D27C33061B445A4F00AA9FCD /* SearchListTableViewController.m */,
-				D2932AB41B1CCDD700531AF0 /* Poem.h */,
-				D2932AB51B1CCDD700531AF0 /* Poem.m */,
-				D2932AB71B1CCE0500531AF0 /* PoemController.h */,
-				D2932AB81B1CCE0500531AF0 /* PoemController.m */,
-				D2932A351B1A436300531AF0 /* TitleTableTableViewController.h */,
-				D2932A361B1A436300531AF0 /* TitleTableTableViewController.m */,
-				D2932A321B1A3B5A00531AF0 /* SearchViewController.h */,
-				D2932A331B1A3B5A00531AF0 /* SearchViewController.m */,
-				D2932A261B1A283C00531AF0 /* StanzaViewController.h */,
-				D2932A271B1A283C00531AF0 /* StanzaViewController.m */,
-				D2932A231B1A20B200531AF0 /* ProfileViewController.h */,
-				D2932A241B1A20B200531AF0 /* ProfileViewController.m */,
-				D2932ABD1B1CCE4B00531AF0 /* ProfileController.h */,
-				D2932ABE1B1CCE4B00531AF0 /* ProfileController.m */,
+				D27C33091B44710E00AA9FCD /* TabBarControllerFiles */,
+				D27C33081B4470BA00AA9FCD /* Models */,
+				D27C330A1B44718800AA9FCD /* ControllerClasses */,
+				D27C330B1B44723E00AA9FCD /* NonTabBarViewControllers */,
 				D2932A0A1B1A15B500531AF0 /* Images.xcassets */,
 				D2932A0C1B1A15B500531AF0 /* LaunchScreen.xib */,
 				D29329FD1B1A15B500531AF0 /* Supporting Files */,
@@ -404,7 +431,6 @@
 				D24627511B39D38F00A5C296 /* ThesaurusTableViewController.m in Sources */,
 				D2932A371B1A436300531AF0 /* TitleTableTableViewController.m in Sources */,
 				D2932B5F1B1E5B5F00531AF0 /* PoemToReadViewController.m in Sources */,
-				D2932A341B1A3B5A00531AF0 /* SearchViewController.m in Sources */,
 				D2932AB91B1CCE0500531AF0 /* PoemController.m in Sources */,
 				D2932AB61B1CCDD700531AF0 /* Poem.m in Sources */,
 				D2932A251B1A20B200531AF0 /* ProfileViewController.m in Sources */,

@@ -11,7 +11,6 @@
 #import "PoemToReadViewController.h"
 #import "ProfileController.h"
 #import "ProfileViewController.h"
-#import "ThesaurusTableViewController.h"
 #include "SearchListTableViewController.h"
 
 @interface TitleTableTableViewController () <UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate>
@@ -19,7 +18,7 @@
 @property (strong, nonatomic) UISearchController *searchController;
 @property (strong, nonatomic) NSArray *filteredSearchResults;
 @property (strong, nonatomic) NSPredicate *searchPredicate;
-@property (strong, nonatomic) ThesaurusTableViewController *filteredTableViewController;
+@property (strong, nonatomic) SearchListTableViewController *filteredTableViewController;
 
 
 @end
@@ -36,7 +35,7 @@
         });
     }];
     
-    self.filteredTableViewController = [ThesaurusTableViewController new];
+    self.filteredTableViewController = [SearchListTableViewController new];
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.filteredTableViewController];
     self.searchController.searchResultsUpdater = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;
