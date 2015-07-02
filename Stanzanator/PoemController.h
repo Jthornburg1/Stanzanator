@@ -20,6 +20,8 @@
 - (void)removePoem:(Poem *)poem;
 - (void)updatePoem:(Poem *)poem;
 - (void)loadPoemsFromParse;
+- (void)poemsByWriterSearch:(NSString *)writer withCompletion:(void (^)(NSArray *poems))completion;
+
 
 
 -(void)writersPoemsforUser:(PFUser*)user;

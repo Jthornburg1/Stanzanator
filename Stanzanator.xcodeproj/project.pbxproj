@@ -14,6 +14,8 @@
 		D27C33011B44562500AA9FCD /* SonnetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C33001B44562500AA9FCD /* SonnetViewController.m */; };
 		D27C33041B4456ED00AA9FCD /* BalladViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C33031B4456ED00AA9FCD /* BalladViewController.m */; };
 		D27C33071B445A4F00AA9FCD /* SearchListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C33061B445A4F00AA9FCD /* SearchListTableViewController.m */; };
+		D27C330E1B44753500AA9FCD /* HaikuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C330D1B44753500AA9FCD /* HaikuViewController.m */; };
+		D27C33111B4475DC00AA9FCD /* BluesPoemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C33101B4475DC00AA9FCD /* BluesPoemViewController.m */; };
 		D2932A001B1A15B500531AF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D29329FF1B1A15B500531AF0 /* main.m */; };
 		D2932A031B1A15B500531AF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A021B1A15B500531AF0 /* AppDelegate.m */; };
 		D2932A061B1A15B500531AF0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2932A051B1A15B500531AF0 /* MainViewController.m */; };
@@ -77,6 +79,10 @@
 		D27C33031B4456ED00AA9FCD /* BalladViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalladViewController.m; sourceTree = "<group>"; };
 		D27C33051B445A4F00AA9FCD /* SearchListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchListTableViewController.h; sourceTree = "<group>"; };
 		D27C33061B445A4F00AA9FCD /* SearchListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchListTableViewController.m; sourceTree = "<group>"; };
+		D27C330C1B44753500AA9FCD /* HaikuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HaikuViewController.h; sourceTree = "<group>"; };
+		D27C330D1B44753500AA9FCD /* HaikuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HaikuViewController.m; sourceTree = "<group>"; };
+		D27C330F1B4475DC00AA9FCD /* BluesPoemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluesPoemViewController.h; sourceTree = "<group>"; };
+		D27C33101B4475DC00AA9FCD /* BluesPoemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluesPoemViewController.m; sourceTree = "<group>"; };
 		D29329FA1B1A15B500531AF0 /* Stanzanator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stanzanator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29329FE1B1A15B500531AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D29329FF1B1A15B500531AF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -184,8 +190,12 @@
 			children = (
 				D27C33021B4456ED00AA9FCD /* BalladViewController.h */,
 				D27C33031B4456ED00AA9FCD /* BalladViewController.m */,
+				D27C330F1B4475DC00AA9FCD /* BluesPoemViewController.h */,
+				D27C33101B4475DC00AA9FCD /* BluesPoemViewController.m */,
 				D27C32FF1B44562500AA9FCD /* SonnetViewController.h */,
 				D27C33001B44562500AA9FCD /* SonnetViewController.m */,
+				D27C330C1B44753500AA9FCD /* HaikuViewController.h */,
+				D27C330D1B44753500AA9FCD /* HaikuViewController.m */,
 				D27C32FC1B44554C00AA9FCD /* LimerickViewController.h */,
 				D27C32FD1B44554C00AA9FCD /* LimerickViewController.m */,
 				D27C32F91B44462A00AA9FCD /* AboutTabBarController.h */,
@@ -430,6 +440,8 @@
 				D2932A031B1A15B500531AF0 /* AppDelegate.m in Sources */,
 				D24627511B39D38F00A5C296 /* ThesaurusTableViewController.m in Sources */,
 				D2932A371B1A436300531AF0 /* TitleTableTableViewController.m in Sources */,
+				D27C33111B4475DC00AA9FCD /* BluesPoemViewController.m in Sources */,
+				D27C330E1B44753500AA9FCD /* HaikuViewController.m in Sources */,
 				D2932B5F1B1E5B5F00531AF0 /* PoemToReadViewController.m in Sources */,
 				D2932AB91B1CCE0500531AF0 /* PoemController.m in Sources */,
 				D2932AB61B1CCDD700531AF0 /* Poem.m in Sources */,
@@ -516,7 +528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -551,7 +563,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

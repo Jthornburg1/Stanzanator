@@ -39,7 +39,7 @@
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.filteredTableViewController];
     self.searchController.searchResultsUpdater = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;
-    self.searchController.searchBar.scopeButtonTitles = @[@"Title",@"Username"];
+//    self.searchController.searchBar.scopeButtonTitles = @[@"Title"];
     
     self.searchController.searchBar.delegate = self;
     // self should be the delegate for the filtered table so DidSelectRowAtIndexPath is called for both tables 
@@ -71,26 +71,21 @@
     NSString *predicateFormat = @"%K CONTAINS[cd] %@";
     NSString *searchAtrribute = @"title";
     
-    if (scopeOption == 1) {
-        searchAtrribute = @"writersOfPoem.@username";
-    }
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAtrribute, searchText];
-    
-    self.filteredSearchResults = [[PoemController sharedInstance].poems filteredArrayUsingPredicate:predicate];
-    self.filteredTableViewController.searchResultsList = self.filteredSearchResults;
-    
-    NSLog(@"~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-    
-    for (Poem *poem in self.filteredSearchResults) {
+    if (scopeOption == 0) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAtrribute, searchText];
         
-        NSLog(@"%@", poem.title);
+        self.filteredSearchResults = [[PoemController sharedInstance].poems filteredArrayUsingPredicate:predicate];
+        self.filteredTableViewController.searchResultsList = self.filteredSearchResults;
     }
+    
 }
 
 #pragma mark - UISearchBarDelegate
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+    
+    
     [searchBar resignFirstResponder];
 }
 

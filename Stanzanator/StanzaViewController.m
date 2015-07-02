@@ -10,7 +10,7 @@
 #import "PoemController.h"
 
 
-@interface StanzaViewController ()<UITextFieldDelegate, ThesaurusWordDelegate>
+@interface StanzaViewController ()<UITextFieldDelegate, UITextViewDelegate, ThesaurusWordDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *privateSwitch;
 @property (weak, nonatomic) IBOutlet UITextView *poemBodyText;
@@ -41,6 +41,11 @@
     NSArray *titleArray = @[@"Breakfast at Midnight", @"Title2", @"How to Raise Your Children",@"Just a Little Innocent Fun",@"She Presents Herself", @"He Presents Himself", @"Not In My Backyard", @"Snapshots At Twilight", @"On The Median Strip"];
     self.titleTextField.text = titleArray[rand];
 }
+
+- (IBAction)viewTapped:(id)sender {
+    [self.poemBodyText resignFirstResponder];
+}
+
 - (IBAction)makePrivateSwitched:(id)sender {
     self.privateFileOnly = !self.privateFileOnly;
 }
@@ -49,14 +54,13 @@
     //[self.navigationController popViewControllerAnimated:YES];
 }
 
-
-
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return YES;
 }
+
+
 
 - (void)updateWithPoem:(Poem *)poem
 {

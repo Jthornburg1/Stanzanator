@@ -56,10 +56,12 @@
 {
     [[PoemController sharedInstance] poemsByWriter:self.userProfile withCompletion:^(NSArray *poems) {
         self.poems = poems;
+        
         [self.tableView reloadData];
+
     }];
     
-    [self.tableView reloadData];
+
 }
 
 - (void)updateProfileForNewUser:(PFUser *)user
@@ -163,10 +165,8 @@
     
     Poem *poem = self.poems[indexPath.row];
     
-    //PFUser *user = self.userProfile;
     
     cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
-    //cell.backgroundColor = [UIColor blueColor];
     cell.textLabel.text = poem.title;
     cell.detailTextLabel.text = @"";
     
@@ -174,7 +174,6 @@
     if (poem.isPrivate == YES) {
         if (poem.writerOfPoem == [PFUser currentUser]) {
             cell.userInteractionEnabled = YES;
-            //cell.detailTextLabel.text = @"private";
         } else {
             cell.userInteractionEnabled = NO;
             cell.detailTextLabel.text = @"private";

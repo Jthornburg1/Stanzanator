@@ -91,6 +91,19 @@
     }];
 }
 
+- (void)poemsByWriterSearch:(NSString *)writer
+       withCompletion:(void (^)(NSArray *poems))completion
+{
+    
+    PFQuery *poemQuery = [Poem query];
+    [poemQuery whereKey:@"writersPoems" containsString:writer];
+    [poemQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.poemsByWriter = objects;
+        completion(objects);
+    }];
+}
+
+
     
 
 -(void)writersPoemsforUser:(PFUser*)user
