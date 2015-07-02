@@ -444,19 +444,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.74999999999999978" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OldPaper" translatesAutoresizingMaskIntoConstraints="NO" id="stk-2C-QFU">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="712" height="600"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsX-4R-F3I">
-                                <rect key="frame" x="106" y="157" width="388" height="328"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="328" id="26I-j9-Sdz"/>
-                                    <constraint firstAttribute="width" constant="388" id="A3U-c7-Eks"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vE-ef-hlx">
                                 <rect key="frame" x="517" y="499" width="44" height="30"/>
                                 <state key="normal" title="Delete">
@@ -466,7 +455,7 @@
                                     <action selector="deletePoem:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="mtu-2X-4Rr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gac-oP-fo9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gac-oP-fo9">
                                 <rect key="frame" x="39" y="499" width="30" height="30"/>
                                 <state key="normal" title="Edit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -476,57 +465,81 @@
                                     <segue destination="5wg-KE-wky" kind="show" identifier="editTapped" id="v5e-sq-TEA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld2-UF-BFg">
-                                <rect key="frame" x="269" y="128" width="63" height="21"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poem Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ii-X8-VwE">
-                                <rect key="frame" x="39" y="84" width="522" height="29"/>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="26"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsX-4R-F3I">
+                                <rect key="frame" x="50" y="173" width="500" height="328"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="328" id="zVr-vu-nhX"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1m-CH-Fkb">
+                                <rect key="frame" x="50" y="34" width="500" height="102"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="AVh-K4-dIC"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="27" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="timestamp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmm-ZN-Lsx">
+                                <rect key="frame" x="258" y="144" width="85" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="RQ7-at-eUM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4vE-ef-hlx" firstAttribute="trailing" secondItem="3ii-X8-VwE" secondAttribute="trailing" id="7PN-Fo-Uda"/>
-                            <constraint firstItem="Ld2-UF-BFg" firstAttribute="top" secondItem="3ii-X8-VwE" secondAttribute="bottom" constant="15" id="BrW-dS-qHG"/>
+                            <constraint firstItem="JsX-4R-F3I" firstAttribute="centerX" secondItem="Fle-Uf-UqP" secondAttribute="centerX" id="3aL-BW-srQ"/>
+                            <constraint firstItem="JsX-4R-F3I" firstAttribute="centerX" secondItem="U1m-CH-Fkb" secondAttribute="centerX" id="8Wo-Z0-zYD"/>
+                            <constraint firstItem="JsX-4R-F3I" firstAttribute="top" secondItem="Wmm-ZN-Lsx" secondAttribute="bottom" constant="3" id="9B3-jz-aIB"/>
+                            <constraint firstAttribute="centerX" secondItem="Wmm-ZN-Lsx" secondAttribute="centerX" constant="-0.5" id="BYj-sE-zb9"/>
                             <constraint firstItem="stk-2C-QFU" firstAttribute="top" secondItem="Fle-Uf-UqP" secondAttribute="top" id="CGF-G3-Vvk"/>
-                            <constraint firstItem="stk-2C-QFU" firstAttribute="centerX" secondItem="Ld2-UF-BFg" secondAttribute="centerX" id="Ek5-57-RaS"/>
-                            <constraint firstItem="stk-2C-QFU" firstAttribute="centerX" secondItem="3ii-X8-VwE" secondAttribute="centerX" id="JZ5-XR-MzU"/>
+                            <constraint firstItem="Wmm-ZN-Lsx" firstAttribute="top" secondItem="U1m-CH-Fkb" secondAttribute="bottom" constant="8" id="DdS-fs-PjN"/>
                             <constraint firstItem="stk-2C-QFU" firstAttribute="leading" secondItem="Gac-oP-fo9" secondAttribute="trailing" constant="-69" id="K4J-Jm-mrk"/>
-                            <constraint firstItem="Gac-oP-fo9" firstAttribute="top" secondItem="JsX-4R-F3I" secondAttribute="bottom" constant="14" id="MLq-Fj-JVC"/>
                             <constraint firstAttribute="trailing" secondItem="stk-2C-QFU" secondAttribute="trailing" id="NI0-BO-MoD"/>
-                            <constraint firstItem="fv0-gD-ZGa" firstAttribute="top" secondItem="JsX-4R-F3I" secondAttribute="bottom" constant="71" id="QZY-gg-wbl"/>
+                            <constraint firstItem="JsX-4R-F3I" firstAttribute="width" secondItem="U1m-CH-Fkb" secondAttribute="width" id="Q6D-6X-ehK"/>
+                            <constraint firstItem="Gac-oP-fo9" firstAttribute="top" secondItem="JsX-4R-F3I" secondAttribute="bottom" constant="-2" id="XEu-Z9-h86"/>
                             <constraint firstAttribute="bottom" secondItem="stk-2C-QFU" secondAttribute="bottom" id="YLg-je-UnG"/>
+                            <constraint firstItem="JsX-4R-F3I" firstAttribute="top" secondItem="Wmm-ZN-Lsx" secondAttribute="bottom" constant="3" id="bei-oD-h1d"/>
                             <constraint firstItem="Gac-oP-fo9" firstAttribute="baseline" secondItem="4vE-ef-hlx" secondAttribute="baseline" id="ceZ-f4-z9u"/>
                             <constraint firstItem="4vE-ef-hlx" firstAttribute="leading" secondItem="stk-2C-QFU" secondAttribute="trailing" constant="-83" id="chU-7T-qxF"/>
-                            <constraint firstItem="stk-2C-QFU" firstAttribute="top" secondItem="3ii-X8-VwE" secondAttribute="bottom" constant="-113" id="kVz-31-FkV"/>
-                            <constraint firstItem="3ii-X8-VwE" firstAttribute="top" secondItem="6fc-BN-7FJ" secondAttribute="bottom" constant="27" id="koZ-5o-yhp"/>
+                            <constraint firstItem="JsX-4R-F3I" firstAttribute="leading" secondItem="Fle-Uf-UqP" secondAttribute="leadingMargin" constant="34" id="cvG-fu-jUF"/>
+                            <constraint firstItem="Wmm-ZN-Lsx" firstAttribute="top" secondItem="U1m-CH-Fkb" secondAttribute="bottom" constant="8" id="hZU-sc-tn1"/>
+                            <constraint firstItem="stk-2C-QFU" firstAttribute="centerX" secondItem="U1m-CH-Fkb" secondAttribute="centerX" constant="56" id="kl9-da-RQO"/>
                             <constraint firstItem="stk-2C-QFU" firstAttribute="leading" secondItem="Fle-Uf-UqP" secondAttribute="leading" id="mvX-GA-IT2"/>
-                            <constraint firstItem="Gac-oP-fo9" firstAttribute="leading" secondItem="3ii-X8-VwE" secondAttribute="leading" id="quZ-RN-MKq"/>
-                            <constraint firstItem="JsX-4R-F3I" firstAttribute="centerX" secondItem="Ld2-UF-BFg" secondAttribute="centerX" id="wao-A9-fXa"/>
-                            <constraint firstItem="JsX-4R-F3I" firstAttribute="top" secondItem="Ld2-UF-BFg" secondAttribute="bottom" constant="8" symbolic="YES" id="zgf-Ri-Fmd"/>
+                            <constraint firstItem="JsX-4R-F3I" firstAttribute="top" secondItem="Fle-Uf-UqP" secondAttribute="top" constant="173" id="nR0-wK-2QU"/>
+                            <constraint firstItem="U1m-CH-Fkb" firstAttribute="top" secondItem="6fc-BN-7FJ" secondAttribute="bottom" constant="14" id="rG2-uI-tsl"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="koZ-5o-yhp"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="deleteButton" destination="4vE-ef-hlx" id="ciy-WM-NGy"/>
                         <outlet property="editButton" destination="Gac-oP-fo9" id="SCB-LU-ndv"/>
                         <outlet property="poemBodyText" destination="JsX-4R-F3I" id="vc9-uQ-JRi"/>
-                        <outlet property="timeStampLabel" destination="Ld2-UF-BFg" id="CcV-xF-qiK"/>
-                        <outlet property="titleLabel" destination="3ii-X8-VwE" id="lIZ-2v-GrB"/>
+                        <outlet property="timeStampLabel" destination="Wmm-ZN-Lsx" id="yNL-Le-eFM"/>
+                        <outlet property="titleTexView" destination="U1m-CH-Fkb" id="avJ-BC-ZM4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1G-ys-anh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2623" y="-390"/>
+            <point key="canvasLocation" x="2552" y="-394"/>
         </scene>
         <!--Stanza View Controller-->
         <scene sceneID="OJv-AY-IFo">
