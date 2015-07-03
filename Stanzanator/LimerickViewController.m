@@ -9,6 +9,7 @@
 #import "LimerickViewController.h"
 
 @interface LimerickViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -16,7 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.textView.text = @"Everyone knows the the bouncy limerick:\n\nblah BLAH blah blah BLAH blah blah BLAH\nblah BLAH blah blah BLAH blah blah BLAH\nblah BLAH blah blah BLAH\nblah BLAH blah blah BLAH\nblah BLAH blah blah BLAH blah blah BLAH\n\n";
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
