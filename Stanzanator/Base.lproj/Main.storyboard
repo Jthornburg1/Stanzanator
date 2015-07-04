@@ -596,8 +596,8 @@
                                             <action selector="makePrivateSwitched:" destination="5wg-KE-wky" eventType="valueChanged" id="QZv-xw-k2p"/>
                                         </connections>
                                     </switch>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7O2-Be-BWa">
-                                        <rect key="frame" x="8" y="110" width="584" height="326"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7O2-Be-BWa">
+                                        <rect key="frame" x="8" y="110" width="584" height="247"/>
                                         <color key="backgroundColor" red="0.96470594409999999" green="0.93725496529999996" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
                                         <gestureRecognizers/>
                                         <color key="textColor" red="0.15686275059999999" green="0.054901964960000001" blue="0.20000001789999999" alpha="1" colorSpace="deviceRGB"/>
@@ -611,7 +611,7 @@
                                         <rect key="frame" x="8" y="29" width="584" height="30"/>
                                         <color key="backgroundColor" red="0.96470594409999999" green="0.93725496529999996" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                         <connections>
                                             <outlet property="delegate" destination="5wg-KE-wky" id="hcC-vF-Aa2"/>
                                         </connections>
@@ -667,7 +667,7 @@
                                     <constraint firstAttribute="trailing" secondItem="WKm-0a-7qa" secondAttribute="trailing" constant="8" id="aGe-YM-ckd"/>
                                     <constraint firstItem="7O2-Be-BWa" firstAttribute="leading" secondItem="r2n-P5-kw0" secondAttribute="leading" id="aL6-zd-NIZ"/>
                                     <constraint firstItem="0Ou-hr-nKe" firstAttribute="leading" secondItem="WKm-0a-7qa" secondAttribute="leading" id="b63-au-9zU"/>
-                                    <constraint firstAttribute="bottom" secondItem="7O2-Be-BWa" secondAttribute="bottom" constant="100" id="b7k-1S-Ia9"/>
+                                    <constraint firstAttribute="bottom" secondItem="7O2-Be-BWa" secondAttribute="bottom" constant="223" id="b7k-1S-Ia9"/>
                                     <constraint firstItem="7O2-Be-BWa" firstAttribute="leading" secondItem="0Ou-hr-nKe" secondAttribute="leading" id="dB4-0j-YPI"/>
                                     <constraint firstItem="7O2-Be-BWa" firstAttribute="top" secondItem="WKm-0a-7qa" secondAttribute="bottom" constant="51" id="hsI-b5-EKa"/>
                                     <constraint firstItem="0Ou-hr-nKe" firstAttribute="top" secondItem="WKm-0a-7qa" secondAttribute="bottom" constant="8" id="s4c-xC-9Xs"/>
@@ -910,7 +910,35 @@
                     <view key="view" contentMode="scaleToFill" id="cxr-gz-3CF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnU-4L-JM3">
+                                <rect key="frame" x="36" y="148" width="528" height="226"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Haiku" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8m-JH-dWY">
+                                <rect key="frame" x="262" y="114" width="78" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7hU-kT-hQX"/>
+                                    <constraint firstAttribute="width" constant="78" id="epa-Pe-nhL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="jnU-4L-JM3" secondAttribute="trailing" constant="20" id="OfP-12-94i"/>
+                            <constraint firstItem="jnU-4L-JM3" firstAttribute="top" secondItem="e8m-JH-dWY" secondAttribute="bottom" constant="13" id="Ooo-Tn-mEd"/>
+                            <constraint firstItem="e8m-JH-dWY" firstAttribute="top" secondItem="KcR-AI-eDd" secondAttribute="bottom" constant="8" id="Vwn-lZ-QB7"/>
+                            <constraint firstAttribute="centerX" secondItem="e8m-JH-dWY" secondAttribute="centerX" constant="-1" id="aBd-ZJ-Vx7"/>
+                            <constraint firstItem="jnU-4L-JM3" firstAttribute="leading" secondItem="cxr-gz-3CF" secondAttribute="leadingMargin" constant="20" id="dmB-q9-2sD"/>
+                            <constraint firstItem="Ud5-vQ-qr4" firstAttribute="top" secondItem="jnU-4L-JM3" secondAttribute="bottom" constant="177" id="oIi-ra-nTR"/>
+                            <constraint firstItem="e8m-JH-dWY" firstAttribute="top" secondItem="KcR-AI-eDd" secondAttribute="bottom" constant="94" id="s5A-ci-WND"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="haiku" id="GJ2-Ek-iK2"/>
                 </viewController>
