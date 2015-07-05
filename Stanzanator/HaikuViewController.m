@@ -9,6 +9,7 @@
 #import "HaikuViewController.h"
 
 @interface HaikuViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textview;
 
 @end
 
@@ -16,7 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.textview.text = @"\t\tI’ve, in forty years,\n\t\tnot competed a haiku\n\t\t…till this one right now!\n\nYes, it’s tempting to think that if you jot down three lines that have 5, 7, and 5 syllables, you’ve got haiku. Here’s another:\n\t\tThe angry man says,\n\t'HAIKUS MUST REFER TO NATURE!'\n\t\tHis face with tattoos\n\nSure of himself as he was, although it is common for them to pertain to nature in some way, the angry man was wrong. Haiku is an art form so adherance to form is voluntary and may be loose.Maybe a better guideline is that good haiku transfers the experience of an instant to the reader in dramatic and illuminating way.";
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,6 +9,7 @@
 #import "BalladViewController.h"
 
 @interface BalladViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -16,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.textView.text = @"Did something happen? A contour of events? Drama is at home in the ballad. There are characters who’s emotions are shaped by events. As readers, we come to relate to the emotions because the events are narrated to us yet we are often left with more questions than answers.\n\nBallads often accompany music. ‘Poncho And Lefty’ by Townes Van Zandt is a classic, country-folk tune and an exemplary ballad: Two outlaws make cross border journey. Van Zandt tells us few things but leads us to infer many others about the nature of each of the characters and the relationship between them. He hint strongly at a betrayal that leaves us lamenting the death of one character and the survival of the other.\n\nWrite your ballad. Better yet, let it write itself. It seems as though some of the best ones may have been done that way.";
 }
 
 - (void)didReceiveMemoryWarning {

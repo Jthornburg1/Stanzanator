@@ -92,7 +92,7 @@
         <!--ballad-->
         <scene sceneID="bHy-bj-uwe">
             <objects>
-                <viewController title="ballad" id="7yh-Vy-kMp" customClass="SonnetViewController" sceneMemberID="viewController">
+                <viewController title="ballad" id="7yh-Vy-kMp" customClass="BalladViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BD7-gN-lLE"/>
                         <viewControllerLayoutGuide type="bottom" id="v0d-vn-1UG"/>
@@ -104,10 +104,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XPA-Pk-h8t">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIM-6v-0pU">
-                                        <rect key="frame" x="20" y="129" width="560" height="368"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIM-6v-0pU">
+                                        <rect key="frame" x="20" y="129" width="560" height="271"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -124,7 +124,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.85490202903747559" green="0.83921575546264648" blue="0.95294123888015747" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="WIM-6v-0pU" secondAttribute="bottom" constant="103" id="AUg-hl-uEq"/>
+                                    <constraint firstAttribute="bottom" secondItem="WIM-6v-0pU" secondAttribute="bottom" constant="200" id="AUg-hl-uEq"/>
                                     <constraint firstAttribute="trailing" secondItem="LNs-C4-HJm" secondAttribute="trailing" constant="20" id="CSh-qa-XgI"/>
                                     <constraint firstItem="WIM-6v-0pU" firstAttribute="leading" secondItem="XPA-Pk-h8t" secondAttribute="leading" constant="20" id="McT-ZU-rVB"/>
                                     <constraint firstItem="Kf4-Kn-i9O" firstAttribute="top" secondItem="XPA-Pk-h8t" secondAttribute="top" constant="94" id="Wqs-Q4-sc1"/>
@@ -145,6 +145,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ballad" id="cwo-kF-Jit"/>
+                    <connections>
+                        <outlet property="textView" destination="WIM-6v-0pU" id="ASH-Qy-Mqh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9rI-x4-GHW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -854,10 +857,6 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Spag1" translatesAutoresizingMaskIntoConstraints="NO" id="b5Q-1w-Eov">
-                                        <rect key="frame" x="20" y="64" width="56" height="64"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bard3" translatesAutoresizingMaskIntoConstraints="NO" id="eMp-B8-3N9">
                                         <rect key="frame" x="524" y="64" width="56" height="64"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -866,8 +865,8 @@
                                             <constraint firstAttribute="width" constant="56" id="pjy-JF-7mf"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NX8-4A-nm4">
-                                        <rect key="frame" x="20" y="129" width="560" height="402"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NX8-4A-nm4">
+                                        <rect key="frame" x="20" y="129" width="560" height="401"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -876,7 +875,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.95686280727386475" green="0.88235300779342651" blue="0.83529418706893921" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
-                                    <constraint firstItem="eMp-B8-3N9" firstAttribute="bottom" secondItem="b5Q-1w-Eov" secondAttribute="bottom" id="56t-Qf-YMm"/>
                                     <constraint firstAttribute="centerX" secondItem="fVm-ge-OJy" secondAttribute="centerX" id="9iw-1W-L0U"/>
                                     <constraint firstItem="NX8-4A-nm4" firstAttribute="leading" secondItem="qBD-Hl-ebX" secondAttribute="leading" constant="20" id="CV6-bj-ESz"/>
                                     <constraint firstItem="fVm-ge-OJy" firstAttribute="top" secondItem="qBD-Hl-ebX" secondAttribute="top" constant="94" id="DMp-G2-Xu7"/>
@@ -886,7 +884,6 @@
                                     <constraint firstAttribute="trailing" secondItem="NX8-4A-nm4" secondAttribute="trailing" constant="20" id="csr-8u-vSj"/>
                                     <constraint firstItem="fVm-ge-OJy" firstAttribute="centerX" secondItem="NX8-4A-nm4" secondAttribute="centerX" id="kHs-MQ-0eG"/>
                                     <constraint firstAttribute="bottom" secondItem="NX8-4A-nm4" secondAttribute="bottom" constant="70" id="rbF-hu-Cle"/>
-                                    <constraint firstItem="eMp-B8-3N9" firstAttribute="top" secondItem="b5Q-1w-Eov" secondAttribute="top" id="yHR-RC-99W"/>
                                     <constraint firstItem="NX8-4A-nm4" firstAttribute="top" secondItem="fVm-ge-OJy" secondAttribute="bottom" constant="14" id="ziH-4X-uFe"/>
                                 </constraints>
                             </view>
@@ -913,47 +910,45 @@
             <objects>
                 <viewController title="haiku" id="eDT-Gc-meL" customClass="HaikuViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KcR-AI-eDd"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ud5-vQ-qr4"/>
+                        <viewControllerLayoutGuide type="top" id="V36-CP-mnr"/>
+                        <viewControllerLayoutGuide type="bottom" id="FhV-Oz-ctm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cxr-gz-3CF">
+                    <view key="view" contentMode="scaleToFill" id="wZS-Jn-R4s">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnU-4L-JM3">
-                                <rect key="frame" x="36" y="148" width="528" height="226"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Haiku" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8m-JH-dWY">
-                                <rect key="frame" x="262" y="114" width="78" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="7hU-kT-hQX"/>
-                                    <constraint firstAttribute="width" constant="78" id="epa-Pe-nhL"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Haiku" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c5-L7-bAB">
+                                <rect key="frame" x="261" y="20" width="77.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vf-g5-uNR">
+                                <rect key="frame" x="36" y="40" width="528" height="431"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="jnU-4L-JM3" secondAttribute="trailing" constant="20" id="OfP-12-94i"/>
-                            <constraint firstItem="jnU-4L-JM3" firstAttribute="top" secondItem="e8m-JH-dWY" secondAttribute="bottom" constant="13" id="Ooo-Tn-mEd"/>
-                            <constraint firstItem="e8m-JH-dWY" firstAttribute="top" secondItem="KcR-AI-eDd" secondAttribute="bottom" constant="8" id="Vwn-lZ-QB7"/>
-                            <constraint firstAttribute="centerX" secondItem="e8m-JH-dWY" secondAttribute="centerX" constant="-1" id="aBd-ZJ-Vx7"/>
-                            <constraint firstItem="jnU-4L-JM3" firstAttribute="leading" secondItem="cxr-gz-3CF" secondAttribute="leadingMargin" constant="20" id="dmB-q9-2sD"/>
-                            <constraint firstItem="Ud5-vQ-qr4" firstAttribute="top" secondItem="jnU-4L-JM3" secondAttribute="bottom" constant="177" id="oIi-ra-nTR"/>
-                            <constraint firstItem="e8m-JH-dWY" firstAttribute="top" secondItem="KcR-AI-eDd" secondAttribute="bottom" constant="94" id="s5A-ci-WND"/>
+                            <constraint firstItem="2Vf-g5-uNR" firstAttribute="top" secondItem="3c5-L7-bAB" secondAttribute="bottom" id="J1Q-PF-FnI"/>
+                            <constraint firstItem="FhV-Oz-ctm" firstAttribute="top" secondItem="2Vf-g5-uNR" secondAttribute="bottom" constant="80" id="PYl-4Z-dmk"/>
+                            <constraint firstAttribute="centerX" secondItem="3c5-L7-bAB" secondAttribute="centerX" id="Xlz-AY-7Om"/>
+                            <constraint firstItem="2Vf-g5-uNR" firstAttribute="leading" secondItem="wZS-Jn-R4s" secondAttribute="leadingMargin" constant="20" id="bLq-E0-0XE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Vf-g5-uNR" secondAttribute="trailing" constant="20" id="oAd-EL-F4U"/>
+                            <constraint firstItem="3c5-L7-bAB" firstAttribute="top" secondItem="V36-CP-mnr" secondAttribute="bottom" id="x7D-rc-3oW"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="haiku" id="GJ2-Ek-iK2"/>
+                    <connections>
+                        <outlet property="textview" destination="2Vf-g5-uNR" id="YfJ-GO-lJe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNE-Zb-OHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1140" y="3212"/>
+            <point key="canvasLocation" x="1178" y="3183"/>
         </scene>
         <!--Limerick-->
         <scene sceneID="TWA-cI-YyE">
@@ -1095,7 +1090,6 @@
         <image name="BalladPic1x" width="100" height="125"/>
         <image name="Bard3" width="180" height="180"/>
         <image name="OldPaper" width="181" height="279"/>
-        <image name="Spag1" width="60" height="60"/>
         <image name="bird copy" width="207" height="243"/>
         <image name="handMadeLeprechaun" width="50" height="54"/>
         <image name="images-1" width="225" height="225"/>
