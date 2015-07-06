@@ -275,7 +275,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ohs-Jt-PfZ"/>
                                     <barButtonItem title="Home" id="0vg-mR-8P1">
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="show" id="FCl-03-LH5"/>
+                                            <action selector="homeBound:" destination="HGX-3C-oqi" id="Bmt-Ff-PAL"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5Ma-JJ-Y53"/>
@@ -319,14 +319,14 @@
                                 </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-1" translatesAutoresizingMaskIntoConstraints="NO" id="fy1-bx-A4b">
-                                <rect key="frame" x="430" y="95" width="132" height="142"/>
+                                <rect key="frame" x="442" y="95" width="132" height="142"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="132" id="VLa-kr-UeM"/>
                                     <constraint firstAttribute="height" constant="142" id="gqp-pq-muu"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NST-dG-4Bz">
-                                <rect key="frame" x="467" y="57" width="95" height="30"/>
+                                <rect key="frame" x="479" y="57" width="95" height="30"/>
                                 <state key="normal" title="Upload Photo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -335,7 +335,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIm-rn-Ay1">
-                                <rect key="frame" x="532" y="28" width="30" height="30"/>
+                                <rect key="frame" x="544" y="28" width="30" height="30"/>
                                 <state key="normal" title="Edit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -343,7 +343,7 @@
                                     <action selector="editProfileButtonTapped:" destination="HGX-3C-oqi" eventType="touchUpInside" id="EQp-Ge-yfz"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDM-3t-h1Y">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDM-3t-h1Y">
                                 <rect key="frame" x="16" y="128" width="97" height="17"/>
                                 <color key="textColor" red="0.96470594409999999" green="0.93725496529999996" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
@@ -352,7 +352,7 @@
                                     <outlet property="delegate" destination="HGX-3C-oqi" id="yuE-Xt-HBx"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ko5-Is-aVy">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ko5-Is-aVy">
                                 <rect key="frame" x="16" y="89" width="97" height="17"/>
                                 <color key="textColor" red="0.96470594409999999" green="0.93725496529999996" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
@@ -364,7 +364,7 @@
                                 <color key="textColor" red="0.96470594409999999" green="0.93725496529999996" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0h-hz-FEj">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0h-hz-FEj">
                                 <rect key="frame" x="16" y="153" width="159" height="43"/>
                                 <color key="textColor" red="0.96470594409999999" green="0.93725496529999996" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
@@ -373,10 +373,6 @@
                                     <outlet property="delegate" destination="HGX-3C-oqi" id="ItW-Zw-Q8a"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="vgw-Gb-fzQ">
-                                <rect key="frame" x="16" y="20" width="48" height="48"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.66666668653488159" green="0.098039224743843079" blue="0.21176472306251526" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -388,7 +384,6 @@
                             <constraint firstItem="NST-dG-4Bz" firstAttribute="top" secondItem="sJ7-Wx-RpG" secondAttribute="bottom" constant="37" id="GH1-3V-NOF"/>
                             <constraint firstItem="G0h-hz-FEj" firstAttribute="leading" secondItem="UDM-3t-h1Y" secondAttribute="leading" id="IZa-0Z-O3G"/>
                             <constraint firstItem="fy1-bx-A4b" firstAttribute="top" secondItem="NST-dG-4Bz" secondAttribute="bottom" constant="8" symbolic="YES" id="M51-aO-mCk"/>
-                            <constraint firstItem="vgw-Gb-fzQ" firstAttribute="top" secondItem="sJ7-Wx-RpG" secondAttribute="bottom" id="PVj-zE-5Kx"/>
                             <constraint firstItem="Ko5-Is-aVy" firstAttribute="top" secondItem="fy1-bx-A4b" secondAttribute="top" constant="-6" id="Pgr-p0-ANq"/>
                             <constraint firstItem="G0h-hz-FEj" firstAttribute="leading" secondItem="Rf4-gW-boJ" secondAttribute="leading" id="QZh-7f-MBa"/>
                             <constraint firstItem="Ko5-Is-aVy" firstAttribute="leading" secondItem="RcY-nP-Aig" secondAttribute="leadingMargin" id="Wea-lD-fQr"/>
@@ -397,11 +392,10 @@
                             <constraint firstItem="NST-dG-4Bz" firstAttribute="trailing" secondItem="fy1-bx-A4b" secondAttribute="trailing" id="cWq-4h-BLz"/>
                             <constraint firstItem="SN2-YU-I7f" firstAttribute="bottom" secondItem="XvQ-z9-kVM" secondAttribute="top" id="idf-Mv-Ho6"/>
                             <constraint firstItem="h77-Vo-Les" firstAttribute="top" secondItem="XvQ-z9-kVM" secondAttribute="bottom" constant="8" id="mYv-cy-iZX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fy1-bx-A4b" secondAttribute="trailing" constant="22" id="mfO-wz-6lW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fy1-bx-A4b" secondAttribute="trailing" constant="10" id="mfO-wz-6lW"/>
                             <constraint firstItem="UDM-3t-h1Y" firstAttribute="top" secondItem="Ko5-Is-aVy" secondAttribute="bottom" constant="22" id="p2d-aX-Ekz"/>
                             <constraint firstItem="XvQ-z9-kVM" firstAttribute="leading" secondItem="RcY-nP-Aig" secondAttribute="leading" id="pJ6-Bd-eyD"/>
                             <constraint firstItem="G0h-hz-FEj" firstAttribute="top" secondItem="UDM-3t-h1Y" secondAttribute="bottom" constant="22" id="piX-GY-Bjm"/>
-                            <constraint firstItem="vgw-Gb-fzQ" firstAttribute="leading" secondItem="RcY-nP-Aig" secondAttribute="leadingMargin" id="sRR-Ic-Yyq"/>
                         </constraints>
                     </view>
                     <connections>
@@ -477,7 +471,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="SLq-5J-yxC"/>
+                                    <action selector="homeBound:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="Bxr-iP-dhC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6S-tc-ATz">
@@ -1051,15 +1045,13 @@
         <image name="Bard3" width="180" height="180"/>
         <image name="OldPaper" width="181" height="279"/>
         <image name="bird copy" width="207" height="243"/>
-        <image name="cat" width="48" height="48"/>
         <image name="handMadeLeprechaun" width="50" height="54"/>
         <image name="images-1" width="225" height="225"/>
         <image name="mainPageImage" width="286" height="173"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="cOw-vG-7aA"/>
         <segue reference="fDd-uQ-G1o"/>
         <segue reference="F7w-N6-4JW"/>
-        <segue reference="cOw-vG-7aA"/>
-        <segue reference="FCl-03-LH5"/>
     </inferredMetricsTieBreakers>
 </document>

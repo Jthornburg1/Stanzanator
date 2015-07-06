@@ -63,6 +63,9 @@
     
 
 }
+- (IBAction)homeBound:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 - (void)updateProfileForNewUser:(PFUser *)user
 {

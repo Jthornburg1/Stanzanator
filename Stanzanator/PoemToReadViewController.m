@@ -51,6 +51,9 @@
     }
 }
 
+- (IBAction)homeBound:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 
 
