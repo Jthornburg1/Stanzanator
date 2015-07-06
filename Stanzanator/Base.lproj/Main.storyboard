@@ -1047,7 +1047,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rK-jM-5yF">
-                                        <rect key="frame" x="154" y="179" width="292" height="315"/>
+                                        <rect key="frame" x="154" y="132" width="292" height="315"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="315" id="8JA-0w-dPk"/>
@@ -1060,7 +1060,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.69411766529083252" green="0.80000007152557373" blue="0.92941182851791382" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
-                                    <constraint firstItem="6rK-jM-5yF" firstAttribute="top" secondItem="EaT-go-fph" secondAttribute="bottom" constant="61" id="5Mg-1s-EPf"/>
+                                    <constraint firstItem="6rK-jM-5yF" firstAttribute="top" secondItem="EaT-go-fph" secondAttribute="bottom" constant="14" id="5Mg-1s-EPf"/>
                                     <constraint firstItem="EaT-go-fph" firstAttribute="centerX" secondItem="pgR-9D-gPx" secondAttribute="centerX" id="8uo-n2-fYc"/>
                                     <constraint firstItem="EaT-go-fph" firstAttribute="top" secondItem="pgR-9D-gPx" secondAttribute="top" constant="91" id="fz1-9q-uKI"/>
                                     <constraint firstItem="EaT-go-fph" firstAttribute="centerX" secondItem="6rK-jM-5yF" secondAttribute="centerX" constant="0.5" id="sNf-pf-Z9Q"/>
