@@ -491,7 +491,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKO-7n-ha9">
-                                <rect key="frame" x="281" y="543" width="41" height="30"/>
+                                <rect key="frame" x="280" y="526" width="41" height="30"/>
                                 <state key="normal" title="Home">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -500,7 +500,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6S-tc-ATz">
-                                <rect key="frame" x="50" y="543" width="30" height="30"/>
+                                <rect key="frame" x="50" y="526" width="30" height="30"/>
                                 <state key="normal" title="Edit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -509,8 +509,15 @@
                                     <segue destination="5wg-KE-wky" kind="show" identifier="editTapped" id="cOw-vG-7aA"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsX-4R-F3I">
+                                <rect key="frame" x="50" y="156" width="514" height="356"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6b-br-YXf">
-                                <rect key="frame" x="520" y="543" width="44" height="30"/>
+                                <rect key="frame" x="520" y="526" width="44" height="30"/>
                                 <state key="normal" title="Delete">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -518,23 +525,16 @@
                                     <action selector="deletePoem:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="jgy-Ye-uSw"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsX-4R-F3I">
-                                <rect key="frame" x="50" y="156" width="514" height="400"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="stk-2C-QFU" firstAttribute="centerX" secondItem="U1m-CH-Fkb" secondAttribute="centerX" id="Fb9-Ja-kzT"/>
                             <constraint firstItem="stk-2C-QFU" firstAttribute="bottom" secondItem="fv0-gD-ZGa" secondAttribute="top" constant="44" id="G5X-aP-cl4"/>
-                            <constraint firstItem="fv0-gD-ZGa" firstAttribute="top" secondItem="zKO-7n-ha9" secondAttribute="bottom" constant="-17" id="JBQ-hY-Nw0"/>
-                            <constraint firstItem="JsX-4R-F3I" firstAttribute="bottom" secondItem="fv0-gD-ZGa" secondAttribute="top" id="LB1-VF-glR"/>
+                            <constraint firstItem="fv0-gD-ZGa" firstAttribute="top" secondItem="zKO-7n-ha9" secondAttribute="bottom" id="JBQ-hY-Nw0"/>
+                            <constraint firstItem="JsX-4R-F3I" firstAttribute="bottom" secondItem="fv0-gD-ZGa" secondAttribute="top" constant="-44" id="LB1-VF-glR"/>
                             <constraint firstItem="stk-2C-QFU" firstAttribute="leading" secondItem="Fle-Uf-UqP" secondAttribute="leading" id="W86-HL-Fub"/>
                             <constraint firstItem="U1m-CH-Fkb" firstAttribute="leading" secondItem="Fle-Uf-UqP" secondAttribute="leadingMargin" constant="20" id="X5p-AL-D5Z"/>
-                            <constraint firstAttribute="centerX" secondItem="zKO-7n-ha9" secondAttribute="centerX" constant="-1.5" id="XQZ-a0-u4P"/>
+                            <constraint firstAttribute="centerX" secondItem="zKO-7n-ha9" secondAttribute="centerX" constant="-0.5" id="XQZ-a0-u4P"/>
                             <constraint firstItem="Q6b-br-YXf" firstAttribute="trailing" secondItem="JsX-4R-F3I" secondAttribute="trailing" id="Zpo-zD-m2G"/>
                             <constraint firstItem="Wmm-ZN-Lsx" firstAttribute="top" secondItem="U1m-CH-Fkb" secondAttribute="bottom" constant="-263" id="eEg-ew-ni5"/>
                             <constraint firstItem="Wmm-ZN-Lsx" firstAttribute="centerX" secondItem="U1m-CH-Fkb" secondAttribute="centerX" id="gGa-SG-LB5"/>
