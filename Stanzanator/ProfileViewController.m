@@ -10,7 +10,7 @@
 #import "PoemController.h"
 #import "PoemToReadViewController.h"
 
-@interface ProfileViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate>
+@interface ProfileViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameText;
 @property (weak, nonatomic) IBOutlet UITextField *ageText;
 @property (weak, nonatomic) IBOutlet UITextField *locationText;
@@ -138,7 +138,6 @@
 - (IBAction)uploadPhotoButtonTapped:(id)sender {
     
     UIImagePickerController *picker = [UIImagePickerController new];
-    
     picker.delegate = self;
     
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
