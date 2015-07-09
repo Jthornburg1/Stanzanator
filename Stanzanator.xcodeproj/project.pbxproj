@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D202D4C21B4F19C400F4ABB2 /* Like.m in Sources */ = {isa = PBXBuildFile; fileRef = D202D4C11B4F19C400F4ABB2 /* Like.m */; };
 		D24627511B39D38F00A5C296 /* ThesaurusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24627501B39D38F00A5C296 /* ThesaurusTableViewController.m */; };
 		D27C32C31B43395900AA9FCD /* StanzifestoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C32C21B43395900AA9FCD /* StanzifestoViewController.m */; };
 		D27C32FB1B44462A00AA9FCD /* AboutTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C32FA1B44462A00AA9FCD /* AboutTabBarController.m */; };
@@ -65,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D202D4C01B4F19C400F4ABB2 /* Like.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Like.h; sourceTree = "<group>"; };
+		D202D4C11B4F19C400F4ABB2 /* Like.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Like.m; sourceTree = "<group>"; };
 		D246274F1B39D38F00A5C296 /* ThesaurusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThesaurusTableViewController.h; sourceTree = "<group>"; };
 		D24627501B39D38F00A5C296 /* ThesaurusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThesaurusTableViewController.m; sourceTree = "<group>"; };
 		D27C32C11B43395900AA9FCD /* StanzifestoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StanzifestoViewController.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				D2A4EF521B3DA347006F19FE /* Thesaurus.m */,
 				D2932AB41B1CCDD700531AF0 /* Poem.h */,
 				D2932AB51B1CCDD700531AF0 /* Poem.m */,
+				D202D4C01B4F19C400F4ABB2 /* Like.h */,
+				D202D4C11B4F19C400F4ABB2 /* Like.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -452,6 +457,7 @@
 				D27C32FE1B44554C00AA9FCD /* LimerickViewController.m in Sources */,
 				D2932A001B1A15B500531AF0 /* main.m in Sources */,
 				D27C32C31B43395900AA9FCD /* StanzifestoViewController.m in Sources */,
+				D202D4C21B4F19C400F4ABB2 /* Like.m in Sources */,
 				D27C32FB1B44462A00AA9FCD /* AboutTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
