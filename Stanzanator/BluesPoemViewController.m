@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.textView.text = @"Simple but powerful, blues poems are known for themes of perseverance through adversity as well as voicing feelings of temptation the world offers and the hardships caused by giving in to them. The Weary Blues by Langston Hughes is widely viewed as a great representation of the genre. It is rhythmic and melodic much like the musical variety that goes by the same name.\n\nOften blues poem stanzas follow a structure where the second line is a reiteration of the first--sometimes identical to the first. The third is a similar statement but with an additional element of humor, irony or darkness\n\nTry it!";
+    self.textView.text = @"In a plane, a train, or a taxi(Uber)\n\nIn an ER waiting room\n\nWhile waiting for other members of a wedding party to gather their belongings\n\nAs part of a complicated strategy for quitting smoking\n\nIn a meeting for members of your local startup community\n\nAt the DMV\n\nWhen you’re waiting for a relative to be born\n\nIf ever shame about a line you’ve written previously overwhelms you and demands that you edit it right now(!)";
     
 }
 
