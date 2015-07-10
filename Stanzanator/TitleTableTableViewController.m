@@ -105,7 +105,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    NSInteger integer = [PoemController sharedInstance].poems.count;
+    NSInteger integer = [PoemController sharedInstance].poems.count + 1;
     return integer;
 }
 
@@ -113,7 +113,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     
-    Poem *poem = [PoemController sharedInstance].poems[indexPath.row];
+    if (indexPath.row == 0) {
+        return cell;
+    }
+    
+    
+    Poem *poem = [PoemController sharedInstance].poems[indexPath.row - 1];
     PFUser *user = poem.writerOfPoem;
     
     cell.textLabel.text = poem.title;

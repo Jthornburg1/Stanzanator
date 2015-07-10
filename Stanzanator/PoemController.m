@@ -56,8 +56,6 @@
     [poem setObject:[PFUser currentUser] forKey:@"writersPoems"];
     poem.writerOfPoem = [PFUser currentUser];
     
-    // [poem setObject:[PFUser currentUser] forKey:@"writersPoems"];
-    //    [PFUser currentUser][@"Poems"] = poem;
     
     [poem pinInBackground];
     [poem saveInBackground];

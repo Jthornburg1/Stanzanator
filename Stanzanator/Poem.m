@@ -17,6 +17,7 @@ static NSString * const poemClassName = @"Poem";
 @dynamic timestamp;
 @dynamic writerOfPoem;
 @dynamic isPrivate;
+@dynamic likedBy;
 
 + (NSString *)parseClassName
 {

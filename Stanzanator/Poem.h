@@ -16,6 +16,7 @@
 @property (retain, nonatomic) NSDate *timestamp;
 @property (strong, nonatomic) PFUser *writerOfPoem;
 @property (nonatomic) BOOL isPrivate;
+@property (strong, nonatomic) NSArray *likedBy;
 
 + (NSString *)parseClassName;
 

@@ -15,8 +15,8 @@
 
 + (instancetype)sharedInstance;
 
-- (void)createLike;
-- (void)deleteLike;
+- (Like *)createLikeFromUser:(PFUser *)user ofPoem:(Poem *)poem;
+- (void)deleteLike:(Like *)like;
 - (NSInteger)getLikesForPoem;
 - (NSArray *)getLikersForPoems;
 

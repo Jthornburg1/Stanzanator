@@ -20,14 +20,24 @@
         return sharedInstance;
 }
 
-- (void)deleteLike
+- (void)deleteLike:(Like *)like
 {
-    
+    [like unpinInBackground];
+    [like deleteInBackground];
 }
 
-- (void)createLike
+- (Like *)createLikeFromUser:(PFUser *)user ofPoem:(Poem *)poem
 {
+    Like *like = [Like object];
+    like.liker = user;
+    like.liked = poem;
     
+    [like pinInBackground];
+    [like saveInBackground];
+    
+    
+    
+    return like;
 }
 
 - (NSInteger)getLikesForPoem
