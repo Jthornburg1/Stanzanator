@@ -11,7 +11,6 @@
 
 @implementation Like
 
-@dynamic isliked;
 @dynamic liker;
 @dynamic liked;
 

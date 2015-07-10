@@ -12,7 +12,6 @@
 @interface Like : PFObject
 
 //@property (strong, nonatomic) Poem *poem;
-@property (nonatomic) BOOL isliked;
 @property (strong, nonatomic) PFUser *liker;
 @property (strong, nonatomic) Poem *liked;
 

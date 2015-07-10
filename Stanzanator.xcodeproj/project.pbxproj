@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D202D4C21B4F19C400F4ABB2 /* Like.m in Sources */ = {isa = PBXBuildFile; fileRef = D202D4C11B4F19C400F4ABB2 /* Like.m */; };
+		D202D4C81B4F806F00F4ABB2 /* LikeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D202D4C71B4F806F00F4ABB2 /* LikeController.m */; };
 		D24627511B39D38F00A5C296 /* ThesaurusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24627501B39D38F00A5C296 /* ThesaurusTableViewController.m */; };
 		D27C32C31B43395900AA9FCD /* StanzifestoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C32C21B43395900AA9FCD /* StanzifestoViewController.m */; };
 		D27C32FB1B44462A00AA9FCD /* AboutTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C32FA1B44462A00AA9FCD /* AboutTabBarController.m */; };
@@ -68,6 +69,8 @@
 /* Begin PBXFileReference section */
 		D202D4C01B4F19C400F4ABB2 /* Like.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Like.h; sourceTree = "<group>"; };
 		D202D4C11B4F19C400F4ABB2 /* Like.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Like.m; sourceTree = "<group>"; };
+		D202D4C61B4F806F00F4ABB2 /* LikeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeController.h; sourceTree = "<group>"; };
+		D202D4C71B4F806F00F4ABB2 /* LikeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeController.m; sourceTree = "<group>"; };
 		D246274F1B39D38F00A5C296 /* ThesaurusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThesaurusTableViewController.h; sourceTree = "<group>"; };
 		D24627501B39D38F00A5C296 /* ThesaurusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThesaurusTableViewController.m; sourceTree = "<group>"; };
 		D27C32C11B43395900AA9FCD /* StanzifestoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StanzifestoViewController.h; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 			children = (
 				D2932ABD1B1CCE4B00531AF0 /* ProfileController.h */,
 				D2932ABE1B1CCE4B00531AF0 /* ProfileController.m */,
+				D202D4C61B4F806F00F4ABB2 /* LikeController.h */,
+				D202D4C71B4F806F00F4ABB2 /* LikeController.m */,
 				D2932AB81B1CCE0500531AF0 /* PoemController.m */,
 				D2932AB71B1CCE0500531AF0 /* PoemController.h */,
 				D2A4EF541B3DC01F006F19FE /* ThesaurusController.h */,
@@ -440,6 +445,7 @@
 				D2932A061B1A15B500531AF0 /* MainViewController.m in Sources */,
 				D2A4EF531B3DA347006F19FE /* Thesaurus.m in Sources */,
 				D2DBC0FB1B3369840079C15A /* CustomCellTableViewCell.m in Sources */,
+				D202D4C81B4F806F00F4ABB2 /* LikeController.m in Sources */,
 				D27C33041B4456ED00AA9FCD /* BalladViewController.m in Sources */,
 				D2A4EF561B3DC01F006F19FE /* ThesaurusController.m in Sources */,
 				D2932A031B1A15B500531AF0 /* AppDelegate.m in Sources */,
