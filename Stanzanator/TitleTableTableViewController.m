@@ -39,8 +39,7 @@
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.filteredTableViewController];
     self.searchController.searchResultsUpdater = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;
-//    self.searchController.searchBar.scopeButtonTitles = @[@"Title"];
-    
+    self.searchController.searchBar.scopeButtonTitles = [NSArray array];
     self.searchController.searchBar.delegate = self;
     // self should be the delegate for the filtered table so DidSelectRowAtIndexPath is called for both tables 
     self.filteredTableViewController.tableView.delegate = self;
@@ -113,9 +112,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     
-    NSArray *reversedPoems = [[[PoemController sharedInstance].poems reverseObjectEnumerator] allObjects];
     
-    Poem *poem = reversedPoems[indexPath.row];
+    
+    Poem *poem = [PoemController sharedInstance].poems[indexPath.row];
     PFUser *user = poem.writerOfPoem;
     
     cell.textLabel.text = poem.title;

@@ -221,8 +221,8 @@
 				D2932ABE1B1CCE4B00531AF0 /* ProfileController.m */,
 				D202D4C61B4F806F00F4ABB2 /* LikeController.h */,
 				D202D4C71B4F806F00F4ABB2 /* LikeController.m */,
-				D2932AB81B1CCE0500531AF0 /* PoemController.m */,
 				D2932AB71B1CCE0500531AF0 /* PoemController.h */,
+				D2932AB81B1CCE0500531AF0 /* PoemController.m */,
 				D2A4EF541B3DC01F006F19FE /* ThesaurusController.h */,
 				D2A4EF551B3DC01F006F19FE /* ThesaurusController.m */,
 			);
