@@ -39,7 +39,6 @@
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.filteredTableViewController];
     self.searchController.searchResultsUpdater = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;
-    self.searchController.searchBar.scopeButtonTitles = [NSArray array];
     self.searchController.searchBar.delegate = self;
     // self should be the delegate for the filtered table so DidSelectRowAtIndexPath is called for both tables 
     self.filteredTableViewController.tableView.delegate = self;
