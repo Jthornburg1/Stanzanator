@@ -103,8 +103,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    NSInteger integer = [PoemController sharedInstance].poems.count;
-    return integer;
+    return [PoemController sharedInstance].poems.count;
 }
 
 

@@ -8,10 +8,17 @@
 
 #import "Like.h"
 
+static NSString * const likeClassName = @"Like";
+
 
 @implementation Like
 
 @dynamic liker;
 @dynamic liked;
+
++ (NSString *)parseClassName
+{
+    return likeClassName;
+}
 
 @end

@@ -7,7 +7,9 @@
 //
 
 #import "PoemToReadViewController.h"
-#import "StanzaViewController.h"
+#import "LikeController.h"
+#import "Like.h"
+#import <Parse/Parse.h>
 
 
 @interface PoemToReadViewController ()
@@ -16,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *poemBodyText;
 @property (weak, nonatomic) IBOutlet UITextView *titleTexView;
 @property (weak, nonatomic) IBOutlet UILabel *timeStampLabel;
+@property (weak, nonatomic) IBOutlet UIButton *likeButton;
 
 @end
 
@@ -55,6 +58,9 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+- (IBAction)likeButtonTapped:(id)sender {
+    [[LikeController sharedInstance] createLikeFromUser:[PFUser currentUser] ofPoem:self.poem];
+}
 
 
 

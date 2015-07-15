@@ -9,10 +9,11 @@
 #import <Parse/Parse.h>
 #import "Poem.h"
 
-@interface Like : PFObject
+@interface Like : PFObject<PFSubclassing>
 
-//@property (strong, nonatomic) Poem *poem;
 @property (strong, nonatomic) PFUser *liker;
 @property (strong, nonatomic) Poem *liked;
+
++ (NSString *)parseClassName;
 
 @end

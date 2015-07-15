@@ -506,7 +506,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsX-4R-F3I">
                                 <rect key="frame" x="43" y="162" width="517" height="336"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -524,6 +524,9 @@
                                 <state key="normal" title="Like">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="likeButtonTapped:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="t7x-Nh-X3W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKO-7n-ha9">
                                 <rect key="frame" x="36" y="506.5" width="41" height="30"/>
@@ -570,6 +573,7 @@
                     <connections>
                         <outlet property="deleteButton" destination="Q6b-br-YXf" id="YEn-ds-lr7"/>
                         <outlet property="editButton" destination="D6S-tc-ATz" id="Eos-KE-aF8"/>
+                        <outlet property="likeButton" destination="x0t-Rp-ygr" id="yny-AL-0kL"/>
                         <outlet property="poemBodyText" destination="JsX-4R-F3I" id="vc9-uQ-JRi"/>
                         <outlet property="timeStampLabel" destination="Wmm-ZN-Lsx" id="yNL-Le-eFM"/>
                         <outlet property="titleTexView" destination="U1m-CH-Fkb" id="avJ-BC-ZM4"/>
