@@ -10,7 +10,6 @@
 #import "PoemController.h"
 #import "PoemToReadViewController.h"
 
-
 @interface ProfileViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameText;
 @property (weak, nonatomic) IBOutlet UITextField *ageText;
@@ -208,7 +207,6 @@
         
         Poem *poem = [PoemController sharedInstance].poemsByWriter[path.row];
         [viewController updateWithPoem:poem];
-        
     }
 }
 

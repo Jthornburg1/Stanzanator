@@ -39,6 +39,8 @@
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:self.filteredTableViewController];
     self.searchController.searchResultsUpdater = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;
+//    self.searchController.searchBar.scopeButtonTitles = @[@"Title"];
+    
     self.searchController.searchBar.delegate = self;
     // self should be the delegate for the filtered table so DidSelectRowAtIndexPath is called for both tables 
     self.filteredTableViewController.tableView.delegate = self;
@@ -103,14 +105,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [PoemController sharedInstance].poems.count;
+    NSInteger integer = [PoemController sharedInstance].poems.count;
+    return integer;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
-    
-    
     
     Poem *poem = [PoemController sharedInstance].poems[indexPath.row];
     PFUser *user = poem.writerOfPoem;

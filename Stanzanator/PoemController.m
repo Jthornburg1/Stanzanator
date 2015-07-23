@@ -34,14 +34,7 @@
     
     // Without notifications to update the tableview we'll need to restart the app to get the tableview to load
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        
-        NSMutableArray *array = [NSMutableArray new];
-        NSEnumerator *enumerator = [objects reverseObjectEnumerator];
-        for (id element in enumerator) {
-            [array addObject:element];
-        }
-        
-        self.poems = [array copy];
+        self.poems = objects;
     }];
 }
 //- (NSArray *)poems
@@ -63,6 +56,8 @@
     [poem setObject:[PFUser currentUser] forKey:@"writersPoems"];
     poem.writerOfPoem = [PFUser currentUser];
     
+    // [poem setObject:[PFUser currentUser] forKey:@"writersPoems"];
+    //    [PFUser currentUser][@"Poems"] = poem;
     
     [poem pinInBackground];
     [poem saveInBackground];
