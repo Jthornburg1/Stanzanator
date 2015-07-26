@@ -398,7 +398,25 @@
                                 <state key="normal" title="flag">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flagButtonTapped:" destination="HGX-3C-oqi" eventType="touchUpInside" id="nSJ-mA-imP"/>
+                                </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wFT-X6-uGO">
+                                <rect key="frame" x="525" y="64" width="51" height="31"/>
+                                <connections>
+                                    <action selector="blockOffensiveSwitchChanged:" destination="HGX-3C-oqi" eventType="valueChanged" id="g3J-4E-lMn"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="block offensive content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0C-m7-0Wh">
+                                <rect key="frame" x="338" y="69" width="179" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="179" id="0nk-TR-YAR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.66666668653488159" green="0.098039224743843079" blue="0.21176472306251526" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -406,12 +424,14 @@
                             <constraint firstItem="Rf4-gW-boJ" firstAttribute="leading" secondItem="G0h-hz-FEj" secondAttribute="leading" id="5pT-Cy-fp9"/>
                             <constraint firstAttribute="trailing" secondItem="XvQ-z9-kVM" secondAttribute="trailing" id="6Tn-OQ-Tmr"/>
                             <constraint firstItem="CIm-rn-Ay1" firstAttribute="top" secondItem="sJ7-Wx-RpG" secondAttribute="bottom" constant="37" id="7Xv-1C-fUZ"/>
+                            <constraint firstItem="g0C-m7-0Wh" firstAttribute="centerY" secondItem="wFT-X6-uGO" secondAttribute="centerY" id="9su-yh-k4k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SN2-YU-I7f" secondAttribute="trailing" constant="-16" id="9ye-jR-5Ku"/>
                             <constraint firstItem="Ko5-Is-aVy" firstAttribute="leading" secondItem="UDM-3t-h1Y" secondAttribute="leading" id="BXO-hx-FKT"/>
                             <constraint firstItem="NST-dG-4Bz" firstAttribute="top" secondItem="sJ7-Wx-RpG" secondAttribute="bottom" constant="37" id="GH1-3V-NOF"/>
                             <constraint firstAttribute="centerY" secondItem="kA0-dk-7HV" secondAttribute="centerY" constant="66" id="GYP-bn-Hjf"/>
                             <constraint firstItem="G0h-hz-FEj" firstAttribute="leading" secondItem="UDM-3t-h1Y" secondAttribute="leading" id="IZa-0Z-O3G"/>
                             <constraint firstItem="Ko5-Is-aVy" firstAttribute="top" secondItem="fy1-bx-A4b" secondAttribute="top" constant="-6" id="LIH-8c-HP6"/>
+                            <constraint firstItem="g0C-m7-0Wh" firstAttribute="top" secondItem="sJ7-Wx-RpG" secondAttribute="bottom" constant="5" id="NWD-z5-YXC"/>
                             <constraint firstItem="SN2-YU-I7f" firstAttribute="top" secondItem="Rf4-gW-boJ" secondAttribute="bottom" constant="8" id="QDg-dw-SVZ"/>
                             <constraint firstItem="fy1-bx-A4b" firstAttribute="leading" secondItem="kA0-dk-7HV" secondAttribute="trailing" constant="50" id="Qq6-VS-ARQ"/>
                             <constraint firstItem="UDM-3t-h1Y" firstAttribute="top" secondItem="sJ7-Wx-RpG" secondAttribute="bottom" constant="115" id="RpW-qJ-lHm"/>
@@ -419,8 +439,10 @@
                             <constraint firstItem="Ko5-Is-aVy" firstAttribute="leading" secondItem="RcY-nP-Aig" secondAttribute="leadingMargin" id="Wea-lD-fQr"/>
                             <constraint firstItem="SN2-YU-I7f" firstAttribute="leading" secondItem="XvQ-z9-kVM" secondAttribute="leading" id="Whm-Nd-oJR"/>
                             <constraint firstItem="CIm-rn-Ay1" firstAttribute="leading" secondItem="Ko5-Is-aVy" secondAttribute="leading" id="Y0p-Wn-t4q"/>
+                            <constraint firstItem="wFT-X6-uGO" firstAttribute="leading" secondItem="g0C-m7-0Wh" secondAttribute="trailing" constant="8" id="Zzc-iR-tJB"/>
                             <constraint firstAttribute="centerX" secondItem="kA0-dk-7HV" secondAttribute="centerX" id="eCp-28-w5J"/>
                             <constraint firstItem="CUB-6e-BGx" firstAttribute="top" secondItem="fy1-bx-A4b" secondAttribute="bottom" constant="-69" id="fsW-fh-sdO"/>
+                            <constraint firstItem="wFT-X6-uGO" firstAttribute="top" secondItem="sJ7-Wx-RpG" secondAttribute="bottom" id="hss-4e-8Du"/>
                             <constraint firstItem="SN2-YU-I7f" firstAttribute="bottom" secondItem="XvQ-z9-kVM" secondAttribute="top" id="idf-Mv-Ho6"/>
                             <constraint firstItem="G0h-hz-FEj" firstAttribute="leading" secondItem="RcY-nP-Aig" secondAttribute="leadingMargin" id="kKK-dY-dnf"/>
                             <constraint firstItem="NST-dG-4Bz" firstAttribute="trailing" secondItem="fy1-bx-A4b" secondAttribute="trailing" id="leI-8T-UjW"/>
@@ -429,6 +451,7 @@
                             <constraint firstItem="UDM-3t-h1Y" firstAttribute="top" secondItem="Ko5-Is-aVy" secondAttribute="bottom" constant="22" id="p2d-aX-Ekz"/>
                             <constraint firstItem="h77-Vo-Les" firstAttribute="top" secondItem="fy1-bx-A4b" secondAttribute="bottom" constant="228" id="p44-Ia-tcc"/>
                             <constraint firstItem="XvQ-z9-kVM" firstAttribute="leading" secondItem="RcY-nP-Aig" secondAttribute="leading" id="pJ6-Bd-eyD"/>
+                            <constraint firstItem="NST-dG-4Bz" firstAttribute="trailing" secondItem="wFT-X6-uGO" secondAttribute="trailing" id="vVO-3D-Jf8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NST-dG-4Bz" secondAttribute="trailing" constant="10" id="xyS-yg-6cn"/>
                         </constraints>
                         <variation key="default">
@@ -440,6 +463,8 @@
                     </view>
                     <connections>
                         <outlet property="ageText" destination="UDM-3t-h1Y" id="ek5-pU-R97"/>
+                        <outlet property="blockObjectSwitch" destination="wFT-X6-uGO" id="uAq-XH-4Sa"/>
+                        <outlet property="blockOffensiveLabel" destination="g0C-m7-0Wh" id="UjS-dQ-2oD"/>
                         <outlet property="editButton" destination="CIm-rn-Ay1" id="bmb-Ac-ohD"/>
                         <outlet property="image" destination="fy1-bx-A4b" id="FiQ-FF-pbq"/>
                         <outlet property="locationText" destination="G0h-hz-FEj" id="bJn-wf-2rd"/>
@@ -538,6 +563,9 @@
                                 <state key="normal" title="flag">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="flagButtonTapped:" destination="6nE-ay-RPZ" eventType="touchUpInside" id="a17-9P-M4C"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

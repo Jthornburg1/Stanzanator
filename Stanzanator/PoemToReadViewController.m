@@ -62,6 +62,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)flagButtonTapped:(id)sender {
+}
 
 - (IBAction)editButtonTapped:(id)sender {
     self.titleTexView.text = @"";

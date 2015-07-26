@@ -18,8 +18,10 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIButton *uploadPhotoButton;
+@property (weak, nonatomic) IBOutlet UILabel *blockOffensiveLabel;
 @property (nonatomic, readwrite) BOOL inEditingMode;
 
+@property (weak, nonatomic) IBOutlet UISwitch *blockObjectSwitch;
 @property (nonatomic, strong) NSArray *poems;
 @end
 
@@ -32,10 +34,12 @@
     if (self.userProfile == [PFUser currentUser]) {
         
         PFUser *user = [PFUser currentUser];
+        self.blockObjectSwitch.userInteractionEnabled = YES;
         self.nameText.text = user.username;
         self.ageText.text = user[@"age"];
         self.locationText.text = user[@"location"];
         PFFile *photoFile = user[@"photo"];
+        self.blockOffensiveLabel.hidden = NO;
         [photoFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -49,6 +53,8 @@
             self.nameText.userInteractionEnabled = NO;
             self.ageText.userInteractionEnabled = NO;
             self.locationText.userInteractionEnabled = NO;
+            self.blockObjectSwitch.hidden = YES;
+            self.blockOffensiveLabel.hidden = YES;
             [self updateProfileForNewUser:self.userProfile];
         }
 }
@@ -65,6 +71,9 @@
 }
 - (IBAction)homeBound:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
+- (IBAction)flagButtonTapped:(id)sender {
+    
 }
 
 - (void)updateProfileForNewUser:(PFUser *)user
@@ -83,6 +92,8 @@
 
 }
 
+- (IBAction)blockOffensiveSwitchChanged:(id)sender {
+}
 
 
 - (IBAction)editProfileButtonTapped:(id)sender {
@@ -191,7 +202,6 @@
 {
     
     return [PoemController sharedInstance].poemsByWriter.count;
-    //return self.poems.count;
 }
 
 - (void)didReceiveMemoryWarning {
