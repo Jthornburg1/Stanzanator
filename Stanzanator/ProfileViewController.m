@@ -22,6 +22,7 @@
 @property (nonatomic, readwrite) BOOL inEditingMode;
 
 @property (weak, nonatomic) IBOutlet UISwitch *blockObjectSwitch;
+@property (weak, nonatomic) IBOutlet UIButton *flagButton;
 @property (nonatomic, strong) NSArray *poems;
 @end
 

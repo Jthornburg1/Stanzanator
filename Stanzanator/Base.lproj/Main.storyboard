@@ -466,6 +466,7 @@
                         <outlet property="blockObjectSwitch" destination="wFT-X6-uGO" id="uAq-XH-4Sa"/>
                         <outlet property="blockOffensiveLabel" destination="g0C-m7-0Wh" id="UjS-dQ-2oD"/>
                         <outlet property="editButton" destination="CIm-rn-Ay1" id="bmb-Ac-ohD"/>
+                        <outlet property="flagButton" destination="CUB-6e-BGx" id="NpJ-3m-hwF"/>
                         <outlet property="image" destination="fy1-bx-A4b" id="FiQ-FF-pbq"/>
                         <outlet property="locationText" destination="G0h-hz-FEj" id="bJn-wf-2rd"/>
                         <outlet property="nameText" destination="Ko5-Is-aVy" id="trY-TQ-nAo"/>
