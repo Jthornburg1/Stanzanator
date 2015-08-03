@@ -106,13 +106,11 @@
         }
     }
 }
-//- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
-//{
-//    self dismissViewControllerAnimated:YES completion:^{
-//        <#code#>
-//    }
-//}
 
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 - (void)updateProfileForNewUser:(PFUser *)user
 {
     
@@ -129,9 +127,7 @@
 
 }
 
-- (IBAction)blockOffensiveSwitchChanged:(id)sender {
-}
-
+#pragma mark - editting methods
 
 - (IBAction)editProfileButtonTapped:(id)sender {
     

@@ -99,6 +99,11 @@
     }
 }
 
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 - (IBAction)editButtonTapped:(id)sender {
     self.titleTexView.text = @"";
