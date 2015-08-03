@@ -11,6 +11,7 @@
 #import "PoemController.h"
 #import "ProfileController.h"
 #import "StanzaViewController.h"
+#import "EULAViewController.h"
 
 @interface MainViewController ()<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, UISearchBarDelegate>
 
@@ -24,12 +25,6 @@
     [[ProfileController sharedInstance] loadUsersFromParseWithCompletion:^(bool boolean) {
         [[PoemController sharedInstance] poemsByWriter];
     }];
-    
-//    PFUser *user = [PFUser currentUser];
-//    
-//    ProfileViewController *profileViewController = [ProfileViewController new];
-//    
-//    profileViewController.userProfile = user;
 }
 - (void)viewDidAppear:(BOOL)animated
 {

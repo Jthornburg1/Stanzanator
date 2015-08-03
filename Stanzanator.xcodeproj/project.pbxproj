@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D24627511B39D38F00A5C296 /* ThesaurusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24627501B39D38F00A5C296 /* ThesaurusTableViewController.m */; };
+		D26613201B6AAA610063AFF2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D266131F1B6AAA610063AFF2 /* MessageUI.framework */; };
+		D26613231B6FBCE40063AFF2 /* EULAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26613221B6FBCE40063AFF2 /* EULAViewController.m */; };
 		D27C32C31B43395900AA9FCD /* StanzifestoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C32C21B43395900AA9FCD /* StanzifestoViewController.m */; };
 		D27C32FB1B44462A00AA9FCD /* AboutTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C32FA1B44462A00AA9FCD /* AboutTabBarController.m */; };
 		D27C32FE1B44554C00AA9FCD /* LimerickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27C32FD1B44554C00AA9FCD /* LimerickViewController.m */; };
@@ -67,6 +69,9 @@
 /* Begin PBXFileReference section */
 		D246274F1B39D38F00A5C296 /* ThesaurusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThesaurusTableViewController.h; sourceTree = "<group>"; };
 		D24627501B39D38F00A5C296 /* ThesaurusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThesaurusTableViewController.m; sourceTree = "<group>"; };
+		D266131F1B6AAA610063AFF2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D26613211B6FBCE40063AFF2 /* EULAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EULAViewController.h; sourceTree = "<group>"; };
+		D26613221B6FBCE40063AFF2 /* EULAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EULAViewController.m; sourceTree = "<group>"; };
 		D27C32C11B43395900AA9FCD /* StanzifestoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StanzifestoViewController.h; sourceTree = "<group>"; };
 		D27C32C21B43395900AA9FCD /* StanzifestoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StanzifestoViewController.m; sourceTree = "<group>"; };
 		D27C32F91B44462A00AA9FCD /* AboutTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTabBarController.h; sourceTree = "<group>"; };
@@ -142,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26613201B6AAA610063AFF2 /* MessageUI.framework in Frameworks */,
 				D2932AE61B1CD34E00531AF0 /* Social.framework in Frameworks */,
 				D2932AE41B1CD34500531AF0 /* Accounts.framework in Frameworks */,
 				D2932AE21B1CD33600531AF0 /* libsqlite3.dylib in Frameworks */,
@@ -202,6 +208,8 @@
 				D27C32FA1B44462A00AA9FCD /* AboutTabBarController.m */,
 				D27C32C11B43395900AA9FCD /* StanzifestoViewController.h */,
 				D27C32C21B43395900AA9FCD /* StanzifestoViewController.m */,
+				D26613211B6FBCE40063AFF2 /* EULAViewController.h */,
+				D26613221B6FBCE40063AFF2 /* EULAViewController.m */,
 			);
 			name = TabBarControllerFiles;
 			sourceTree = "<group>";
@@ -243,6 +251,7 @@
 		D29329F11B1A15B500531AF0 = {
 			isa = PBXGroup;
 			children = (
+				D266131F1B6AAA610063AFF2 /* MessageUI.framework */,
 				D29329FC1B1A15B500531AF0 /* Stanzanator */,
 				D2932A161B1A15B500531AF0 /* StanzanatorTests */,
 				D29329FB1B1A15B500531AF0 /* Products */,
@@ -452,6 +461,7 @@
 				D27C33011B44562500AA9FCD /* SonnetViewController.m in Sources */,
 				D27C32FE1B44554C00AA9FCD /* LimerickViewController.m in Sources */,
 				D2932A001B1A15B500531AF0 /* main.m in Sources */,
+				D26613231B6FBCE40063AFF2 /* EULAViewController.m in Sources */,
 				D27C32C31B43395900AA9FCD /* StanzifestoViewController.m in Sources */,
 				D27C32FB1B44462A00AA9FCD /* AboutTabBarController.m in Sources */,
 			);

@@ -8,9 +8,10 @@
 
 #import "PoemToReadViewController.h"
 #import "StanzaViewController.h"
+#import <MessageUI/MessageUI.h>
 
 
-@interface PoemToReadViewController ()
+@interface PoemToReadViewController ()<MFMailComposeViewControllerDelegate, UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) IBOutlet UITextView *poemBodyText;
@@ -62,8 +63,42 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - flag user methods
+
 - (IBAction)flagButtonTapped:(id)sender {
+    UIAlertView *flag = [[UIAlertView alloc] initWithTitle:@"Flag this user?"
+                                                   message:@"If 'YES,' then this user's content will be subject to administrative review and you'll need to log back in to use Stanzanator again."
+                                                  delegate:self
+                                         cancelButtonTitle:@"NO"
+                                         otherButtonTitles:@"YES", nil];
+    flag.tag = 1;
+    [flag show];
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 1) {
+        if (buttonIndex == 1) {
+            if ([MFMailComposeViewController canSendMail])
+            {
+                MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
+                mail.mailComposeDelegate = self;
+                [mail setSubject:@"Stanzanator user flagged"];
+                [mail setMessageBody:[NSString stringWithFormat:@"The user %@ has had the poem, %@, flagged as objectionable", self.poem.writerOfPoem.username, self.poem.title] isHTML:NO];
+                [mail setToRecipients:@[@"stanzanatorflagged@gmail.com"]];
+                
+                [self presentViewController:mail animated:YES completion:NULL];
+            }
+            else
+            {
+                NSLog(@"This device cannot send email");
+            }
+            
+        }
+    }
+}
+
 
 - (IBAction)editButtonTapped:(id)sender {
     self.titleTexView.text = @"";

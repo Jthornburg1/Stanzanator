@@ -9,8 +9,9 @@
 #import "ProfileViewController.h"
 #import "PoemController.h"
 #import "PoemToReadViewController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface ProfileViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ProfileViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate, MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameText;
 @property (weak, nonatomic) IBOutlet UITextField *ageText;
 @property (weak, nonatomic) IBOutlet UITextField *locationText;
@@ -18,10 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIButton *uploadPhotoButton;
-@property (weak, nonatomic) IBOutlet UILabel *blockOffensiveLabel;
 @property (nonatomic, readwrite) BOOL inEditingMode;
-
-@property (weak, nonatomic) IBOutlet UISwitch *blockObjectSwitch;
 @property (weak, nonatomic) IBOutlet UIButton *flagButton;
 @property (nonatomic, strong) NSArray *poems;
 @end
@@ -35,12 +33,10 @@
     if (self.userProfile == [PFUser currentUser]) {
         
         PFUser *user = [PFUser currentUser];
-        self.blockObjectSwitch.userInteractionEnabled = YES;
         self.nameText.text = user.username;
         self.ageText.text = user[@"age"];
         self.locationText.text = user[@"location"];
         PFFile *photoFile = user[@"photo"];
-        self.blockOffensiveLabel.hidden = NO;
         [photoFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -54,8 +50,6 @@
             self.nameText.userInteractionEnabled = NO;
             self.ageText.userInteractionEnabled = NO;
             self.locationText.userInteractionEnabled = NO;
-            self.blockObjectSwitch.hidden = YES;
-            self.blockOffensiveLabel.hidden = YES;
             [self updateProfileForNewUser:self.userProfile];
         }
 }
@@ -70,12 +64,54 @@
     
 
 }
+
+
 - (IBAction)homeBound:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+# pragma mark - flag user methods
+
+// sends alert to be sure flag is not accidental
 - (IBAction)flagButtonTapped:(id)sender {
-    
+    UIAlertView *flag = [[UIAlertView alloc] initWithTitle:@"Flag this user?"
+                                                   message:@"If 'YES,' then this user's content will be subject to administrative review and you'll need to log back in to use Stanzanator again."
+                                                  delegate:self
+                                         cancelButtonTitle:@"NO"
+                                         otherButtonTitles:@"YES", nil];
+    flag.tag = 1;
+    [flag show];
 }
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 1) {
+        if (buttonIndex == 1) {
+            if ([MFMailComposeViewController canSendMail])
+            {
+                MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
+                mail.mailComposeDelegate = self;
+                [mail setSubject:@"Stanzanator user flagged"];
+                [mail setMessageBody:[NSString stringWithFormat:@"The user %@ has had their photo flagged as objectionable", self.userProfile.username] isHTML:NO];
+                [mail setToRecipients:@[@"stanzanatorflagged@gmail.com"]];
+                
+                [self presentViewController:mail animated:YES completion:NULL];
+            }
+            else
+            {
+                NSLog(@"This device cannot send email");
+            }
+
+        }
+    }
+}
+//- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+//{
+//    self dismissViewControllerAnimated:YES completion:^{
+//        <#code#>
+//    }
+//}
 
 - (void)updateProfileForNewUser:(PFUser *)user
 {
