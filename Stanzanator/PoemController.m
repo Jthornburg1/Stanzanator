@@ -91,8 +91,15 @@
     PFQuery *poemQuery = [Poem query];
     [poemQuery whereKey:@"writersPoems" equalTo:writer];
     [poemQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        self.poemsByWriter = objects;
-        completion(objects);
+        
+        NSMutableArray *array = [NSMutableArray new];
+        NSEnumerator *enumerator = [objects reverseObjectEnumerator];
+        for (id element in enumerator) {
+            [array addObject:element];
+        }
+        
+        self.poemsByWriter = [array copy];
+        completion([array copy]);
     }];
 }
 
