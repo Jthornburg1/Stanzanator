@@ -34,7 +34,12 @@
     
     // Without notifications to update the tableview we'll need to restart the app to get the tableview to load
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        self.poems = objects;
+        NSMutableArray *array = [NSMutableArray new];
+        NSEnumerator *enumerator = [objects reverseObjectEnumerator];
+        for (id element in enumerator) {
+            [array addObject:element];
+        }
+        self.poems = [array copy];
     }];
 }
 //- (NSArray *)poems
