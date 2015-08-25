@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bw1-gq-uv6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bw1-gq-uv6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -255,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2220" y="1324"/>
+            <point key="canvasLocation" x="1807" y="1104"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="rUT-ES-jSo">
@@ -613,7 +613,7 @@
                                         </connections>
                                     </switch>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7O2-Be-BWa">
-                                        <rect key="frame" x="8" y="110" width="584" height="159"/>
+                                        <rect key="frame" x="8" y="110" width="584" height="132"/>
                                         <color key="backgroundColor" red="0.96470594409999999" green="0.93725496529999996" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
                                         <gestureRecognizers/>
                                         <color key="textColor" red="0.15686275059999999" green="0.054901964960000001" blue="0.20000001789999999" alpha="1" colorSpace="deviceRGB"/>
@@ -683,7 +683,7 @@
                                     <constraint firstAttribute="trailing" secondItem="WKm-0a-7qa" secondAttribute="trailing" constant="8" id="aGe-YM-ckd"/>
                                     <constraint firstItem="7O2-Be-BWa" firstAttribute="leading" secondItem="r2n-P5-kw0" secondAttribute="leading" id="aL6-zd-NIZ"/>
                                     <constraint firstItem="0Ou-hr-nKe" firstAttribute="leading" secondItem="WKm-0a-7qa" secondAttribute="leading" id="b63-au-9zU"/>
-                                    <constraint firstAttribute="bottom" secondItem="7O2-Be-BWa" secondAttribute="bottom" constant="223" id="b7k-1S-Ia9"/>
+                                    <constraint firstAttribute="bottom" secondItem="7O2-Be-BWa" secondAttribute="bottom" constant="250" id="b7k-1S-Ia9"/>
                                     <constraint firstItem="7O2-Be-BWa" firstAttribute="leading" secondItem="0Ou-hr-nKe" secondAttribute="leading" id="dB4-0j-YPI"/>
                                     <constraint firstItem="7O2-Be-BWa" firstAttribute="top" secondItem="WKm-0a-7qa" secondAttribute="bottom" constant="51" id="hsI-b5-EKa"/>
                                     <constraint firstItem="0Ou-hr-nKe" firstAttribute="top" secondItem="WKm-0a-7qa" secondAttribute="bottom" constant="8" id="s4c-xC-9Xs"/>
@@ -717,7 +717,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1816" y="1072"/>
+            <point key="canvasLocation" x="1132" y="1104"/>
         </scene>
         <!--user agreement-->
         <scene sceneID="apS-eX-ySN">
@@ -1147,8 +1147,8 @@
         <image name="mainPageImage" width="286" height="173"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nKa-vi-fPx"/>
+        <segue reference="Usd-SZ-Ift"/>
+        <segue reference="F7w-N6-4JW"/>
         <segue reference="fDd-uQ-G1o"/>
-        <segue reference="cOw-vG-7aA"/>
     </inferredMetricsTieBreakers>
 </document>
